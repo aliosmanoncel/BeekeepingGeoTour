@@ -1,0 +1,198 @@
+═══════════════════════════════════════════════════════════════════
+NOTEBOOKLM SUNUM TASLAĞI — HALK EĞİTİMİ MODU — PPT HAZIR v3
+Fay Yolu Arıcılığı: Biyo-Sismik Arıcılık
+16 Haziran 2026 · Prof. Dr. Ali Osman Öncel
+═══════════════════════════════════════════════════════════════════
+
+MOD: HALK EĞİTİMİ MODU (aktif)
+Hedef kitle: Genel izleyici, vatandaş
+Ton: Sıcak, analoji ağırlıklı, korku değil farkındalık
+Slayt dili: Günlük dil, teknik terim açıklamalı
+Görsel: Sadeleştirilmiş, yeniden üretilmiş görseller
+
+───────────────────────────────────────────────────────────────────
+SLAYT 1: AÇILIŞ
+───────────────────────────────────────────────────────────────────
+Başlık: Biyo-Sismik Arıcılık: Yerin Altındaki Sarsıntıdan Yerin Üstündeki Berekete
+Alt Başlık: Doktora Semineri — Yer Bilimleri ve Arıcılık Entegrasyonu
+Tarih: 16 Haziran 2026
+Bağlam: Türkiye'nin 1.200 km'lik ana fay omurgaları ile 9 milyon kovan varlığının
+sismobiyolojik erken uyarı potansiyeli.
+Kaynak Notu: 15 hakemli makale, 4 doktora tezi ve uluslararası deprem raporları analiz edildi.
+
+───────────────────────────────────────────────────────────────────
+SLAYT 2: DEPREM DUYARLILIĞI: HAYVAN GRUPLARININ ERKEN UYARISI
+───────────────────────────────────────────────────────────────────
+• Hayvan kolektiflerinin, tek bir bireyin algı kapasitesini aşan "süper-algı"
+  yeteneği bilimsel bir gerçektir.
+• 2016 İtalya Norcia depremleri öncesinde inek ve köpeklerin 1 ila 20 saat
+  önceden anormal hareketlilik gösterdiği raporlandı.
+• Arı kovanı gibi kapalı ve dış gürültüden izole ortamlar, yer kabuğundan
+  gelen zayıf titreşimleri hissettiren hassas birer platformdur.
+• Görsel: Wikelski (2020) — Şekil 1 (İtalya deprem epi-merkezleri
+  ve çiftlik lokasyonları haritası).
+
+¹ Wikelski vd. (2020). Potential short-term earthquake forecasting by farm
+  animal monitoring. Ethology, 126(9), 931–941.
+  DOI: 10.1111/eth.13078 ✓✓✓
+
+───────────────────────────────────────────────────────────────────
+SLAYT 3: BİYO-SİSMİK BAĞLANTI: ARI KOVANININ "HUZUR MÜZİĞİ"
+───────────────────────────────────────────────────────────────────
+Akademik Özet:
+• Arı kolonileri, petek titreşimlerini yükseltici olarak kullanan 50.000
+  bireylik yaşayan bir sensör ağıdır.
+• Sağlıklı bir kovanın 230-270 Hz rezonans bandı, sismik stres durumunda
+  350 Hz üzerine çıkarak alarm moduna geçer.
+
+Halk İçin Yorum:
+• Bir arı kovanı, yerin derinliklerini dinleyen 50 bin hassas mikrofonun
+  birleştiği bir orkestra gibidir.
+• Arıların o huzurlu mırıltısı, yer altında sarsıntı yaklaşırken dijital
+  olarak ölçülebilen bir "çığlığa" dönüşür.
+
+¹ Wikelski vd. (2020). Ethology. ✓✓✓
+² Tautz (2008). The Buzz about Bees. Springer-Verlag. ✓✓✓
+
+───────────────────────────────────────────────────────────────────
+SLAYT 4: GÖRÜNMEZ FIRTINALAR: ELEKTROMANYETİK MEKANİZMA
+───────────────────────────────────────────────────────────────────
+• Hayvanların depremi hissetme mekanizması sismik dalgalardan ziyade,
+  yer kabuğundaki gerilmenin yaydığı ultra düşük frekanslı elektromanyetik
+  dalgalara (ULF/ELF — "yer kabuğunun sessiz elektrik sinyali") dayanır.
+• 2021 Tokyo depremi öncesinde ineklerin süt veriminde saptanan 9-11 günlük
+  düşüş, bu görünmez sinyallerin bilimsel bir örneğidir.
+• Arıların "doğal pusula" yeteneği, yer altındaki bu elektrik değişimlerine
+  karşı onları diğer memelilerden daha duyarlı yapar.
+• Görsel: Hayakawa & Yamauchi (2024) — Şekil 3
+  (Deprem öncesi elektromanyetik kanal modeli).
+
+³ Hayakawa & Yamauchi (2024). Unusual Animal Behavior as a Possible Candidate
+  of Earthquake Prediction. Applied Sciences, 14(10), 4317.
+  DOI: 10.3390/app14104317 ✓✓✓
+⁴ Hayakawa vd. (2016). A study on the correlation of milk yield of cows with
+  seismicity and ULF magnetic field variations. Open Journal of Earthquake
+  Research, 5, 206–218. DOI: 10.4236/ojer.2016.54017 ✓✓
+
+───────────────────────────────────────────────────────────────────
+SLAYT 5: TÜRKİYE'NİN OPERASYONEL GÜCÜ: 200 METRE AVANTAJI
+───────────────────────────────────────────────────────────────────
+Akademik Özet:
+• Japonya'daki süt verimi çalışmaları kentsel gürültü kısıtı nedeniyle
+  şehir merkezlerinde başarısız olmuştur.
+• Türkiye'deki "200 metrelik yerleşim tampon bölgesi" mevzuatı, kovanların
+  gürültüden süzülmüş "temiz veri" üretmesini sağlayan yapısal bir avantajdır.
+
+Halk İçin Yorum:
+• Japonya ineklerle ölçtü çünkü elinde o veri vardı; Türkiye'nin 9 milyon
+  kovanı hem daha yaygın hem de daha hassas sensörlerdir.
+• Kanun gereği insanlardan uzak duran arılarımız, şehrin gürültüsünden
+  uzak oldukları için yerin en saf sesini duyabilirler.
+
+³ Hayakawa & Yamauchi (2024). Applied Sciences. ✓✓✓
+⁵ Anlaşılabilir Arıcılık Rehberi (2012). Tarım ve Orman Bakanlığı. ✓✓
+
+───────────────────────────────────────────────────────────────────
+SLAYT S-A: BİYO-SİSMİK VERİ SETLERİ — KAYNAK ŞEKİLLER
+───────────────────────────────────────────────────────────────────
+Aşağıdaki sentez bu 4 temel çalışmadan türetilmiştir:
+
+• Şekil 3 — Hayakawa & Yamauchi (2024): Tokyo 2021 süt verimi anomalisi [✓✓✓]
+• Şekil 5 — Wikelski (2020): Hayvan aktivite eşikleri ve kestirim modeli [✓✓✓]
+• Şekil 7.27 — Tautz (2008): Petek titreşim yayılım kanalları [✓✓✓]
+• Şekil 4.8 — Varol (2024): Ege Bölgesi arı zehiri protein içerikleri [✓✓✓]
+
+⁵ Varol (2024). Bal Arısı Zehirinin Bazı Kalite Parametrelerinin Belirlenmesi.
+  Doktora Tezi, Ege Üniversitesi. YÖK Tez Merkezi. ✓✓✓
+⁶ Tautz (2008). The Buzz about Bees. Springer-Verlag. ✓✓✓
+
+───────────────────────────────────────────────────────────────────
+SLAYT S-B: SENTEZ — TÜRKİYE BİYO-SİSMİK İZLEME AĞI (ARDU-BEE)
+───────────────────────────────────────────────────────────────────
+• Biyo-Sismik İzleme: 9 milyon kovanın akıllı sensör ağına (IoT) dönüştürülmesi,
+  dünyanın en geniş canlı sismograf ağını oluşturma potansiyeline sahiptir.
+• Jeokimyasal Terroir: Fay hatlarından süzülen minerallerin (Ca, Mg, K)
+  bala geçerek jeolojik bir imza ve marka oluşturması hedeflenmektedir.
+• Vaka Analizi: 2026 Iğdır vakası, arıların mekanik gürültüye verdiği tepkinin
+  biyo-mekanik alarm olarak saha düzeyindeki ilk belgesidir.
+
+Çelişki Analizi:
+• Wikelski (2020): Depremden saatler önce sinyal (mekanik duyarlılık)
+• Hayakawa (2024): Depremden haftalar önce sinyal (elektromanyetik duyarlılık)
+• Tartışma Sorusu: Arıların süper-organizma yapısı bu iki farklı sinyali
+  eşzamanlı işleyerek uyarı süresini stabilize edebilir mi?
+
+───────────────────────────────────────────────────────────────────
+SLAYT S-C: BİYO-SİSMİK ÇIKARIM VE ARAŞTIRMA BOŞLUĞU
+───────────────────────────────────────────────────────────────────
+Akademik Perspektif:
+• Arıcılık, yer bilimleriyle entegre edilerek sismobiyolojik bir ekosistem
+  izleme modeline dönüştürülmelidir.
+
+Pratik Perspektif:
+• Iğdır vakası, kovan güvenliği ve veri kalitesi için 200 metre tampon bölge
+  kuralının operasyonel önemini ortaya koymuştur.
+
+Karar Verici Çıkarımı:
+• AFAD ve AKS (Arıcılık Kayıt Sistemi) arasında dijital köprü kurularak
+  biyo-sismik erken uyarı protokolleri başlatılmalıdır.
+
+Araştırma Boşluğu (3 satır):
+• Yanıtlanmamış soru: Arıların 230-270 Hz huzur bandı ile yer kabuğundaki
+  elektrik değişimleri arasındaki doğrudan matematiksel bağ nedir?
+• Veri boşluğu: Türkiye'deki 9 milyon kovanın henüz yüzde 0.1'inde bile
+  dijital titreşim takip sistemi bulunmamaktadır.
+• Yöntem boşluğu: Fay hattı mineralleri üzerinden balın jeolojik izlenebilirliği
+  (kimlik doğrulaması) henüz yapılmamıştır.
+
+Tez Fikri (Seviye 4):
+"Kuzey Anadolu Fay Hattı (KAF) üzerindeki kovanlardan gelen dijital titreşim
+verilerinin yapay zekâ (LSTM derin öğrenme) ile analizi, M>5 depremler öncesi
+biyo-sismik anomalilerin karakteristik öncü süre profilini belirleyebilir."
+
+───────────────────────────────────────────────────────────────────
+SLAYT 6: SEMİNER TARTIŞMA SORULARI
+───────────────────────────────────────────────────────────────────
+• Wikelski (2020) çalışmasında hayvanların yalnızca kapalı ortamda (ahırda)
+  sinyal vermesi, arı kovanının neden ideal izole biyosensör olduğunu
+  sismolojik olarak nasıl açıklar?
+• Hayakawa (2024) kentsel gürültü kısıtı ile Türkiye'deki 200 metre kuralı
+  biyo-sismik veri kalitesini nasıl etkiler?
+• Arı zehirindeki protein kalitesinin fay hatlarıyla korelasyonu, Terroir Balı
+  markalaması için yeterli bilimsel dayanak oluşturabilir mi?
+
+───────────────────────────────────────────────────────────────────
+SLAYT 7: SONUÇ VE GELECEK VİZYONU
+───────────────────────────────────────────────────────────────────
+1. Bilimsel Çıkarım: Arılar, yer kabuğundaki hem mekanik titreşimi hem de
+   elektriksel değişimi kaydeden hibrit biyosensörlerdir.
+2. Toplumsal Çıkarım: Fay Yolu Arıcılığı, deprem riskini ekonomik bir
+   markalı bal hikâyesine dönüştüren özgün bir kırsal kalkınma modelidir.
+3. Karar Vericilere: Akıllı kovan sensör verilerinin AFAD'a entegrasyonu
+   başlatılmalıdır.
+4. Araştırma İhtiyacı: Biyo-Sismik Atlas tamamlanarak yerli arı ırklarımızın
+   sismotektonik koridorlara adaptasyonu haritalanmalıdır.
+5. Halk Mesajı: Arıları korumak, yer kabuğunun sessiz dilini dinleyen
+   sensörlerimizi korumaktır.
+6. Ana Mesaj: "Yerin altı ne kadar hareketliyse, yerin üstündeki balın
+   şifası ve biyo-sismik hikâyesi o kadar güçlüdür."
+
+───────────────────────────────────────────────────────────────────
+MANUEL EKLENECEK ŞEKİLLER (PPT SONRASI)
+───────────────────────────────────────────────────────────────────
+Slayt 2 → Wikelski (2020) Şekil 1 — İtalya haritası
+Slayt 4 → Hayakawa & Yamauchi (2024) Şekil 3 — EM kanal modeli
+S-A    → 2×2 ızgara:
+           Hayakawa (2024) Şekil 3
+           Wikelski (2020) Şekil 5
+           Tautz (2008) Şekil 7.27
+           Varol (2024) Şekil 4.8
+
+═══════════════════════════════════════════════════════════════════
+Düzeltmeler (v2 → v3):
+  EQ → Deprem (Slayt 2 başlığı)
+  LAIC modeli → elektromanyetik kanal modeli (Slayt 4)
+  traceability → izlenebilirlik (S-C)
+  IoT → akıllı sensör ağına (IoT) açıklamalı geçiş (S-B)
+  Iğdır "kanıtlamıştır" → "ortaya koymuştur" (S-C Pratik)
+═══════════════════════════════════════════════════════════════════

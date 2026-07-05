@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>TRT Radyo Röportajı — Fay Yolu Arıcılığı · Prof. Dr. Ali Osman Öncel · 9 Haziran 2026</title>
+<meta name="description" content="Prof. Dr. Ali Osman Öncel ile TRT Radyo röportajı: Fay Yolu Arıcılığı, sismotektonik koridorlar ve Türkiye bal yolu." />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg:#07090f; --surface:#0b0f1a; --panel:#0f1520;
+  --panel2:#131c2b; --panel3:#1a2236;
+  --blue:#3b9eff; --orange:#e67e22; --green:#22c55e;
+  --red:#f5576c; --purple:#9b59b6;
+  --gold:#c9a84c; --gold-light:#e8c97a;
+  --teal:#14b8a6;
+  --honey:#f59e0b; --honey-light:#fbbf24;
+  --text:#dde6f0; --muted:#64748b; --soft:#8fa8c0;
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(255,255,255,0.13);
+  --border-gold:rgba(201,168,76,0.3);
+  --border-blue:rgba(59,158,255,0.25);
+  --border-honey:rgba(245,158,11,0.3);
+  --border-teal:rgba(20,184,166,0.28);
+  --border-red:rgba(245,87,108,0.3);
+  --border-green:rgba(34,197,94,0.28);
+  --shadow:0 8px 40px rgba(0,0,0,0.6);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+p{text-align:justify;}
+body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',Georgia,serif;line-height:1.85;min-height:100vh;padding:24px 16px 56px;}
+.hb-wrap{max-width:960px;margin:0 auto;background:var(--surface);border-radius:22px;border:1px solid var(--border2);overflow:hidden;box-shadow:var(--shadow);}
+
+/* ── BANNER ── */
+.src-banner{background:linear-gradient(90deg,rgba(245,158,11,.12),rgba(34,197,94,.06));border-bottom:1px solid rgba(245,158,11,.22);padding:10px 28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.src-dot{width:8px;height:8px;border-radius:50%;background:var(--honey);box-shadow:0 0 6px var(--honey);animation:pulse 2s ease-in-out infinite;flex-shrink:0;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.src-label{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--honey);}
+.src-reviewed{margin-left:auto;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border-gold);border-radius:4px;padding:3px 10px;background:rgba(201,168,76,.07);}
+
+/* ── RİBBON ── */
+.hb-ribbon{background:linear-gradient(135deg,#060a14 0%,#0d1525 50%,#080e1b 100%);border-bottom:1px solid var(--border2);padding:18px 28px 16px;position:relative;overflow:hidden;}
+.hb-ribbon::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--honey),var(--gold),var(--teal),var(--honey));background-size:200%;animation:shimmer 4s linear infinite;}
+@keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
+.hb-ribbon-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
+.hb-badge{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:4px;}
+.hb-badge.honey{background:rgba(245,158,11,.15);color:var(--honey);border:1px solid var(--border-honey);}
+.hb-badge.geo{background:rgba(34,197,94,.12);color:var(--green);border:1px solid var(--border-green);}
+.hb-badge.sr{background:rgba(59,158,255,.15);color:var(--blue);border:1px solid var(--border-blue);}
+.hb-badge.teal{background:rgba(20,184,166,.12);color:var(--teal);border:1px solid var(--border-teal);}
+.hb-badge.red{background:rgba(245,87,108,.12);color:var(--red);border:1px solid var(--border-red);}
+.hb-badge.purple{background:rgba(155,89,182,.12);color:#c084fc;border:1px solid rgba(155,89,182,.28);}
+.hb-badge.gold{background:rgba(201,168,76,.12);color:var(--gold);border:1px solid var(--border-gold);}
+.hb-ribbon-title{font-family:'Montserrat',sans-serif;font-size:.79rem;font-weight:600;color:var(--soft);margin-bottom:8px;letter-spacing:.02em;}
+.hb-ribbon-meta{font-family:'JetBrains Mono',monospace;font-size:.67rem;color:var(--muted);line-height:1.75;}
+.hb-ribbon-meta strong{color:var(--soft);}
+
+/* ── HERO ── */
+.hb-hero{padding:54px 42px 46px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.hb-hero-bg-default{background:linear-gradient(160deg,#0d1520 0%,#08130d 40%,#0a0f1e 100%);}
+.hb-hero-bg-seismo{background:linear-gradient(160deg,#0d1828 0%,#091320 40%,#0a0f1e 100%);}
+.hb-hero-bg-geo{background:linear-gradient(160deg,#071520 0%,#091a14 40%,#060e10 100%);}
+.hb-hero-watermark{position:absolute;right:28px;bottom:-20px;font-size:13rem;opacity:.05;line-height:1;pointer-events:none;user-select:none;}
+.hb-eyebrow{display:block;font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--honey);margin-bottom:20px;}
+.hb-hero h1{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:800;line-height:1.2;color:#fff;margin-bottom:20px;}
+.hl-honey{color:var(--honey-light);} .hl-gold{color:var(--gold);} .hl-teal{color:var(--teal);} .hl-blue{color:var(--blue);} .hl-red{color:var(--red);}
+.hb-hero-sub{font-size:1.05rem;color:var(--soft);max-width:680px;line-height:1.9;margin-bottom:28px;}
+.hb-hero-tags{display:flex;flex-wrap:wrap;gap:10px;}
+.hb-hero-tag{font-family:'Montserrat',sans-serif;font-size:.69rem;font-weight:500;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:6px;padding:7px 13px;color:var(--soft);}
+.hb-hero-tag.honey-tag{border-color:var(--border-honey);background:rgba(245,158,11,.07);color:var(--honey);}
+.hb-hero-tag.teal-tag{border-color:var(--border-teal);background:rgba(20,184,166,.06);color:var(--teal);}
+.hb-hero-tag.blue-tag{border-color:var(--border-blue);background:rgba(59,158,255,.06);color:var(--blue);}
+.hb-hero-tag.red-tag{border-color:var(--border-red);background:rgba(245,87,108,.06);color:var(--red);}
+
+/* ── STAT BOXES ── */
+.hb-stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin:28px 24px;}
+.hb-stat-box{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px 16px;text-align:center;transition:transform .2s;}
+.hb-stat-box:hover{transform:translateY(-2px);}
+.hb-stat-box.honey-box{background:linear-gradient(135deg,rgba(245,158,11,.14),rgba(245,158,11,.04));border-color:var(--border-honey);}
+.hb-stat-box.gold-box{background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(201,168,76,.04));border-color:var(--border-gold);}
+.hb-stat-box.green-box{background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(34,197,94,.03));border-color:var(--border-green);}
+.hb-stat-box.blue-box{background:linear-gradient(135deg,rgba(59,158,255,.12),rgba(59,158,255,.03));border-color:var(--border-blue);}
+.hb-stat-box.teal-box{background:linear-gradient(135deg,rgba(20,184,166,.12),rgba(20,184,166,.03));border-color:var(--border-teal);}
+.hb-stat-box.red-box{background:linear-gradient(135deg,rgba(245,87,108,.12),rgba(245,87,108,.03));border-color:var(--border-red);}
+.hb-stat-box.purple-box{background:linear-gradient(135deg,rgba(155,89,182,.12),rgba(155,89,182,.03));border-color:rgba(155,89,182,.28);}
+.hb-stat-num{display:block;font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:800;line-height:1.1;margin-bottom:8px;}
+.honey-box .hb-stat-num{color:var(--honey-light);} .gold-box .hb-stat-num{color:var(--gold-light);} .green-box .hb-stat-num{color:var(--green);} .blue-box .hb-stat-num{color:var(--blue);} .teal-box .hb-stat-num{color:var(--teal);} .red-box .hb-stat-num{color:var(--red);} .purple-box .hb-stat-num{color:#c084fc;}
+.hb-stat-label{font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;line-height:1.6;}
+
+/* ── INNER WRAP ── */
+.hb-inner{padding:0 24px 44px;display:flex;flex-direction:column;align-items:center;}
+.hb-inner > *{width:100%;max-width:700px;}
+
+/* ── EXEC SUMMARY ── */
+.hb-exec{background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(201,168,76,.04));border:1px solid var(--border-honey);border-radius:14px;padding:28px 30px;margin:32px 0;}
+.hb-exec-label{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--honey);margin-bottom:14px;}
+.hb-exec p{color:#d4c09a;font-size:.98rem;line-height:2;text-align:justify;}
+
+/* ── SECTION LABEL ── */
+.hb-section-lbl{margin:38px 0 16px;display:flex;align-items:center;gap:14px;}
+.hb-section-lbl span{font-family:'Montserrat',sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:5px 14px;border-radius:4px;white-space:nowrap;}
+.hb-section-lbl::after{content:'';flex:1;height:1px;}
+.hb-section-lbl.honey-lbl span{color:var(--honey);border:1px solid var(--border-honey);background:rgba(245,158,11,.06);}
+.hb-section-lbl.honey-lbl::after{background:linear-gradient(90deg,rgba(245,158,11,.3),transparent);}
+.hb-section-lbl.teal-lbl span{color:var(--teal);border:1px solid var(--border-teal);background:rgba(20,184,166,.06);}
+.hb-section-lbl.teal-lbl::after{background:linear-gradient(90deg,rgba(20,184,166,.3),transparent);}
+.hb-section-lbl.blue-lbl span{color:var(--blue);border:1px solid var(--border-blue);background:rgba(59,158,255,.06);}
+.hb-section-lbl.blue-lbl::after{background:linear-gradient(90deg,rgba(59,158,255,.3),transparent);}
+.hb-section-lbl.gold-lbl span{color:var(--gold);border:1px solid var(--border-gold);background:rgba(201,168,76,.06);}
+.hb-section-lbl.gold-lbl::after{background:linear-gradient(90deg,rgba(201,168,76,.3),transparent);}
+.hb-section-lbl.red-lbl span{color:var(--red);border:1px solid var(--border-red);background:rgba(245,87,108,.06);}
+.hb-section-lbl.red-lbl::after{background:linear-gradient(90deg,rgba(245,87,108,.3),transparent);}
+.hb-section-lbl:not([class*="-lbl"]) span{color:var(--honey);border:1px solid var(--border-honey);background:rgba(245,158,11,.06);}
+.hb-section-lbl:not([class*="-lbl"])::after{background:linear-gradient(90deg,rgba(245,158,11,.3),transparent);}
+
+/* ── Q&A ── */
+.hb-qa{margin-bottom:28px;}
+.hb-q{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start;}
+.hb-q-icon{font-size:1rem;min-width:24px;margin-top:3px;}
+.hb-q-label{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+.hb-q-text{font-size:.97rem;color:var(--soft);font-style:italic;line-height:1.75;}
+.hb-a{background:linear-gradient(135deg,rgba(245,158,11,.07),rgba(245,158,11,.02));border-left:3px solid var(--honey);border-radius:0 12px 12px 0;padding:18px 22px;margin-left:8px;}
+.hb-a.blue-a{background:linear-gradient(135deg,rgba(59,158,255,.07),rgba(59,158,255,.02));border-left-color:var(--blue);}
+.hb-a.teal-a{background:linear-gradient(135deg,rgba(20,184,166,.07),rgba(20,184,166,.02));border-left-color:var(--teal);}
+.hb-a-label{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--honey);margin-bottom:10px;}
+.hb-a.blue-a .hb-a-label{color:var(--blue);}
+.hb-a.teal-a .hb-a-label{color:var(--teal);}
+.hb-a p{font-size:.97rem;color:var(--text);line-height:1.9;text-align:justify;margin-bottom:10px;}
+.hb-a p:last-child{margin-bottom:0;}
+.hb-a ul{padding-left:20px;margin-top:10px;}
+.hb-a li{font-size:.95rem;color:var(--soft);line-height:1.8;margin-bottom:6px;}
+
+/* ── ANALİZ KUTUSU ── */
+.hb-analysis{border-radius:12px;padding:22px 24px;margin:18px 0;}
+.hb-analysis.gold{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.03));border:1px solid rgba(201,168,76,.25);}
+.hb-analysis.honey{background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(245,158,11,.03));border:1px solid rgba(245,158,11,.25);}
+.hb-analysis.teal{background:linear-gradient(135deg,rgba(20,184,166,.1),rgba(20,184,166,.03));border:1px solid rgba(20,184,166,.25);}
+.hb-analysis.green{background:linear-gradient(135deg,rgba(34,197,94,.1),rgba(34,197,94,.03));border:1px solid rgba(34,197,94,.25);}
+.hb-analysis.blue{background:linear-gradient(135deg,rgba(59,158,255,.1),rgba(59,158,255,.03));border:1px solid rgba(59,158,255,.22);}
+.hb-analysis.red{background:linear-gradient(135deg,rgba(245,87,108,.1),rgba(245,87,108,.03));border:1px solid rgba(245,87,108,.25);}
+.hb-analysis-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.hb-analysis-icon{font-size:1.3rem;}
+.hb-analysis-head h4{font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;}
+.hb-analysis.gold .hb-analysis-head h4{color:var(--gold);}
+.hb-analysis.honey .hb-analysis-head h4{color:var(--honey);}
+.hb-analysis.teal .hb-analysis-head h4{color:var(--teal);}
+.hb-analysis.green .hb-analysis-head h4{color:var(--green);}
+.hb-analysis.blue .hb-analysis-head h4{color:var(--blue);}
+.hb-analysis.red .hb-analysis-head h4{color:var(--red);}
+.hb-analysis p{font-size:.95rem;color:var(--soft);line-height:1.85;margin-bottom:8px;text-align:justify;}
+.hb-analysis ul{padding-left:20px;margin-top:8px;}
+.hb-analysis li{font-size:.93rem;color:var(--soft);line-height:1.8;margin-bottom:6px;}
+
+/* ── DİĞER BLOKLAR ── */
+.hb-highlight{background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(59,158,255,.06));border-left:3px solid var(--honey);border-radius:0 12px 12px 0;padding:18px 22px;margin:20px 0;font-size:.98rem;color:#d4c09a;line-height:1.9;}
+.hb-personal-note{background:rgba(245,158,11,.06);border-left:3px solid var(--honey);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0;}
+.pn-label{display:block;font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--honey);margin-bottom:8px;}
+.hb-personal-note p{color:#d4c09a;font-size:.97rem;line-height:1.85;}
+.hb-divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:32px 0;}
+.hb-thinkzone{background:linear-gradient(135deg,rgba(59,158,255,.08),rgba(59,158,255,.02));border:1px solid rgba(59,158,255,.2);border-radius:12px;padding:20px 22px;margin:20px 0;}
+.hb-thinkzone-lbl{display:block;font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}
+.hb-thinkzone p{font-size:.95rem;color:var(--soft);line-height:1.8;text-align:justify;}
+
+/* ── TEKTONİK BÖLGE KARTLARI ── */
+.hb-tecto-grid{display:flex;flex-direction:column;gap:14px;margin:20px 0;}
+.hb-tecto-zone{border-radius:12px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;}
+.hb-tecto-zone.z1{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.22);}
+.hb-tecto-zone.z2{background:rgba(20,184,166,.08);border:1px solid rgba(20,184,166,.22);}
+.hb-tecto-zone.z3{background:rgba(155,89,182,.08);border:1px solid rgba(155,89,182,.22);}
+.hb-tecto-zone.z4{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.22);}
+.hb-tecto-zone.z5{background:rgba(59,158,255,.08);border:1px solid rgba(59,158,255,.22);}
+.hb-zone-num{font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;min-width:40px;line-height:1;}
+.z1 .hb-zone-num{color:var(--honey);} .z2 .hb-zone-num{color:var(--teal);} .z3 .hb-zone-num{color:#c084fc;} .z4 .hb-zone-num{color:var(--green);} .z5 .hb-zone-num{color:var(--blue);}
+.hb-zone-content h5{font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px;}
+.z1 .hb-zone-content h5{color:var(--honey);} .z2 .hb-zone-content h5{color:var(--teal);} .z3 .hb-zone-content h5{color:#c084fc;} .z4 .hb-zone-content h5{color:var(--green);} .z5 .hb-zone-content h5{color:var(--blue);}
+.hb-zone-content p{font-size:.92rem;color:var(--soft);line-height:1.75;text-align:justify;}
+
+/* ── KEY MESSAGE ── */
+.key-message{background:linear-gradient(135deg,rgba(245,158,11,.09),rgba(201,168,76,.06));border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:26px 28px;margin:28px 0;text-align:center;}
+.key-message-label{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--honey);margin-bottom:14px;display:block;}
+.key-message p{font-size:1.05rem;color:#d4c09a;line-height:1.9;font-style:italic;}
+.key-message strong{color:var(--honey-light);}
+
+/* ── CHAIN ── */
+.chain-wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0;}
+.chain-step{padding:5px 12px;border-radius:6px;font-size:.82rem;font-weight:600;font-family:'Montserrat',sans-serif;}
+.chain-arrow{color:var(--muted);font-size:.9rem;}
+
+/* ── İKİ SÜTUN ── */
+.hb-two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+.hb-info-box{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:20px;}
+.hb-info-box h5{font-family:'Montserrat',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}
+.hb-info-box p{font-size:.92rem;color:var(--soft);line-height:1.8;text-align:justify;}
+
+/* ── KAPANIŞ ── */
+.hb-final{background:linear-gradient(135deg,#0c1426 0%,#101a2e 50%,#0a1020 100%);border:1px solid var(--border-honey);border-radius:16px;padding:40px 32px;margin:28px auto;text-align:center;position:relative;overflow:hidden;max-width:700px;width:100%;}
+.hb-final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(245,158,11,.08) 0%,transparent 65%);}
+.hb-final h2{font-family:'Montserrat',sans-serif;font-size:1.7rem;font-weight:800;line-height:1.35;color:#fff;margin-bottom:18px;position:relative;}
+.hb-final-sub{font-size:1rem;color:var(--soft);max-width:620px;margin:0 auto 28px;line-height:1.9;position:relative;}
+.hb-pillars{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;position:relative;}
+.hb-pillar{font-family:'Montserrat',sans-serif;font-size:.68rem;font-weight:600;padding:8px 16px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid var(--border2);color:var(--soft);letter-spacing:.06em;}
+
+/* ── FOOTER ── */
+.hb-footer{background:var(--panel);border-top:1px solid var(--border);padding:20px 34px;text-align:center;font-family:'Montserrat',sans-serif;font-size:.73rem;color:var(--muted);line-height:1.85;}
+.hb-footer strong{color:var(--honey);}
+
+/* ── VİDEO COVER ── */
+.hb-video-cover{background:linear-gradient(135deg,#060c18 0%,#0a1220 100%);border-bottom:1px solid var(--border2);padding:28px 32px 24px;}
+.hb-video-label{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.hb-video-label::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);animation:pulse 1.8s ease-in-out infinite;}
+.hb-video-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:14px;overflow:hidden;border:1px solid rgba(245,87,108,.25);}
+.hb-video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+
+/* ── SORU NAVİGATÖRÜ ── */
+.qa-nav{background:var(--panel2);border:1px solid var(--border-honey);border-radius:14px;padding:20px 22px;margin:28px 0;}
+.qa-nav-label{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--honey);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.qa-nav-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;}
+.qa-nav-list li a{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid var(--border);text-decoration:none;color:var(--soft);font-size:.9rem;line-height:1.5;transition:all .18s;}
+.qa-nav-list li a:hover{background:rgba(245,158,11,.08);border-color:var(--border-honey);color:var(--honey);}
+.qa-nav-num{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:600;color:var(--honey);min-width:28px;opacity:.8;}
+
+/* ── AKORDİYON ── */
+.acc-section{margin-bottom:14px;}
+.acc-header{display:flex;align-items:center;gap:14px;cursor:pointer;padding:12px 16px;border-radius:10px;background:var(--panel2);border:1px solid var(--border);transition:all .2s;user-select:none;}
+.acc-header:hover{border-color:var(--border-honey);background:rgba(245,158,11,.06);}
+.acc-header.open{border-color:var(--border-honey);background:rgba(245,158,11,.07);border-bottom-left-radius:0;border-bottom-right-radius:0;}
+.acc-header-lbl{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border-radius:4px;white-space:nowrap;}
+.acc-header-lbl.honey-lbl{color:var(--honey);border:1px solid var(--border-honey);background:rgba(245,158,11,.06);}
+.acc-header-lbl.teal-lbl{color:var(--teal);border:1px solid var(--border-teal);background:rgba(20,184,166,.06);}
+.acc-header-lbl.blue-lbl{color:var(--blue);border:1px solid var(--border-blue);background:rgba(59,158,255,.06);}
+.acc-header-title{font-size:.93rem;color:var(--soft);flex:1;line-height:1.4;}
+.acc-arrow{color:var(--muted);font-size:.9rem;transition:transform .25s;flex-shrink:0;}
+.acc-header.open .acc-arrow{transform:rotate(180deg);color:var(--honey);}
+.acc-body{display:none;border:1px solid var(--border-honey);border-top:none;border-radius:0 0 10px 10px;padding:18px 16px 20px;background:rgba(245,158,11,.03);}
+.acc-body.open{display:block;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .hb-hero h1{font-size:1.6rem;}
+  .hb-hero{padding:36px 24px 32px;}
+  .hb-inner{padding:0 14px 36px;}
+  .hb-two-col{grid-template-columns:1fr;}
+  .hb-stat-row{margin:20px 12px;}
+}
+</style>
+</head>
+<body>
+<div class="hb-wrap">
+<!-- BANNER -->
+<div class="src-banner">
+  <div class="src-dot"></div>
+  <span class="src-label">📻 TRT Radyo · Canlı Yayın Röportajı</span>
+  <span style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--blue);opacity:.85;">9 Haziran 2026 · 06:44 · Soru–Cevap Arşivi</span>
+  <span class="src-reviewed">🍯 Fay Yolu Arıcılığı</span>
+</div>
+
+<!-- RİBBON -->
+<div class="hb-ribbon">
+  <div class="hb-ribbon-badges">
+    <span class="hb-badge honey">🐝 Arıcılık</span>
+    <span class="hb-badge sr">🌋 Sismoloji</span>
+    <span class="hb-badge teal">🗺️ JeoTurizm</span>
+    <span class="hb-badge geo">🌿 Ekoloji</span>
+    <span class="hb-badge" style="background:rgba(155,89,182,.12);color:#c084fc;border:1px solid rgba(155,89,182,.28);">🔬 Araştırma</span>
+  </div>
+  <div class="hb-ribbon-title">TRT Radyo Röportajı — Fay Yolu Arıcılığı Soru–Cevap Arşivi</div>
+  <div class="hb-ribbon-meta">
+    <strong>Konuk:</strong> Prof. Dr. Ali Osman Öncel · İstanbul Üniversitesi-Cerrahpaşa, Jeofizik Müh. Bölümü &nbsp;|&nbsp;
+    <strong>Tarih:</strong> 9 Haziran 2026 &nbsp;|&nbsp; <strong>Format:</strong> 10 Soru · Layman Üslubu
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hb-hero">
+  <span class="hb-eyebrow">TRT Radyo · 9 Haziran 2026 · Canlı Röportaj</span>
+  <h1><span class="hl-honey">Fay Yolu</span> Arıcılığı<br><span style="font-size:1.5rem;font-weight:600;color:var(--soft);">Arılar Fayları, Faylar Balı Nasıl Şekillendiriyor?</span></h1>
+  <p class="hb-hero-sub">Türkiye'nin 1.200 km'lik aktif fay koridoru — Muğla kızılçamından Bingöl gevene uzanan bu yolculuk, aynı zamanda dünyanın en özgün bal rotasıdır. Bir deprem bilimcinin gözünden arılar, nektar ve tektonik plakalar.</p>
+  <div class="hb-hero-tags">
+    <span class="hb-hero-tag honey-tag">🍯 Bal Yolu 1.200 km</span>
+    <span class="hb-hero-tag honey-tag">🐝 5 Arı Irkı</span>
+    <span class="hb-hero-tag teal-tag">🌋 NAF · EAF · BAF</span>
+    <span class="hb-hero-tag">📡 Jeokimyasal Parmak İzi</span>
+    <span class="hb-hero-tag">🌍 JeoTurizm</span>
+  </div>
+</div>
+
+<!-- STAT KUTULARI -->
+<div class="hb-stat-row">
+  <div class="hb-stat-box honey-box"><span class="hb-stat-num">~9M</span><div class="hb-stat-label">Kayıtlı Kovan · Türkiye</div></div>
+  <div class="hb-stat-box gold-box"><span class="hb-stat-num">%90</span><div class="hb-stat-label">Dünya Çam Balı Payı</div></div>
+  <div class="hb-stat-box teal-box"><span class="hb-stat-num">1.200 km</span><div class="hb-stat-label">Türkiye Bal Yolu</div></div>
+  <div class="hb-stat-box green-box"><span class="hb-stat-num">5 Irk</span><div class="hb-stat-label">Fay Hattı Ekotipi</div></div>
+  <div class="hb-stat-box blue-box"><span class="hb-stat-num">3 Fay</span><div class="hb-stat-label">NAF · EAF · BAF</div></div>
+</div>
+
+<!-- İÇERİK -->
+<div class="hb-inner">
+
+<!-- ÖZET -->
+<div class="hb-exec">
+  <div class="hb-exec-label">🎙️ Röportaj Özeti</div>
+  <p>Bu röportajda, depremleriyle tanınan Türkiye'nin fay hatlarının aynı zamanda dünyanın en zengin arıcılık koridorlarını oluşturduğunu konuşuyoruz. "Fay yolu arıcılığı" — yeryüzünün derin hareketlerini bal üretimiyle buluşturan özgün bir vizyon. Muğla'dan başlayıp Bingöl'de biten 1.200 km'lik bu rotada her çiçeğin, her arı ırkının ve her balın arkasında jeolojik bir hikâye yatıyor.</p>
+</div>
+
+<!-- SORU NAVİGATÖRÜ -->
+<div class="qa-nav">
+  <div class="qa-nav-label">🎙️ Sorular — Tıklayarak Doğrudan Git</div>
+  <ul class="qa-nav-list">
+    <li><a href="#s01"><span class="qa-nav-num">S01</span>"Fay yolu arıcılığı" kavramını nasıl tanımlıyorsunuz?</a></li>
+    <li><a href="#s02"><span class="qa-nav-num">S02</span>Sizi arılar ve arıcılık üzerine çalışmaya yönlendiren motivasyon ne oldu?</a></li>
+    <li><a href="#s03"><span class="qa-nav-num">S03</span>Aktif fay zonları bitki örtüsünü ve nektar kaynaklarını nasıl etkiliyor?</a></li>
+    <li><a href="#s04"><span class="qa-nav-num">S04</span>Arıların yer kabuğu değişimlerine hassasiyetine dair bilimsel veriler neler?</a></li>
+    <li><a href="#s05"><span class="qa-nav-num">S05</span>Fay hatları üzerindeki ballar kimyasal olarak farklı mı?</a></li>
+    <li><a href="#s06"><span class="qa-nav-num">S06</span>Araştırmalarınızda sizi en çok şaşırtan bulgu ne oldu?</a></li>
+    <li><a href="#s07"><span class="qa-nav-num">S07</span>Arı davranışlarının deprem öncesi değiştiğine dair somut gözlemler var mı?</a></li>
+    <li><a href="#s08"><span class="qa-nav-num">S08</span>Fay yolu arıcılığı açısından Türkiye'de öne çıkan bölgeler hangileri?</a></li>
+    <li><a href="#s09"><span class="qa-nav-num">S09</span>Bu yaklaşımın arıcılık sektörüne ve kırsal kalkınmaya katkıları neler?</a></li>
+    <li><a href="#s10"><span class="qa-nav-num">S10</span>Önümüzdeki yıllarda hangi araştırmaların yapılmasını gerekli görüyorsunuz?</a></li>
+  </ul>
+</div>
+
+<!-- VİDEO -->
+<div class="hb-section-lbl red-lbl"><span>🎬 Yayın Kaydı</span></div>
+<div class="hb-video-label" style="margin-bottom:12px;">Canlı Yayın · TRT Ankara Radyosu</div>
+<div class="hb-video-wrap" style="margin-bottom:14px;">
+  <iframe id="hb-yt-player" src="https://www.youtube.com/embed/4POIQwZ3qLM?enablejsapi=1" title="Fay Yolu Arıcılığı — TRT Ankara Radyosu Röportajı" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+</div>
+<p style="font-size:.86rem;color:var(--muted);font-style:italic;text-align:center;margin-bottom:18px;">Yayın bağlantısı: <a href="https://youtu.be/4POIQwZ3qLM" style="color:var(--blue);text-decoration:none;">youtu.be/4POIQwZ3qLM</a></p>
+
+<div class="hb-analysis blue" style="margin-top:0;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">⏱️</span><h4>Zaman Damgaları</h4></div>
+  <ul style="list-style:none;padding-left:0;margin-top:6px;">
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(0);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">00:00</a> &nbsp;—&nbsp; Giriş: Fay Yolu Arıcılığı Nedir</li>
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(94);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">01:34</a> &nbsp;—&nbsp; Konuk Tanıtımı: Prof. Dr. Ali Osman Öncel</li>
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(153);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">02:33</a> &nbsp;—&nbsp; Arı Coğrafyası ve Deprem Coğrafyasının Örtüşmesi</li>
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(251);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">04:11</a> &nbsp;—&nbsp; Deprem-Hayvan İlişkisi: Motoji Ikeya ve 1995 Kobe</li>
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(398);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">06:38</a> &nbsp;—&nbsp; Arı Titreşim Bantları: Huzur ve Panik Frekansları</li>
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(529);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">08:49</a> &nbsp;—&nbsp; Iğdır Vakası ve Kaynağa Yakınlık İlkesi</li>
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(660);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">11:00</a> &nbsp;—&nbsp; Biyosensör ve Ulusal Erken Uyarı Entegrasyonu</li>
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(708);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">11:48</a> &nbsp;—&nbsp; Fay Yolunun Bal Mineral İçeriğine Etkisi</li>
+    <li style="margin-bottom:7px;"><a href="#hb-yt-player" onclick="hbSeek(893);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">14:53</a> &nbsp;—&nbsp; Muğla Doktora Tezi ve Rize Ballarının Kaynağı</li>
+    <li style="margin-bottom:0;"><a href="#hb-yt-player" onclick="hbSeek(1032);return false;" style="font-family:'JetBrains Mono',monospace;color:var(--blue);text-decoration:none;font-weight:600;cursor:pointer;">17:12</a> &nbsp;—&nbsp; Kapanış ve Değerlendirme</li>
+  </ul>
+  <p style="margin-top:14px;font-size:.84rem;color:var(--muted);font-style:italic;">Not: Aşağıdaki soru–cevap arşivi yayından önce hazırlanan sorulara dayanır. Canlı yayında soruların akışı farklılaşmıştır; videodaki zaman damgaları yayının gerçek akışını yansıtır.</p>
+</div>
+
+<!-- S1 -->
+<div class="hb-section-lbl"><span>Soru 01 — Tanım</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Öncelikle "fay yolu arıcılığı" kavramını nasıl tanımlıyorsunuz? Bu fikir nasıl ortaya çıktı?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Aslında her şey, deprem haritalarıyla bal haritalarını üst üste koyduğumuz bir merak deneyiyle başladı. Türkiye'nin en kaliteli ballarının üretildiği bölgelerle en aktif fay hatlarının neredeyse <strong>"ikiz kardeş"</strong> gibi aynı yerlerde toplandığını gördük.</p>
+    <p>"Fay Yolu Arıcılığı" şunu söylüyor: Fay hatları sadece yıkım üreten çizgiler değil; yerin altındaki kalsiyum ve magnezyum gibi zengin mineralleri toprağa taşıyan dev <strong>"besleme kanallarıdır."</strong> Bu zengin toprakta yetişen çiçeklerin nektarı da daha kaliteli ve aromatik olur.</p>
+    <p>Kısacası, yıllardır depremleri okuduğum haritalara bir de arıların gözünden, balın tadından bakmak istedim — Fay Yolu Arıcılığı fikri böyle doğdu.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Bayır, H. (2019). <em>Konya ilinin farklı lokasyonlarında üretilen bal arısı, bal ve polende ağır metal düzeyi ve bazı fiziko-kimyasal özelliklerin belirlenmesi</em> (Doktora tezi). Selçuk Üniversitesi Fen Bilimleri Enstitüsü.</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Şahin, İ. (2024). <em>Farklı bal arısı (Apis mellifera L.) ırk/ekotiplerinin Bingöl koşullarında fizyolojik ve davranışsal özellikleri ile ballarının kalitelerinin belirlenmesi</em> (Doktora tezi). Bingöl Üniversitesi Fen Bilimleri Enstitüsü.</li>
+    <li>Tolon, B. (1999). <em>Muğla ve yöresi çam ballarının biyokimyasal özellikleri üzerine bir araştırma</em> (Doktora tezi). Ege Üniversitesi Fen Bilimleri Enstitüsü.</li>
+  </ul>
+</div>
+
+<!-- S2 -->
+<div class="hb-section-lbl"><span>Soru 02 — Motivasyon</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Bir deprem bilimci olarak sizi arılar ve arıcılık üzerine çalışmaya yönlendiren temel motivasyon ne oldu?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Bir sismolog olarak ömrüm yerin altındaki sarsıntıları dinlemekle geçti. Türkiye, deprem açısından dünyanın en hareketli kuşaklarından biri; ama bu hareket bize sadece risk değil, aynı zamanda kaplıcalar, mineralli sular ve zengin bir bitki örtüsü de sunuyor.</p>
+    <p>Arıları, kovanın etrafındaki kilometrelerce geniş bir alanda her gün çiçekleri gezen profesyonel bir <strong>"numune alan ekip"</strong> olarak düşünebilirsiniz. Binlerce arı, hangi çiçeğe konarsa o toprağın derinliklerinden gelen mineral kayıtlarını bala kodluyor.</p>
+    <p>Bunu fark edince şunu düşündüm: Bu canlı numune alma sistemi aslında yerin üstünde çalışan devasa bir <strong>"jeokimyasal kayıt cihazı"</strong>dır. Benim motivasyonum da tam olarak bu — yerin altındaki sismik imzayı, yerin üstündeki balın jeokimyasal parmak izleri üzerinden okumak.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Bayır, H. (2019). <em>Konya ilinin farklı lokasyonlarında üretilen bal arısı, bal ve polende ağır metal düzeyi ve bazı fiziko-kimyasal özelliklerin belirlenmesi</em> (Doktora tezi). Selçuk Üniversitesi Fen Bilimleri Enstitüsü.</li>
+    <li>Korpela, S. ve Pihlaja, K. (2015). Honey bee (<em>Apis mellifera</em>) as a tool for monitoring environmental contamination. <em>Environmental Monitoring and Assessment</em>, <em>187</em>(1), 1–19.</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Tautz, J. (2008). <em>The buzz about bees: Biology of a superorganism</em>. Springer-Verlag.</li>
+  </ul>
+</div>
+
+<div class="hb-personal-note">
+  <span class="pn-label">🍯 Saha Notu</span>
+  <p>"Bir arı kovanı, 5 km yarıçaplı alanda her gün yaklaşık 300.000 uçuş gerçekleştirir. Bu, herhangi bir bilimsel örnekleme sisteminin yapabileceğinin çok ötesinde bir kapsama alanı demektir."</p>
+</div>
+
+<hr class="hb-divider">
+
+<!-- S3 -->
+<div class="hb-section-lbl teal-lbl"><span>Soru 03 — Fay &amp; Flora</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Aktif fay zonlarının bulunduğu bölgelerdeki doğal ortamın, bitki örtüsünü ve nektar kaynaklarını etkilediğine dair hangi gözlemler bulunuyor?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Bunu anlamak için yerkabuğunu devasa bir mutfak gibi düşünebiliriz. Fayı, yerin altından mineralli <strong>"soslar"</strong> fışkırtan bir mutfak tezgâhına benzetebiliriz. Yerin altındaki dev kayaçlar sarsıntılarla kırıldığında, derinlerden gelen kalsiyum, magnezyum ve potasyum gibi zengin mineralli sular çatlaklardan sızarak yüzeye ulaşır. Bu doğal "soslar" toprağa karıştığında, orada yetişen bitkinin besini, kokusu ve dolayısıyla balın lezzeti de değişiyor.</p>
+    <p>Türkiye haritasını açıp baktığımızda şunu net bir şekilde görüyoruz: Muğla'nın dünyaca ünlü çam balı, Bingöl'ün o yüksek aromalı yayla balları — hepsi aktif fay hatlarını adeta bir şerit gibi izleyen bölgelerde toplanmış durumda. Bu kesinlikle bir tesadüf değil; fayın toprağı havalandırıp zenginleştirmesiyle ortaya çıkan bir <strong>jeoloji hediyesidir.</strong></p>
+    <p>Özellikle Erzurum'daki Tortum Çayı Vadisi gibi bölgelerde bu durum çok çarpıcıdır. Fayların yarattığı dik yükselti farkları, vadi içinde <strong>"mikroklima"</strong> alanları oluşturur — vadinin içinde birkaç kilometrelik küçücük bir alanda bile farklı bir iklim adacığından söz ediyoruz. Bu da bitki çeşitliliğini adeta patlatıyor. Bitki ne kadar çeşitlenirse arının sofrası o kadar zenginleşiyor, ortaya çıkan balın aromatik gücü de o denli artıyor.</p>
+    <p>Bu zenginliğin taşınma mekanizması da bir o kadar ilginç: Fay çatlakları, yerin derinliklerinden mineralli <strong>"kaynak sularının"</strong> yüzeye ulaşması için devasa doğal kanallar açar. Bu mineralli sular toprağa karıştığında bitkiler elementleri kökleriyle alır — ve tarlacı arı o çiçeğin nektarını işlediğinde, yerin kilometrelerce derininden gelen mineral izi bala kodlanmış olur. Türkiye'nin yaklaşık 3.000–3.900 endemik bitkisinin önemli bir bölümü tam da bu fay vadilerinde, o mineralli topraklarda yetişiyor. Geven cinsinin 439 türünden 216'sı, kekiğin 40 taksonundan 18'i yalnızca Türkiye'de bulunan endemik türler — bunlar arının sofrasının yeri başka ülkede olmayan özgün lezzetleri ve taklit edilemez bir jeolojik mirasın ürünü.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Ateş, Y. (2014). <em>Bingöl ve yöresinde üretilen balların kimyasal incelenmesi</em> (Yüksek lisans tezi). Bingöl Üniversitesi Fen Bilimleri Enstitüsü.</li>
+    <li>Orhan, T. (2017). <em>Tortum Çayı vadisinin (Uzundere–su kavuşumu arası) jeopark potansiyelinin belirlenmesi</em> (Doktora tezi). Atatürk Üniversitesi Fen Bilimleri Enstitüsü.</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Tolon, B. (1999). <em>Muğla ve yöresi çam ballarının biyokimyasal özellikleri üzerine bir araştırma</em> (Doktora tezi). Ege Üniversitesi Fen Bilimleri Enstitüsü.</li>
+  </ul>
+</div>
+
+<div class="hb-analysis teal">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">⛓️</span><h4>Sismotektonik Değer Zinciri</h4></div>
+  <div class="chain-wrap">
+    <span class="chain-step" style="background:rgba(239,68,68,.15);color:#fca5a5;">🌋 Fay Hattı</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step" style="background:rgba(245,158,11,.12);color:var(--honey);">Kayaç Kırılması</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step" style="background:rgba(56,189,248,.12);color:#7dd3fc;">Mineral Çözünmesi</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step" style="background:rgba(74,222,128,.12);color:#4ade80;">Toprak Zenginleşmesi</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step" style="background:rgba(167,243,208,.12);color:var(--teal);">Bitki Çeşitliliği</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step" style="background:rgba(245,158,11,.15);color:var(--honey-light);">Nektar Aroması</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-step" style="background:rgba(245,158,11,.22);color:var(--honey-light);font-weight:800;">🍯 Jeokimyasal Parmak İzi</span>
+  </div>
+  <p style="margin-top:12px;font-size:.88rem;">Fay zonları toprağın mineral yapısını, yüzey sularının kimyasını ve topoğrafyayı eş zamanlı şekillendiriyor. Bu zincirin son halkası, balın kimyasal olarak coğrafi kökenini ele vermesi.</p>
+</div>
+
+<!-- S4 -->
+<div class="hb-section-lbl teal-lbl"><span>Soru 04 — Arı Hassasiyeti</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Arıların yer kabuğunda meydana gelen fiziksel ya da kimyasal değişimlere karşı hassasiyet gösterdiğine ilişkin hangi bilimsel veriler mevcut?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Arılar aslında binlerce küçük sensörü olan <strong>canlı sismograflardır</strong>; vücut titreşimleriyle birbirleriyle konuşuyorlar. Kovan içinde birbirlerine haber verirken saniyede yaklaşık 250 kez titreşiyorlar — titreşim onlar için adeta bir dil. Yer kabuğunun derinliklerinden gelen alçak frekanslı sismik dalgalar, tam da arıların bu hassas algı bandına denk gelebiliyor.</p>
+    <p>Dünyada bu konuda çok çarpıcı çalışmalar var. 1995 Kobe Depremi'nin hemen ardından Japon araştırmacı Kiyoo Wadatsumi, vatandaşlardan topladığı <strong>1.519 sıra dışı hayvan davranışı raporu</strong>yla deprem öncesindeki biyolojik sinyalleri ilk kez bu kadar sistematik biçimde bir araya getirdi. Japon fizikçi Motoji Ikeya ise bu ham veriyi 2004 yılında yayımladığı <em>"Earthquakes and Animals: From Folk Legends to Science"</em> adlı kitabında bilimsel bir çerçeveye oturttu: arılar, kovanı terk etmekten saatler önce <strong>iletişim danslarını kaybediyor</strong> — tarlacı arıların besin tarifi için kullandığı 230–270 Hz "huzurlu bant" sismik stres altında 265 Hz'in üzerine fırlıyor, artık ne besin yeri ne mesafe tarifliyor, kovan içinde bir kaos sinyaline dönüşüyor. Arıların deprem öncesi havada oluşan statik elektrik değişimlerine karşı da aşırı duyarlı oldukları belgelenmiştir.</p>
+    <p>Türkiye'de ise çok taze ve somut bir örneğimiz var. <strong>Mayıs 2026'da Iğdır'da yaşanan</strong> olayda, ağır araç ve sürü hareketlerinin yarattığı titreşimler arılara deprem öncesi bir sarsıntıymış gibi geldi; koloniler büyük bir stresle saldırganlaştı. Buna bilimsel olarak <strong>"biyolojik yanlış alarm"</strong> diyoruz. Henüz bunu resmi bir erken uyarı sistemi olarak sunmak için erken; ama arıların bu hassasiyetini Ardu-Bee gibi sistemlerle sistematik veriye dönüştürürsek, yer bilimleriyle biyolojiyi buluşturan yepyeni bir alan açabiliriz.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Ikeya, M. (2004). <em>Earthquakes and animals: From folk legends to science</em>. World Scientific.</li>
+    <li>Kirschvink, J. L. (2000). Earthquake prediction by animals: Evolution and sensory perception. <em>Bulletin of the Seismological Society of America</em>, <em>90</em>(2), 312–323. https://doi.org/10.1785/0119990114</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Tautz, J. (2008). <em>The buzz about bees: Biology of a superorganism</em>. Springer-Verlag.</li>
+    <li>Wadatsumi, K. (1995). <em>Zenkusa: 1519-ken no shōgen — Jishin to dōbutsu no fushigina kankei</em> [1519 Tanıklık: Deprem ve Hayvanların Gizemli İlişkisi]. Japan Uni Agency.</li>
+    <li>Woith, H., Petersen, G. M., Hainzl, S., &amp; Dahm, T. (2018). Review: Can animals predict earthquakes? <em>Bulletin of the Seismological Society of America</em>, <em>108</em>(3A), 1031–1045. https://doi.org/10.1785/0120170313</li>
+  </ul>
+</div>
+
+<!-- S5 -->
+<div class="hb-section-lbl"><span>Soru 05 — Balın Kimyası</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Fay hatları üzerinde veya yakınında üretilen balların kimyasal ve biyolojik özellikleri bakımından farklılık gösterdiğini söylemek mümkün mü?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Evet, ve bu belki de konunun en heyecan verici boyutu. Her fay hattı yerin farklı derinliklerinden beslendiği için toprağa farklı bir mineral imzası bırakıyor. <strong>Bir yerde magnezyum baskınken, başka yerde kalsiyum ve potasyum öne çıkıyor; bu fark doğrudan bala yansıyor.</strong> Arı bu nektarı işlerken bal, özünde o toprağın jeokimyasal bir kaydı haline geliyor.</p>
+    <p>Pratik bir örnekle açıklayayım: NAF koridoru boyunca üretilen Muğla kızılçam balı, laboratuvar analizlerinde Bingöl'ün EAF üzerindeki kekik balından belirgin şekilde ayrışıyor. Bilimsel dilde bize <strong>"coğrafi köken tespiti"</strong> diyoruz. <strong>Yani balın kimyasına bakarak "bu bal gerçekten Muğla mı, yoksa Bingöl mü?" diye sorup laboratuvardan kesin bir cevap alabiliyoruz.</strong></p>
+    <p>Düşünün:</p>
+    <ul style="margin:.6rem 0 .6rem 1.2rem;line-height:2;">
+      <li>Muğla'nın sismik koridorundan gelen o meşhur <strong>çam balı</strong>…</li>
+      <li>Bingöl'ün fay hatları kesişimindeki yüksek aromalı <strong>geven balı</strong>…</li>
+      <li>EAF üzerindeki bazaltik topraklardan beslenen <strong>kekik balları</strong>…</li>
+    </ul>
+    <p>Bu balların her biri, çıktığı yerin <strong>"jeolojik parmak izini"</strong> bir mühür gibi kavanozunda taşıyor.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Ateş, Y. (2014). <em>Bingöl ve yöresinde üretilen balların kimyasal incelenmesi</em> (Yüksek lisans tezi). Bingöl Üniversitesi Fen Bilimleri Enstitüsü.</li>
+    <li>Gurel, F., Karkacier, M. ve Ozdemir, F. (1998). Identification of sugar honey, multifloral honey and honeydew honey based on mineral content, total ash, pH and acidity. <em>Apiacta</em>, <em>33</em>, 42–45.</li>
+    <li>Hennessy, S. N., Downey, G. ve O'Donnell, C. P. (2010). Attempted confirmation of the provenance of Corsican PDO honey using FT-IR spectroscopy and multivariate data analysis. <em>Journal of Agricultural Food Chemistry</em>, <em>58</em>(17), 9401–9406.</li>
+    <li>Karabagias, I. K., Badeka, A., Kontakos, S., Karabournioti, S. ve Kontominas, M. G. (2014). Characterisation and classification of Greek pine honeys according to their geographical origin based on volatiles, physicochemical parameters and chemometrics. <em>Food Chemistry</em>, <em>146</em>, 548–557.</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Tolon, B. (1999). <em>Muğla ve yöresi çam ballarının biyokimyasal özellikleri üzerine bir araştırma</em> (Doktora tezi). Ege Üniversitesi Fen Bilimleri Enstitüsü.</li>
+  </ul>
+</div>
+
+<div class="hb-analysis gold">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📡</span><h4>Üç Fay — Üç Bal İmzası</h4></div>
+  <ul>
+    <li><strong style="color:var(--honey);">NAF Koridoru</strong> — Kızılçam salgı balı: Ege kıyısı silika-kalkeri, Mg zengin toprak, düşük HMF, yüksek enzim aktivitesi.</li>
+    <li><strong style="color:var(--teal);">EAF Koridoru</strong> — Kekik ve lavanta balı: Bazaltik toprak, yüksek fenolik içerik, güçlü antimikrobiyal özellik.</li>
+    <li><strong style="color:#c084fc;">BAF Koridoru</strong> — Bingöl geveni: NAF+EAF+BAF kavşak noktası, dünyanın en yoğun mineral çeşitliliği, nadir aromatik bileşikler.</li>
+  </ul>
+</div>
+
+<hr class="hb-divider">
+
+<!-- S6 -->
+<div class="hb-section-lbl"><span>Soru 06 — En Şaşırtıcı Bulgu</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Fay yolu arıcılığı kapsamında bugüne kadar yürüttüğünüz araştırmalarda sizi en çok şaşırtan bulgu ne oldu?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Beni en çok şaşırtan şey şu oldu: Türkiye'deki fay hatları sadece toprağı kırmamış — arıların genetik mirasını da adeta bölgelere ayırıp milyonlarca yıl boyunca korumuş.</p>
+    <p><strong>Anadolu, Kafkas, Karniyol, Suriye ve Meda…</strong> Bu beş arı ırkının doğal sınırlarına baktığınızda; Kuzey Anadolu ve Doğu Anadolu fay zonlarının sanki <strong>cetvelle çizilmiş</strong> gibi araya girdiğini, her bir ırkı kendi güvenli bölgesinde tuttuğunu görüyorsunuz. Faylar sadece yerin altında değil, yerin üstündeki biyolojik çeşitlilikte de aşılması güç <strong>doğal kale duvarları</strong> örmüş.</p>
+    <p>Ancak bugün insan eliyle bu doğal izolasyon bozulduğunda — yani her yere her ırk karıştırıldığında — arı o bölgenin iklimine ve bitkisine tam uyum sağlayamıyor. Sonuçta koloni verimi, <strong>neredeyse her üç kovandan birini kaybetmişiz gibi %20–30 oranında düşebiliyor.</strong> Doğa bize açıkça "bu sismik sınırlara saygı duy" diyor.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Adam, B. (1983). <em>In search of the best strains of honeybees</em>. Northern Bee Books.</li>
+    <li>Güler, A. (2017). <em>Türkiye'nin arı genetik kaynakları ve ıslahı</em>. Ondokuz Mayıs Üniversitesi Yayınları.</li>
+    <li>Kandemir, İ., Kence, M., Sheppard, W. S. ve Kence, A. (2006). Mitochondrial DNA variation in honey bee (<em>Apis mellifera</em> L.) populations from Turkey. <em>Journal of Apicultural Research and Bee World</em>, <em>45</em>(1), 33–38.</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Ruttner, F. (1988). <em>Biogeography and taxonomy of honey bees</em>. Springer-Verlag.</li>
+  </ul>
+</div>
+
+<div class="hb-highlight">
+  "Fay hatları sadece deprem üretmez — milyonlarca yıl boyunca hem toprağı minerallerce zenginleştirir hem de canlı türlerini coğrafi olarak izole ederek genetik çeşitliliği korur. Türkiye'nin arı genetik hazinesi, aynı zamanda tektonik tarihin bir ürünüdür."
+</div>
+
+<!-- S7 -->
+<div class="hb-section-lbl blue-lbl"><span>Soru 07 — Deprem Öncesi Davranış</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Arı davranışlarının deprem öncesinde değişebileceğine yönelik görüşler zaman zaman gündeme geliyor. Bu konuda elde edilmiş somut gözlemler veya çalışmalar var mı?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Bu soru bilim dünyasında da çok konuşulan bir konu; ama cevap verirken ayağımızı yere sağlam basmamız gerekiyor. Bu alandaki bilimsel temeli atan ülke Japonya'dır. 1995 Kobe Depremi sonrasında Kiyoo Wadatsumi vatandaşlardan topladığı 1.519 hayvan davranışı raporunu derledi; Motoji Ikeya ise bu ham veriyi 2004'te akademik bir kitaba dönüştürerek arıların davranışlarını fiziksel modellerle açıkladı. Önemli bir not: Japonya bu bulguları bugüne kadar ulusal bir erken uyarı sistemine <em>entegre etmedi</em> — çalışmalar saha gözlemi ve laboratuvar düzeyinde kaldı. Evet, özellikle bu çalışmalarda büyük depremlerden saatler hatta günler önce arıların normal vızıltı frekansının <strong>"huzurlu bant"</strong> dediğimiz 230–270 Hz aralığından bir <strong>"alarm bandına"</strong> (265–350 Hz) kaydığı gözlemlendi.</p>
+    <p>Bunun bilimsel açıklaması arıların muazzam hassasiyetinde gizli. Arılar, yer kabuğunun derinliklerinden gelen mikro titreşimleri, elektromanyetik alan değişimlerini ve radon gazı sızıntılarını bizlerden çok daha önce hissedebilen <strong>"canlı sismograflar"</strong> gibidir. Hatta Mayıs 2026'da Iğdır'da yaşadığımız olay, yer kabuğu sarsıntılarının arılarda nasıl bir <strong>"biyolojik yanlış alarm"</strong> tetikleyebildiğini açıkça gösterdi.</p>
+    <p>Gelecekte <strong>Ardu-Bee</strong> gibi dijital ağları kurduğumuzda iki şeyi aynı anda kazanacağız: Hem arıların sağlığını ve verimini anlık izleyebileceğiz, hem de deprem öncesi olası anormallikleri kaydeden devasa bir <strong>biyolojik sismograf ağı</strong> oluşturmuş olacağız. Henüz bu sistem resmi bir "erken uyarı" aracı değildir; ancak yer bilimleri ile biyolojinin bu kesişimi, afet yönetiminde bize yepyeni pencereler açabilir.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Farmonaut. (2026). <em>Bee keeping apiculture &amp; apiary trends for 2026</em>. farmonaut.com</li>
+    <li>Ikeya, M. (2004). <em>Earthquakes and animals: From folk legends to science</em>. World Scientific.</li>
+    <li>Kirschvink, J. L. (2000). Earthquake prediction by animals: Evolution and sensory perception. <em>Bulletin of the Seismological Society of America</em>, <em>90</em>(2), 312–323. https://doi.org/10.1785/0119990114</li>
+    <li>Li, Y., Liu, Y., Jiang, Z., Guan, J., Yi, G., Cheng, S., Yang, B., Fu, T., &amp; Wang, Z. (2009). Behavioral change related to Wenchuan devastating earthquake in mice. <em>Bioelectromagnetics</em>, <em>30</em>(8), 613–620. https://doi.org/10.1002/bem.20520</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Tautz, J. (2008). <em>The buzz about bees: Biology of a superorganism</em>. Springer-Verlag.</li>
+    <li>Wadatsumi, K. (1995). <em>Zenkusa: 1519-ken no shōgen</em>. Japan Uni Agency.</li>
+    <li>Whitehead, N. E., &amp; Ulusoy, Ü. (2013). Macroscopic anomalies before the September 2010 M = 7.1 earthquake in Christchurch, New Zealand. <em>Natural Hazards and Earth System Sciences</em>, <em>13</em>, 167–176. https://doi.org/10.5194/nhess-13-167-2013</li>
+    <li>Woith, H., Petersen, G. M., Hainzl, S., &amp; Dahm, T. (2018). Review: Can animals predict earthquakes? <em>Bulletin of the Seismological Society of America</em>, <em>108</em>(3A), 1031–1045. https://doi.org/10.1785/0120170313</li>
+    <li>Öncel, A. O. (2026). <em>Fay Yolu Arıcılığı — JeoTurizm EduPanel</em>. İstanbul Üniversitesi-Cerrahpaşa. <a href="https://aliosmanoncel.blogspot.com/2026/04/beekeeping-geotourism-2026-04-16.html" target="_blank" style="color:var(--teal);">[Blogspot Yazısı]</a></li>
+  </ul>
+</div>
+
+<div class="hb-analysis blue">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📊</span><h4>Kovan İçi Sismoloji — Titreşim Bantları</h4></div>
+  <ul>
+    <li><strong style="color:var(--blue);">230–270 Hz</strong> — Normal sağlıklı koloni bandı; işçi arı iletişimi, bal depolama.</li>
+    <li><strong style="color:var(--honey);">265–350 Hz</strong> — Alarm/stres bandı; kraliçe kaybı, dış titreşim, yırtıcı tehdidi.</li>
+    <li><strong style="color:var(--red);">&gt;350 Hz</strong> — Kriz bandı; koloni çöküşü riski, acil müdahale gerektiren durum.</li>
+  </ul>
+  <p style="margin-top:8px;">Sismik titreşimlerin bu sinyali nasıl etkilediği, devam eden araştırmaların odak noktası.</p>
+</div>
+
+<hr class="hb-divider">
+
+<!-- S8 -->
+<div class="hb-section-lbl"><span>Soru 08 — Türkiye'de Öne Çıkan Bölgeler</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Türkiye'nin aktif fay sistemleri düşünüldüğünde, fay yolu arıcılığı açısından öne çıkan bölgeler hangileridir?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Türkiye'nin deprem haritasını bir de bal haritası gibi hayal edelim — Muğla'dan Bingöl'e uzanan yaklaşık 1.200 kilometrelik, sismik bir <strong>"bal yolu"</strong> çizgisi çıkıyor karşımıza. Bu rotayı yerin altındaki devasa enerji koridorlarına göre üç ana gruba ayırıyoruz:</p>
+    <p><strong style="color:var(--honey);">1. Kuzey Anadolu Fayı (NAF) Koridoru:</strong> Burası işin omurgasıdır. Kasım ayında Muğla'nın kızılçamlarıyla başlayan bu sismik yolculuk, kovanların Afyon'un yaylalarına, oradan Ordu'nun yükseklerine kadar uzandığı bir göç hattı çiziyor. Kovanlar burada adeta <strong>fay hattını bir pusula gibi takip ediyor.</strong> Dünyadaki çam balı üretiminin %90'ı, tam da bu hareketli hattın toprağa sunduğu minerallerin bir sonucudur.</p>
+    <p><strong style="color:var(--teal);">2. Doğu Anadolu Fayı (EAF) Koridoru:</strong> Gaziantep, Adıyaman ve Malatya hattını kapsar. Buradaki topraklar yerin derinliklerinden gelen bazaltik minerallerle beslendiği için kekik ve lavanta balları çok daha keskin bir aromaya sahiptir. Ayrıca bu hat, bölgeye milyonlarca yıldır uyum sağlamış dayanıklı <em>syriaca</em> arı ırkının anavatanıdır.</p>
+    <p><strong style="color:#c084fc;">3. Batı Anadolu Fayı (BAF) Koridoru:</strong> Bal Yolu'nun batı başlangıç noktası burasıdır. Büyük Menderes ve Gediz grabenleri boyunca uzanan Ege şeridi, Türkiye'nin en ünlü arıcılık bölgelerini barındırır. Muğla kızılçam ormanları dünyanın %90'ına yakın çam balını üretirken, bu çam balının efsanevi tadı doğrudan graben toprağının mineral zenginliğinden geliyor.</p>
+    <p>Buna bir de <strong style="color:var(--green);">Trakya uzantısını</strong> ekliyoruz; Istranca ve Ganos Dağı çevresi, Avrupa'nın en uysal arısı olan Karniyol ırkının en batıdaki doğal sınırıdır. Kısacası, yerin altı ne kadar hareketliyse, yerin üstündeki balın <strong>aroması, şifası ve hikâyesi</strong> de o kadar zenginleşiyor.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;margin-bottom:16px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Güler, A. (2017). <em>Türkiye'nin arı genetik kaynakları ve ıslahı</em>. Ondokuz Mayıs Üniversitesi Yayınları.</li>
+    <li>Kandemir, İ., Kence, M., Sheppard, W. S. ve Kence, A. (2006). Mitochondrial DNA variation in honey bee (<em>Apis mellifera</em> L.) populations from Turkey. <em>Journal of Apicultural Research and Bee World</em>, <em>45</em>(1), 33–38.</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Tolon, B. (1999). <em>Muğla ve yöresi çam ballarının biyokimyasal özellikleri üzerine bir araştırma</em> (Doktora tezi). Ege Üniversitesi Fen Bilimleri Enstitüsü.</li>
+    <li>Varol, E. (2024). <em>Türkiye'nin farklı coğrafi bölgelerindeki bal arısı ırk ve ekotiplerinden elde edilen arı zehirinin biyokimyasal içeriklerinin ve kalite özelliklerinin belirlenmesi</em> (Doktora tezi). Ege Üniversitesi.</li>
+  </ul>
+</div>
+
+<div style="margin:16px 0;border-radius:12px;overflow:hidden;border:1px solid rgba(245,158,11,.22);background:rgba(0,0,0,.15);">
+  <div style="padding:8px 16px 6px;background:rgba(245,158,11,.07);border-bottom:1px solid rgba(245,158,11,.15);font-size:.8rem;font-weight:700;color:var(--honey);letter-spacing:.05em;">🗺️ Türkiye Fay ve Bal Koridoru — Muğla (BAF) · NAF · Bingöl (EAF)</div>
+  <div class="separator" style="clear:both;margin:0;padding:0;line-height:0;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiram2JesL3kKnrUVul4j-E23_DsTfnpvAWqzsAlYFJFu_b-zcliGHhURz8KAIX2HhylK61NkW2Kyli0HajvJnPBQo2tQqrdOTqC77z15uyfBzW-kNCRbPJkzF2ArY8fOsCLJXTmETmf3l4Ky3slVbE8qhq5lKayZZJ-IBTKIzl0iV82t9JuLesz8gFMls/s1536/balkoridoru.png" style="display:block;"><img alt="Türkiye Fay ve Bal Koridoru 1.200 km" border="0" style="display:block;width:100%;height:auto;" data-original-height="1024" data-original-width="1536" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiram2JesL3kKnrUVul4j-E23_DsTfnpvAWqzsAlYFJFu_b-zcliGHhURz8KAIX2HhylK61NkW2Kyli0HajvJnPBQo2tQqrdOTqC77z15uyfBzW-kNCRbPJkzF2ArY8fOsCLJXTmETmf3l4Ky3slVbE8qhq5lKayZZJ-IBTKIzl0iV82t9JuLesz8gFMls/s600/balkoridoru.png"/></a></div>
+  <div style="padding:5px 16px 8px;font-size:.72rem;color:var(--soft);font-style:italic;text-align:center;">Aktif fay hatları boyunca uzanan 1.200 km'lik sismotektonik–bal koridoru</div>
+</div>
+
+<div class="hb-tecto-grid">
+  <div class="hb-tecto-zone z1">
+    <div class="hb-zone-num">NAF</div>
+    <div class="hb-zone-content">
+      <h5>Kuzey Anadolu Fayı Koridoru</h5>
+      <p><strong style="color:var(--honey);">Muğla · Antalya · İsparta · Afyon · Ordu Yaylaları</strong> — Kızılçam salgı balı, lavanta, kekik. Kasım–Şubat Muğla kızılçamıyla başlayan mevsimsel göç rotasının omurgası. Türkiye'nin dünya çam balı üretiminin %90'ı bu koridor boyunca gerçekleşiyor.</p>
+    </div>
+  </div>
+  <div class="hb-tecto-zone z2">
+    <div class="hb-zone-num">EAF</div>
+    <div class="hb-zone-content">
+      <h5>Doğu Anadolu Fayı Koridoru</h5>
+      <p><strong style="color:var(--teal);">Gaziantep · Adıyaman · Malatya · Elazığ</strong> — Bazaltik toprak, yüksek mineral içerik, kekik ve lavanta. 2023 depremi sonrası rövanş niteliğinde güçlü bir arıcılık kalkınma potansiyeli taşıyor. Arı genetiği açısından syriaca ırkının anavatanı.</p>
+    </div>
+  </div>
+  <div class="hb-tecto-zone z3">
+    <div class="hb-zone-num">BAF</div>
+    <div class="hb-zone-content">
+      <h5>Batı Anadolu Fayı Koridoru</h5>
+      <p><strong style="color:#c084fc;">Muğla · Aydın · İzmir · Manisa</strong> — Bal Yolu'nun batı başlangıcı; Büyük Menderes ve Gediz graben sistemi. Kızılçam salgı balı, lavanta, kekik. Anatoliaca arı ırkının Ege yuvası.</p>
+    </div>
+  </div>
+  <div class="hb-tecto-zone z4">
+    <div class="hb-zone-num">+</div>
+    <div class="hb-zone-content">
+      <h5>Trakya Uzantısı</h5>
+      <p><strong style="color:var(--green);">Istranca · Ganos Dağı · Ergene · Edirne</strong> — Türkiye'nin Avrupa yakasında da aktif bir tektonik arıcılık koridoru mevcut. Karniyol ırkının en batıdaki doğal yayılım sınırı.</p>
+    </div>
+  </div>
+</div>
+
+<!-- S9 -->
+<div class="hb-section-lbl teal-lbl"><span>Soru 09 — Sektöre Katkılar</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Bu yaklaşımın arıcılık sektörüne, kırsal kalkınmaya ve yerel üreticilere sağlayabileceği katkılar neler olabilir?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Bu vizyoner yaklaşımı, Türkiye'nin sismik gerçekliğini ekonomik bir avantaja dönüştüren üç temel sütun üzerinde görüyorum:</p>
+    <p><strong style="color:var(--honey);">1. Ekonomik Değer ve Terroir Balı:</strong> Bugün standart balımız belli bir fiyat aralığında satılırken, jeolojik kimliği ispatlanmış <strong>"terroir balı"</strong> kategorisi dünyada kilogramı 200 dolarlara varan butik ve tıbbi bal pazarına açılan bir kapı demektir. Bir balın hangi fay koridorundan geldiğini mineral ve izotop analizleriyle kanıtladığımızda, o ürün artık taklit edilemez bir <strong>jeolojik marka</strong> haline gelir.</p>
+    <p><strong style="color:var(--teal);">2. Bal Turizmi (JeoTurizm) ve Köy Ekonomisi:</strong> Fay hatları boyunca oluşturacağımız <strong>"Bal Rotaları"</strong>, kırsal bölgelerimiz için yeni bir soluk olacaktır. İnsanlar sadece bal almaya değil; kovan başında eğitim almaya, fay vadilerinde yürüyüş yapmaya, köy pansiyonunda konaklayıp o bölgenin şifalı ürünlerini yerinde tatmaya gelecekler.</p>
+    <p><strong style="color:var(--green);">3. Doğal Kale Duvarlarımız:</strong> Fay hatları, arı ırklarını milyonlarca yıl boyunca birbirinden ayıran <strong>doğal kale duvarları</strong> gibidir. Biz bugün o kaleleri korursak, hem benzersiz genetik mirasımızı hem de yerel adaptasyonun getirdiği yüksek verimi korumuş oluruz.</p>
+    <p>Unutmayalım ki Türkiye; <strong>dokuz milyon kovan, dünya çam balının yüzde doksanı, küresel arı genetiğinin yüzde yirmi üçü</strong> ve aktif fayların jeokimyasal zenginliğiyle — dünyada eşi benzeri olmayan bir hazineye sahiptir.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Göksu, E. (2022). <em>Ürün ihtisas borsasının odun dışı orman ürünlerine uygulanabilirliği üzerine bir araştırma: Çam balı örneği</em> (Doktora tezi). Ege Üniversitesi.</li>
+    <li>Güler, A. (2017). <em>Türkiye'nin arı genetik kaynakları ve ıslahı</em>. Ondokuz Mayıs Üniversitesi Yayınları.</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+  </ul>
+</div>
+
+<div class="key-message">
+  <span class="key-message-label">💡 Ana Mesaj</span>
+  <p>Türkiye, <strong>9 milyon kovan + %90 dünya çam balı + %23 küresel arı genetiği + aktif fay hatlarının jeokimyasal zenginliği</strong> ile dünyanın başka hiçbir ülkesinde bir arada bulunmayan dörtlü avantaja sahip. "Fay yolu arıcılığı" bu avantajı görünür kılmanın ve katma değere dönüştürmenin çerçevesidir.</p>
+</div>
+
+<hr class="hb-divider">
+
+<!-- S10 -->
+<div class="hb-section-lbl blue-lbl"><span>Soru 10 — Gelecek Araştırmalar</span></div>
+<div class="hb-qa">
+  <div class="hb-q">
+    <div class="hb-q-icon">🎙️</div>
+    <div>
+      <div class="hb-q-label">TRT Radyo</div>
+      <div class="hb-q-text">Fay yolu arıcılığı konusunda önümüzdeki yıllarda hangi araştırmaların yapılmasını gerekli görüyorsunuz ve bu alanın geleceğini nasıl değerlendiriyorsunuz?</div>
+    </div>
+  </div>
+  <div class="hb-a">
+    <div class="hb-a-label">Prof. Dr. Ali Osman Öncel</div>
+    <p>Ben bu alanın geleceğini, Türkiye'nin deprem gerçeğini bir <strong>kalkınma hikâyesine</strong> çevirebileceği yeni bir dönem olarak görüyorum. Önümüzdeki dönemde çalışmalarımızı üç ana sütun üzerine inşa etmeliyiz.</p>
+    <p>Birincisi, <strong>"balın izotop haritalaması"</strong> — her fay koridoru için bir <strong>"bal kimliği dosyası"</strong> çıkaracağız; böylece sahte balın önüne geçen en güçlü bilimsel kalkanı kurmuş olacağız.</p>
+    <p>İkincisi, <strong>"kovan sismolojisi"</strong> ağıdır. Ardu-Bee'deki "Ardu", dünyada yaygın kullanılan açık kaynaklı IoT elektronik platformu <strong>Arduino</strong>'dan geliyor — küçük bir devre kartı ama kovan içi titreşimi, sıcaklığı ve nemi kesintisiz ölçüyor. Kovan verilerinin AFAD veya Tarım Bakanlığı sistemleriyle buluşturulması, Türkiye'yi bu modeli kuran <strong>öncü ülke</strong> yapabilir.</p>
+    <p>Üçüncüsü ise <strong>"arı ırkı gen bankası"</strong> çalışmalarıdır. Fay hatlarının milyonlarca yıldır koruduğu saf yerel ırklarımızın genomik haritalarını çıkararak biyolojik çeşitliliğimizi güvence altına almalıyız.</p>
+    <p>Sonuç olarak: <strong>Japonya, İtalya, Peru ve Yeni Zelanda</strong> gibi hem deprem hem de arıcılık ülkeleri bu modeli bizden öğrenmek isteyebilir. Türkiye bu alanda <strong>yer bilimleri ile biyolojiyi kalkınma odağında birleştiren yepyeni bir bilim modelinin öncüsü</strong> olabilir.</p>
+  </div>
+</div>
+
+<div class="hb-analysis honey" style="margin-top:8px;">
+  <div class="hb-analysis-head"><span class="hb-analysis-icon">📚</span><h4>İlişkili Referanslar</h4></div>
+  <ul style="font-size:.8rem;line-height:1.7;color:var(--soft);">
+    <li>Burğut, A. (2017). <em>Akdeniz Bölgesi bal arısı populasyonlarında biyolojik çeşitliliğin tanımlanması</em> (Doktora tezi). Çukurova Üniversitesi.</li>
+    <li>Hennessy, S. N., Downey, G. ve O'Donnell, C. P. (2010). Attempted confirmation of the provenance of Corsican PDO honey using FT-IR spectroscopy. <em>Journal of Agricultural Food Chemistry</em>, <em>58</em>(17), 9401–9406.</li>
+    <li>Öncel, A. O. (2026). <em>Fay yolu arıcılığı strateji belgesi ve vizyon raporu (v5 Final)</em>. İstanbul Üniversitesi-Cerrahpaşa.</li>
+    <li>Varol, E. (2024). <em>Bal arısı zehirinin bazı kalite parametrelerinin belirlenmesi</em> (Doktora tezi). Ege Üniversitesi.</li>
+  </ul>
+</div>
+
+<!-- KAPANIŞ -->
+<div class="hb-final">
+  <h2>🐝 Fay Yolu Arıcılığı<br><span style="color:var(--honey-light);">Yeryüzünün Sesi, Balın Tadı</span></h2>
+  <p class="hb-final-sub">Türkiye'nin aktif fay sistemleri, milyonlarca yıldır yalnızca deprem üretmekle kalmıyor — toprağı besliyor, floraya kimya katıyor, arı ekotiplerini şekillendiriyor. Sonuçta ortaya çıkan bal, jeolojik tarihin tatlı bir özeti.</p>
+  <div class="hb-pillars">
+    <span class="hb-pillar">🌋 NAF · EAF · BAF</span>
+    <span class="hb-pillar">🍯 1.200 km Bal Yolu</span>
+    <span class="hb-pillar">🐝 5 Arı Irkı</span>
+    <span class="hb-pillar">📡 Jeokimyasal Parmak İzi</span>
+    <span class="hb-pillar">🌿 JeoTurizm</span>
+    <span class="hb-pillar">🧬 Genetik Koruma</span>
+    <span class="hb-pillar">🔬 Kovan Sismolojisi</span>
+  </div>
+</div>
+
+</div><!-- /.hb-inner -->
+</div><!-- /.hb-wrap -->
+
+<div class="hb-footer">
+  <strong>🐝 Fay Yolu Arıcılığı — TRT Radyo Röportajı · 9 Haziran 2026</strong><br>
+  Prof. Dr. Ali Osman Öncel · İstanbul Üniversitesi-Cerrahpaşa · Jeofizik Mühendisliği<br>
+  <span style="opacity:.6;"><a href="https://aliosmanoncel.blogspot.com/2026/04/beekeeping-geotourism-2026-04-16.html" target="_blank" style="color:var(--honey);opacity:.8;text-decoration:none;">aliosmanoncel.blogspot.com</a> · JeoTurizm EduPanel v4 Final · Haziran 2026</span>
+</div>
+<script>
+function hbSeek(sec){
+  var f=document.getElementById('hb-yt-player');
+  if(!f)return;
+  f.src='https://www.youtube.com/embed/4POIQwZ3qLM?start='+sec+'&autoplay=1&enablejsapi=1';
+  var box=f.closest('.hb-video-wrap')||f;
+  box.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function initAccordion(){
+  var inner=document.querySelector('.hb-inner');
+  if(!inner)return;
+
+  var titles=[
+    '"Fay yolu arıcılığı" kavramını nasıl tanımlıyorsunuz?',
+    'Sizi arılar ve arıcılık üzerine çalışmaya yönlendiren motivasyon ne?',
+    'Aktif fay zonları bitki örtüsünü ve nektar kaynaklarını nasıl etkiliyor?',
+    'Arıların yer kabuğu değişimlerine hassasiyetine dair bilimsel veriler neler?',
+    'Fay hatları üzerindeki ballar kimyasal olarak farklı mı?',
+    'Araştırmalarınızda sizi en çok şaşırtan bulgu ne oldu?',
+    'Arı davranışlarının deprem öncesi değiştiğine dair somut gözlemler var mı?',
+    'Fay yolu arıcılığı açısından Türkiye\'de öne çıkan bölgeler hangileri?',
+    'Bu yaklaşımın arıcılık sektörüne ve kırsal kalkınmaya katkıları neler?',
+    'Önümüzdeki yıllarda hangi araştırmaların yapılmasını gerekli görüyorsunuz?'
+  ];
+  var colors=['honey','honey','teal','teal','honey','honey','blue','honey','teal','blue'];
+
+  var labels=Array.from(inner.querySelectorAll('.hb-section-lbl')).filter(function(el){
+    return !el.classList.contains('red-lbl');
+  });
+
+  labels.forEach(function(lbl,idx){
+    var sNum=String(idx+1).padStart(2,'0');
+    var spanText=lbl.querySelector('span')?lbl.querySelector('span').textContent:'';
+    var color=colors[idx]||'honey';
+
+    // Akordeon başlık stiline dönüştür
+    lbl.innerHTML=
+      '<span class="acc-header-lbl '+color+'-lbl">'+spanText+'</span>'+
+      '<span class="acc-header-title">'+titles[idx]+'</span>'+
+      '<span class="acc-arrow">▼</span>';
+    lbl.classList.add('acc-header');
+    lbl.style.margin='0 0 0 0';
+
+    // Kardeş elementleri topla (bir sonraki section-lbl veya hb-divider veya hb-final'e kadar)
+    var siblings=[];
+    var next=lbl.nextElementSibling;
+    while(next &&
+          !next.classList.contains('hb-section-lbl') &&
+          !next.classList.contains('hb-final')){
+      if(next.classList.contains('hb-divider')) break;
+      siblings.push(next);
+      next=next.nextElementSibling;
+    }
+
+    // Gövde div oluştur
+    var body=document.createElement('div');
+    body.className='acc-body';
+
+    // Başlıktan sonra gövdeyi ekle
+    lbl.parentNode.insertBefore(body,lbl.nextSibling);
+    siblings.forEach(function(el){ body.appendChild(el); });
+
+    // acc-section wrapper oluştur; ID nav linkleri için buraya
+    var section=document.createElement('div');
+    section.className='acc-section';
+    section.id='s'+sNum;
+    section.style.scrollMarginTop='16px';
+    lbl.parentNode.insertBefore(section,lbl);
+    section.appendChild(lbl);
+    section.appendChild(body);
+
+    // Tıklama — aç/kapat toggle
+    lbl.addEventListener('click',function(){
+      var isOpen=body.classList.contains('open');
+      // Önce hepsini kapat
+      inner.querySelectorAll('.acc-body').forEach(function(b){ b.classList.remove('open'); });
+      inner.querySelectorAll('.acc-header').forEach(function(h){ h.classList.remove('open'); });
+      inner.querySelectorAll('.acc-arrow').forEach(function(a){ a.style.transform=''; a.style.color=''; });
+      // Kapalıysa aç; açıksa kapalı bırak
+      if(!isOpen){
+        body.classList.add('open');
+        lbl.classList.add('open');
+        var arrow=lbl.querySelector('.acc-arrow');
+        if(arrow){ arrow.style.transform='rotate(180deg)'; arrow.style.color='var(--honey)'; }
+      }
+    });
+  });
+
+  // İlk soruyu açık başlat
+  var firstBody=inner.querySelector('.acc-body');
+  var firstHeader=inner.querySelector('.acc-header');
+  if(firstBody) firstBody.classList.add('open');
+  if(firstHeader) firstHeader.classList.add('open');
+  var firstArrow=firstHeader?firstHeader.querySelector('.acc-arrow'):null;
+  if(firstArrow){ firstArrow.style.transform='rotate(180deg)'; firstArrow.style.color='var(--honey)'; }
+}
+
+document.addEventListener('DOMContentLoaded',initAccordion);
+</script>
+</body>
+</html>

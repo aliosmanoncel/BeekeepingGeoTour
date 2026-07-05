@@ -1,0 +1,348 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+#ep-wrap {
+  --ep-bg:#0d1117; --ep-text:#e2e8f0; --ep-panel:#111827; --ep-muted:#7c9cbd;
+  --ep-accent:#e11d48; --ep-accent2:#f59e0b; --ep-accent3:#a78bfa;
+  --ep-glass:rgba(255,255,255,.03); --ep-border:rgba(255,255,255,.08);
+  font-family:'DM Sans',sans-serif;
+  background:var(--ep-bg);
+  color:var(--ep-text);
+  line-height:1.8;
+  text-align:justify;
+  max-width:780px;
+  margin:0 auto;
+  padding:24px 24px 60px;
+  transition:background .4s,color .4s;
+}
+#ep-wrap[data-theme="light"] {
+  --ep-bg:#f0f4f8; --ep-text:#1a202c; --ep-panel:#ffffff; --ep-muted:#4a6280;
+  --ep-accent:#c41535; --ep-accent2:#b45309; --ep-accent3:#7c3aed;
+  --ep-glass:rgba(0,0,0,.02); --ep-border:rgba(0,0,0,.1);
+}
+#ep-wrap * { box-sizing:border-box; }
+
+#ep-wrap .ep-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 0 20px;border-bottom:1px solid var(--ep-border);margin-bottom:28px;}
+#ep-wrap .ep-badge{background:linear-gradient(135deg,var(--ep-accent),var(--ep-accent2));padding:5px 14px;border-radius:100px;font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase;}
+#ep-wrap .ep-brand-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--ep-text);margin-top:5px;}
+#ep-wrap .ep-brand-sub{font-size:.78rem;color:var(--ep-muted);}
+#ep-wrap .ep-theme-btn{border:1px solid var(--ep-border);padding:7px 14px;border-radius:100px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;background:var(--ep-glass);color:var(--ep-text);transition:all .2s;}
+#ep-wrap .ep-theme-btn:hover{border-color:var(--ep-accent);color:var(--ep-accent);}
+
+#ep-wrap .ep-hero{background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(225,29,72,.18),transparent 70%),linear-gradient(135deg,#070c18,#0d1525);border-radius:20px;padding:44px 32px;text-align:center;margin-bottom:28px;border:1px solid var(--ep-border);overflow:hidden;}
+#ep-wrap .ep-hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(225,29,72,.1);border:1px solid rgba(225,29,72,.25);padding:5px 14px;border-radius:100px;font-size:.78rem;color:var(--ep-accent);margin-bottom:18px;font-weight:600;}
+#ep-wrap .ep-hero h1{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;line-height:1.15;margin-bottom:12px;text-wrap:balance;}
+#ep-wrap .ep-hero h1 span{background:linear-gradient(90deg,var(--ep-accent),var(--ep-accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+#ep-wrap .ep-hero .ep-lead{font-size:1rem;color:var(--ep-muted);max-width:520px;margin:0 auto 20px;}
+#ep-wrap .ep-pills{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;}
+#ep-wrap .ep-pill{padding:4px 12px;border-radius:100px;font-size:.75rem;font-weight:600;border:1px solid var(--ep-border);color:var(--ep-muted);background:var(--ep-glass);}
+
+
+#ep-wrap .ep-video{margin:0 0 28px;border-radius:16px;overflow:hidden;border:1px solid rgba(225,29,72,.25);}
+#ep-wrap .ep-video a{display:block;position:relative;line-height:0;border-radius:12px;overflow:hidden;}
+#ep-wrap .ep-video img{width:100%;display:block;}
+#ep-wrap .ep-video .ep-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:68px;background:rgba(225,29,72,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.5);}
+#ep-wrap .ep-video .ep-play-arrow{width:0;height:0;border-style:solid;border-width:13px 0 13px 26px;border-color:transparent transparent transparent #fff;margin-left:5px;}
+#ep-wrap .ep-video-cap{padding:12px 18px;background:linear-gradient(135deg,rgba(225,29,72,.07),rgba(245,158,11,.04));border-top:1px solid rgba(225,29,72,.2);font-size:.78rem;color:var(--ep-muted);font-style:italic;text-align:justify;hyphens:auto;}
+
+
+
+#ep-wrap .ep-section{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ep-accent);margin:32px 0 14px;display:flex;align-items:center;gap:10px;border-bottom:2px solid rgba(225,29,72,.2);padding-bottom:8px;text-wrap:balance;}
+
+#ep-wrap .ep-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0;}
+#ep-wrap .ep-card{background:var(--ep-panel);border:1px solid var(--ep-border);border-radius:14px;padding:18px;transition:border-color .2s,transform .2s;}
+#ep-wrap .ep-card:hover{border-color:var(--ep-accent);transform:translateY(-2px);}
+#ep-wrap .ep-card .ep-icon{font-size:1.6rem;margin-bottom:10px;}
+#ep-wrap .ep-card h4{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:6px;color:var(--ep-accent);}
+#ep-wrap .ep-card p{font-size:.82rem;opacity:.72;line-height:1.6;}
+
+
+
+#ep-wrap .ep-box{border-radius:14px;padding:18px 22px;margin:20px 0;font-size:.92rem;}
+#ep-wrap .ep-box-red{background:rgba(225,29,72,.07);border:1px solid rgba(225,29,72,.2);}
+#ep-wrap .ep-box-red strong{color:var(--ep-accent);}
+#ep-wrap .ep-box-warn{background:rgba(245,87,108,.07);border:1px solid rgba(245,87,108,.2);}
+#ep-wrap .ep-box-warn strong{color:#f5576c;}
+#ep-wrap .ep-box-gold{background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);}
+#ep-wrap .ep-box-gold strong{color:#c9a84c;}
+#ep-wrap .ep-box-green{background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);}
+#ep-wrap .ep-box-green strong{color:#22c55e;}
+
+
+
+#ep-wrap .ep-tags{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0 0;}
+#ep-wrap .ep-tag{padding:6px 16px;border-radius:100px;font-size:.78rem;font-weight:600;border:1px solid var(--ep-border);color:var(--ep-muted);background:var(--ep-glass);}
+
+#ep-wrap .ep-divider{height:1px;background:linear-gradient(90deg,transparent,var(--ep-border),transparent);margin:28px 0;}
+
+#ep-wrap .ep-p{font-size:.96rem;line-height:1.9;margin:16px 0;opacity:.9;}
+
+
+#ep-wrap .ep-author{display:flex;align-items:center;gap:18px;background:var(--ep-panel);border:1px solid var(--ep-border);border-radius:16px;padding:20px 24px;margin:28px 0;flex-wrap:wrap;}
+#ep-wrap .ep-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--ep-accent),var(--ep-accent2));display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;}
+#ep-wrap .ep-author-info{flex:1;min-width:180px;}
+#ep-wrap .ep-author-name{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--ep-text);margin-bottom:3px;}
+#ep-wrap .ep-author-role{font-size:.78rem;color:var(--ep-accent);margin-bottom:5px;}
+#ep-wrap .ep-author-bio{font-size:.8rem;color:var(--ep-muted);line-height:1.6;}
+#ep-wrap .ep-author-link{display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:.75rem;font-weight:600;color:var(--ep-accent);text-decoration:none;border:1px solid rgba(225,29,72,.3);border-radius:100px;padding:3px 10px;background:rgba(225,29,72,.06);}
+
+#ep-wrap .ep-share{margin:28px 0 0;}
+#ep-wrap .ep-share-label{font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ep-muted);margin-bottom:10px;}
+#ep-wrap .ep-share-btns{display:flex;flex-wrap:wrap;gap:9px;}
+#ep-wrap .ep-share-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:100px;font-family:'Syne',sans-serif;font-size:.76rem;font-weight:700;cursor:pointer;text-decoration:none;border:1px solid var(--ep-border);background:var(--ep-glass);color:var(--ep-text);transition:all .2s;}
+#ep-wrap .ep-share-btn:hover{transform:translateY(-2px);}
+#ep-wrap .ep-tw{border-color:rgba(29,161,242,.35);color:#1da1f2;}
+#ep-wrap .ep-wa{border-color:rgba(37,211,102,.35);color:#25d366;}
+#ep-wrap .ep-cp{border-color:rgba(167,139,250,.35);color:var(--ep-accent3);}
+#ep-wrap .ep-ml{border-color:rgba(225,29,72,.35);color:var(--ep-accent);}
+
+#ep-wrap .ep-cta{text-align:center;margin:36px 0 16px;}
+#ep-wrap .ep-cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--ep-accent),var(--ep-accent2));color:#fff;border:none;padding:16px 36px;border-radius:100px;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;text-decoration:none;box-shadow:0 8px 28px rgba(225,29,72,.35);transition:opacity .2s,transform .2s;}
+#ep-wrap .ep-cta-btn:hover{opacity:.88;transform:translateY(-2px);}
+#ep-wrap .ep-cta-sub{font-size:.8rem;color:var(--ep-muted);margin-top:10px;}
+
+#ep-wrap .ep-footer{text-align:justify;hyphens:auto;padding:24px 0 0;color:var(--ep-muted);font-size:.82rem;border-top:1px solid var(--ep-border);}
+#ep-wrap .ep-footer strong{color:var(--ep-accent);}
+
+#ep-wrap figcaption{text-align:justify;hyphens:auto;}
+
+
+@media(max-width:600px){
+  #ep-wrap .ep-hero h1{font-size:1.6rem;}
+  #ep-wrap .ep-hero{padding:32px 20px;}
+  #ep-wrap .ep-author{flex-direction:column;text-align:center;}
+  #ep-wrap .ep-cards{grid-template-columns:1fr;}
+}
+</style>
+<div id="ep-wrap">
+
+<!-- HEADER -->
+<div class="ep-header">
+  <div>
+    <div class="ep-badge">Makale · BeeGeo EduPanel</div>
+    <div class="ep-brand-title">Fay Yolu Arıcılığı</div>
+    <div class="ep-brand-sub">Kısa Tanıtım · BeeGeo EduPanel · <span style="opacity:.6;">Temmuz 2026</span></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <div style="display:flex;align-items:center;gap:7px;background:linear-gradient(135deg,rgba(59,158,255,0.12),rgba(30,80,140,0.18));border:1px solid rgba(59,158,255,0.35);border-radius:100px;padding:5px 12px 5px 10px;">
+      <span style="font-size:1em;line-height:1;">🌐</span>
+      <span style="font-size:0.68rem;font-weight:700;color:#90caf9;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;">Language</span>
+      <div id="google_translate_element" style="display:flex;align-items:center;"></div>
+    </div>
+    <button id="tts-btn" title="Sesli oku / Listen" style="padding:7px 13px;background:linear-gradient(135deg,#1e3a5f,#1e40af);border:1px solid rgba(59,158,255,0.45);border-radius:100px;color:#90caf9;font-weight:700;font-size:.76rem;cursor:pointer;white-space:nowrap;transition:background .2s;">🔊 Dinle</button>
+    <button class="ep-theme-btn" id="ep-theme-btn"><span id="ep-theme-icon">🌙</span> Tema</button>
+  </div>
+</div>
+
+<!-- 1. HERO -->
+<div class="ep-hero">
+  <div class="ep-hero-tag">📍 Makale · Temmuz 2026</div>
+  <h1>Fay Yolu <span>Arıcılığı</span></h1>
+  <p class="ep-lead">Doğa, deprem bilimi ve sürdürülebilir arıcılığı buluşturan disiplinler arası bir rehber.</p>
+  <div class="ep-pills">
+    <span class="ep-pill">🐝 Arıcılık</span>
+    <span class="ep-pill">🌍 JeoTurizm</span>
+    <span class="ep-pill">🔬 Sismoloji</span>
+  </div>
+</div>
+
+<!-- 2. NEDEN BU ÇALIŞMA HAZIRLANDI -->
+<div class="ep-section">🎯 Neden Bu Çalışma Hazırlandı?</div>
+<p class="ep-p">Türkiye, ~9 milyon kayıtlı kovanla dünyanın en büyük arıcılık altyapılarından birine sahip; ancak bu miras aynı zamanda Kuzey Anadolu, Doğu Anadolu ve Batı Anadolu fay hatlarının kesiştiği bir coğrafyada sürdürülüyor. Arıcılık ve deprem bilimi, ilk bakışta uzak iki alan gibi görünse de, ikisi de aynı zemini — toprağı, topoğrafyayı, mikro-iklimi — paylaşır.</p>
+<p class="ep-p">Bu çalışma, göçer arıcılık rotalarının fay hatları boyunca neden yoğunlaştığını, kızılçam ormanlarının jeolojik geçmişle ilişkisini ve arıcılığın kırsal kalkınma için neden stratejik bir araç olabileceğini <strong class="ep-kw">disiplinler arası</strong> bir bakışla ele alıyor.</p>
+
+<div class="ep-divider"></div>
+
+<!-- 3. ÖNE ÇIKAN 5 BULGU -->
+<div class="ep-section">🔍 Öne Çıkan 5 Bulgu</div>
+<div class="ep-cards">
+  <div class="ep-card">
+    <div class="ep-icon">🧬</div>
+    <h4>Türkiye'nin Biyolojik Çeşitliliği</h4>
+    <p>Endemik arı ırkları ve kızılçam gibi bölgeye özgü bal kaynakları, dünyada eşsiz bir genetik ve botanik çeşitlilik sunuyor.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🚚</div>
+    <h4>Göçer Arıcılık</h4>
+    <p>Kovanların mevsimsel olarak taşınması, hem verimi artırıyor hem de belirli coğrafi koridorları takip ediyor.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🌋</div>
+    <h4>Fay Zonları</h4>
+    <p>Aktif tektonik hatlar boyunca oluşan toprak ve mikro-iklim çeşitliliği, nektar kaynaklarının dağılımını doğrudan etkiliyor.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🗺️</div>
+    <h4>Jeoturizm</h4>
+    <p>Arıcılık rotaları, jeolojik miras alanlarıyla birleştirildiğinde kırsal bölgeler için yeni bir turizm modeli oluşturabilir.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🔬</div>
+    <h4>Bilimsel Gözlem</h4>
+    <p>Kovan içi titreşim ve davranış verileri, dikkatle yorumlandığında ekolojik izleme çalışmalarına katkı sunabilir.</p>
+  </div>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- 4. İZLEMEK İSTEYENLER -->
+<div class="ep-section">🎬 İzlemek İsteyenler</div>
+<div class="ep-video">
+  <a href="https://youtu.be/eyOBa2_B9jI" target="_blank" rel="noopener">
+    <img src="https://img.youtube.com/vi/eyOBa2_B9jI/maxresdefault.jpg"
+         alt="TVNET — Fay Yolu Arıcılığı Programı — Prof. Dr. Ali Osman Öncel" />
+    <div class="ep-play"><div class="ep-play-arrow"></div></div>
+  </a>
+  <div class="ep-video-cap">🎬 TVNET — Fay Yolu Arıcılığı Programı · Prof. Dr. Ali Osman Öncel · Haziran 2026</div>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- 5. BEEGEO EDUPANEL'DE NELER VAR -->
+<div class="ep-section">📚 BeeGeo EduPanel'de Neler Var?</div>
+<div class="ep-tags">
+  <span class="ep-tag">📘 Başlangıç ve Genel Bakış</span>
+  <span class="ep-tag">🐝 Arıcılık ve Kovan Yaşamı</span>
+  <span class="ep-tag">🌍 Fay Yolu Arıcılığı ve Jeoturizm</span>
+  <span class="ep-tag">🧪 Bilimsel Araştırmalar</span>
+  <span class="ep-tag">📍 Saha Gözlemleri</span>
+  <span class="ep-tag">📚 Kaynaklar ve Ekler</span>
+</div>
+<p class="ep-p" style="margin-top:14px;">Bu altı kategori altında toplam <strong class="ep-kw">75 bölüm</strong> bulunmaktadır.</p>
+
+<div class="ep-divider"></div>
+
+<!-- 6. KISA BİLİMSEL NOT -->
+<div class="ep-box ep-box-gold">
+  <strong>🔬 Bilimsel Çerçeve:</strong> Bu çalışma deprem tahmini amacı taşımaz. Fay zonları; ekoloji, topoğrafya, hidrojeoloji ve göçer arıcılık ilişkileri açısından incelenmektedir.
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- 7. CTA -->
+<div class="ep-cta">
+  <a class="ep-cta-btn" href="https://aliosmanoncel.blogspot.com/p/beekeeping-geotourism-2026-04-16.html" target="_blank">
+    📖 BeeGeo EduPanel 1.0
+  </a>
+  <div class="ep-cta-sub">Tam rehber · 75 bölüm · İnteraktif harita · PDF · Word · Kaynakça · YouTube — tamamı burada.</div>
+</div>
+
+<!-- YAZAR KARTI -->
+<div class="ep-author">
+  <div class="ep-avatar">🌍</div>
+  <div class="ep-author-info">
+    <div class="ep-author-name">Prof. Dr. Ali Osman Öncel</div>
+    <div class="ep-author-role">Deprem Sismolojisti · Jeofizik Mühendisi · BeeGeo EduPanel</div>
+    <div class="ep-author-bio">Edinburgh'dan İstanbul'a; yeraltı verilerinden saha romanlarına — bilimi insanla buluşturan bir araştırmacının yolculuğu.</div>
+    <a class="ep-author-link" href="https://aliosmanoncel.blogspot.com" target="_blank">🔗 aliosmanoncel.blogspot.com</a>
+  </div>
+</div>
+
+<!-- SOSYAL PAYLAŞIM -->
+<div class="ep-share">
+  <div class="ep-share-label">Bu içeriği paylaş</div>
+  <div class="ep-share-btns">
+    <a class="ep-share-btn ep-tw" id="ep-tw" href="#" target="_blank">𝕏 Twitter / X</a>
+    <a class="ep-share-btn ep-wa" id="ep-wa" href="#" target="_blank">💬 WhatsApp</a>
+    <a class="ep-share-btn ep-ml" id="ep-ml" href="#">✉️ E-posta</a>
+    <button class="ep-share-btn ep-cp" id="ep-cp">🔗 Linki Kopyala</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="ep-footer" style="margin-top:32px;">
+  <p>© 2026 <strong>BeeGeo EduPanel</strong> · Fay Yolu Arıcılığı · Temmuz 2026</p>
+  <p style="margin-top:6px;opacity:.55;">Prof. Dr. Ali Osman Öncel · aliosmanoncel.blogspot.com</p>
+</div>
+
+</div><!-- /#ep-wrap -->
+<script>
+(function(){
+
+/* TEMA */
+var btn = document.getElementById('ep-theme-btn');
+var ico = document.getElementById('ep-theme-icon');
+var wrap = document.getElementById('ep-wrap');
+if(btn) btn.onclick = function(){
+  var light = wrap.getAttribute('data-theme') === 'light';
+  wrap.setAttribute('data-theme', light ? 'dark' : 'light');
+  ico.textContent = light ? '🌙' : '☀️';
+};
+
+/* KART FADE-IN */
+if('IntersectionObserver' in window){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('#ep-wrap .ep-card').forEach(function(c){
+    c.style.opacity='0';c.style.transform='translateY(16px)';
+    c.style.transition='opacity .45s ease,transform .45s ease';
+    obs.observe(c);
+  });
+}
+
+/* SOSYAL PAYLAŞIM */
+var url   = encodeURIComponent(window.location.href);
+var title = encodeURIComponent('Fay Yolu Arıcılığı — BeeGeo EduPanel');
+var tw = document.getElementById('ep-tw');
+var wa = document.getElementById('ep-wa');
+var ml = document.getElementById('ep-ml');
+var cp = document.getElementById('ep-cp');
+if(tw) tw.href = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url;
+if(wa) wa.href = 'https://api.whatsapp.com/send?text=' + title + '%20' + url;
+if(ml) ml.href = 'mailto:?subject=' + title + '&body=' + url;
+if(cp) cp.onclick = function(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    cp.textContent = '✅ Kopyalandı!';
+    setTimeout(function(){ cp.innerHTML = '🔗 Linki Kopyala'; }, 2000);
+  });
+};
+
+})();
+</script>
+
+<!-- Google Translate — Auto EN + görsel widget -->
+<script type="text/javascript">
+(function(){
+  function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+(d*864e5));document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/';}
+  if(document.cookie.indexOf('googtrans')===-1){setCookie('googtrans','/tr/en',1);setCookie('googtrans','/tr/en',1);}
+})();
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({
+    pageLanguage:'tr',
+    includedLanguages:'en,tr,it,de,fr,es,ar,ru,pt,nl,pl',
+    layout:google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay:true
+  },'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- TTS — Web Speech API -->
+<script>
+(function(){
+  var synth=window.speechSynthesis,btn=document.getElementById('tts-btn');
+  if(!synth||!btn) return;
+  var speaking=false,paused=false;
+  function getLang(){var m=document.cookie.match(/googtrans=\/[^/]+\/([^;]+)/);return m?m[1]:(document.documentElement.lang||'en');}
+  function getContent(){
+    var root=document.getElementById('ep-wrap')||document.body;
+    var clone=root.cloneNode(true);
+    clone.querySelectorAll('script,style,noscript,button,input,select,option,iframe,svg,#google_translate_element,.ep-share,.ep-footer,.ep-author-link,[class*="goog-"],[id*="goog"],[class*="VIpgJd"],[class*="skiptranslate"]').forEach(function(el){el.remove();});
+    return (clone.innerText||'').replace(/#[0-9a-fA-F]{3,8}\b/g,' ').replace(/\s{2,}/g,' ').trim().slice(0,50000);
+  }
+  function setState(s){
+    if(s==='playing'){btn.textContent='⏸ Duraklat';btn.style.background='linear-gradient(135deg,#92400e,#b45309)';}
+    else if(s==='paused'){btn.textContent='▶ Devam';btn.style.background='linear-gradient(135deg,#14532d,#166534)';}
+    else{btn.textContent='🔊 Dinle';btn.style.background='linear-gradient(135deg,#1e3a5f,#1e40af)';}
+  }
+  btn.addEventListener('click',function(){
+    if(!speaking&&!paused){synth.cancel();var utt=new SpeechSynthesisUtterance(getContent());utt.lang=getLang();utt.rate=0.92;utt.pitch=1;utt.onend=utt.onerror=function(){speaking=false;paused=false;setState('idle');};synth.speak(utt);speaking=true;setState('playing');}
+    else if(speaking){synth.pause();speaking=false;paused=true;setState('paused');}
+    else if(paused){synth.resume();paused=false;speaking=true;setState('playing');}
+  });
+  window.addEventListener('beforeunload',function(){synth.cancel();});
+})();
+</script>

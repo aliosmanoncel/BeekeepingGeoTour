@@ -1,0 +1,213 @@
+═══════════════════════════════════════════════════════
+FAY YOLU ARICILIĞI — TV KAMERA NOTU
+Ana Haber · 16 Haziran 2026 · 19:30
+Prof. Dr. Ali Osman Öncel
+═══════════════════════════════════════════════════════
+
+⚠ KULLANIM REHBERİ
+• Her madde bir soruya hazır yanıt iskeletidir.
+• Teknik terimler [ ] içinde gösterildi — TV'de kullanmayın, yerine sağdaki ifadeyi söyleyin.
+• Kaynakları canlıda söylemek zorunda değilsiniz; bilgi güveniniz için yanınızda.
+
+───────────────────────────────────────────────────────
+SLAYT 1 / AÇILIŞ
+───────────────────────────────────────────────────────
+"Fay yolu arıcılığı nedir?" sorusuna hazır yanıt:
+
+  "Türkiye'nin deprem hatları — Kuzey Anadolu, Doğu Anadolu,
+   Batı Anadolu fayları — sadece tehlike değil, aynı zamanda
+   zenginlik üretiyor. Bu hatlardaki mineraller toprağa, toprağa
+   düşen çiçeklere, çiçeklere giden arılara ve sonunda bala
+   geçiyor. Biz buna 'fay yolu balı' diyoruz."
+
+  Değer zinciri — gerekirse görsel anlatım için:
+  Fay → Kayaç kırılması → Mineraller yüzeye → Toprak zenginleşmesi
+  → Bitki çeşitliliği → Nektar aroması → Jeokimyasal parmak izi bala kodlanır
+
+───────────────────────────────────────────────────────
+SLAYT 2 / HAYVANLAR VE DEPREM
+───────────────────────────────────────────────────────
+"Hayvanlar depremi hisseder mi?" sorusuna:
+
+  "2020'de Max Planck Enstitüsü, İtalya'da inekler ve köpeklerin
+   depremi 1 ila 20 saat önceden hissettiklerini bilimsel olarak
+   raporladı. 2024'te Japon araştırmacılar ineklerin süt veriminin
+   depremden 9-11 gün önce düştüğünü gösterdi. Arılar bu
+   araştırmalarda henüz yok — 1995 Kobe depreminden önceki
+   tek gözlem, Japon bilim insanı Ikeya'nın notlarında:
+   arılar kovandan kaçmış."
+
+  Gerekirse derinleştirmek için:
+  "1995 Kobe Depremi'nden sonra Japon araştırmacı Wadatsumi,
+   vatandaşlardan 1.519 sıra dışı hayvan davranışı raporu derledi.
+   Fizikçi Ikeya bu veriyi 2004'te kitaba dönüştürdü — arılar
+   depremden saatler önce iletişim danslarını kaybediyor,
+   huzurlu vızıltı bandından alarm bandına geçiyor."
+
+  Kaynak: Wikelski vd. (2020) Ethology · Hayakawa & Yamauchi (2024) Applied Sciences
+           Wadatsumi (1995) 1519 Hayvan Davranışı · Ikeya (2004) Earthquakes and Animals
+
+───────────────────────────────────────────────────────
+SLAYT 3 / KOVAN VE FREKANS
+───────────────────────────────────────────────────────
+"Arılar depremi nasıl hisseder?" sorusuna:
+
+  "Sağlıklı bir kovanda 50 bin arı aynı frekansta titreşir —
+   buna 'huzur mırıltısı' diyoruz, 230-270 Hz bandında.
+   Bir şeyler değiştiğinde — sismik gerilim, sağlık sorunu,
+   tehlike — bu frekans yükseliyor, alarm bandına giriyor.
+   Dijital sensörle ölçülebilir. Kovan aslında 50 bin
+   mikrofondan oluşan doğal bir sismograf."
+
+  TV'de 'Hz' demek yerine: "Müzisyenler nota diyorsa biz
+  frekans diyoruz — arının o notası değişiyor işte."
+
+───────────────────────────────────────────────────────
+SLAYT 4 / ELEKTROMANYETİK MEKANİZMA
+───────────────────────────────────────────────────────
+"Peki nasıl oluyor bu?" sorusuna:
+
+  "Yer kabuğu gerilirken çok düşük frekanslı elektromanyetik
+   dalgalar yayıyor — gözle görülmez, kulaKla duyulmaz.
+   Ama arılar manyetik alanı hisseden biyolojik bir sisteme
+   sahip. Bunu bal peteğindeki küçük manyetit kristalleri
+   sağlıyor. Yani arı bir pusula gibi yer kabuğunun
+   'nabzını' tutuyor."
+
+  [magnetoreception] → "arının doğal manyetik pusulası"
+  [ULF/ELF] → "yer kabuğunun sessiz elektromanyetik sinyali"
+
+───────────────────────────────────────────────────────
+SLAYT 5 / TÜRKİYE'NİN AVANTAJI
+───────────────────────────────────────────────────────
+"Türkiye bu konuda nerede?" sorusuna:
+
+  "Japonya inekleri seçti çünkü elinde süt sağım verisi
+   hazırdı. Türkiye'nin 9 milyon kovası var — dünyada
+   üçüncü sıra. Üstelik yasal zorunluluk gereği kovanlar
+   insan yerleşiminden en az 200 metre uzakta. Bu şehir
+   gürültüsünden uzak demek — temiz sinyal demek.
+   Japonya'nın yapamadığını Türkiye yapabilir."
+
+───────────────────────────────────────────────────────
+SLAYT 5B / 5 ARI IRKI VE FAY SINIRLARI
+───────────────────────────────────────────────────────
+"Bu balların farkı neden bu kadar büyük?" sorusuna:
+
+  "Türkiye'nin 5 farklı arı ırkı var — Anadolu, Kafkas,
+   Karniyol, Suriye ve Meda. Şaşırtıcı olan şu: bu ırkların
+   doğal sınırlarına baktığınızda, Kuzey ve Doğu Anadolu fay
+   hatlarının araya cetvelle çizilmiş gibi girdiğini görüyorsunuz.
+   Faylar milyonlarca yıldır her ırkı kendi bölgesinde tutmuş —
+   doğal kale duvarı gibi. Bu sınırları bugün insan eliyle
+   bozduğumuzda koloni verimi yüzde 20-30 düşüyor."
+
+  NAF → Muğla kızılçam (Anadolu ırkı)
+  EAF → Gaziantep-Bingöl kekik-geven (Suriye/Meda ırkı)
+  BAF → Ege lavanta-çiçek (Anadolu/Karniyol sınırı)
+
+───────────────────────────────────────────────────────
+SLAYT 6 / IĞDIR VAKASI
+───────────────────────────────────────────────────────
+"Somut bir örnek var mı?" sorusuna:
+
+  "Mayıs 2026'da Iğdır'da ağır araç trafiğinin geçtiği
+   bir güzergah üzerindeki kovanlar çöktü — arılar
+   kaçtı, koloniler bitti. Titreşim frekansı alarm bandına
+   geçmişti. Bu, biyo-sismik uyarının yanlış tetiklendiği
+   ilk belgelenmiş Türkiye vakası. Ders şu: kovan yeri
+   seçimi çok önemli."
+
+───────────────────────────────────────────────────────
+SLAYT 7 / BAL TERROİR
+───────────────────────────────────────────────────────
+"Bu balın farkı ne?" sorusuna:
+
+  "Fay hatları derinlerden kalsiyum, magnezyum, potasyum
+   gibi mineralleri yüzeye çıkarıyor. Bu mineraller
+   toprağa geçiyor, bitkiye geçiyor, arıya geçiyor,
+   bala geçiyor. Düzce balı ile Elazığ balı farklı
+   tektonik hatlar üzerinde — mineral imzası farklı.
+   Bunu laboratuvarda kanıtlayabiliriz. Fransızlar
+   şaraba 'terroir' diyor — biz bala diyeceğiz."
+
+  Somut rakam eklemek isterseniz:
+  "Dünyada kimyasal köken analizi yapılmış terroir balı
+   kilogramı 200 dolara kadar çıkıyor. Standart bal
+   fiyatının 10 katı. Fark, jeolojik kimliğin
+   laboratuvarda ispatlanmasından geliyor."
+
+───────────────────────────────────────────────────────
+SLAYT 8 / TÜRKİYE İSTATİSTİKLERİ
+───────────────────────────────────────────────────────
+"Türkiye arıcılıkta nerede?" sorusuna:
+
+  "Türkiye dünya çam balının yüzde 90'ını üretiyor.
+   9 milyon kayıtlı kovan var. Dünya arı genetiğinin
+   yüzde 23'ü burada. 1.200 kilometre uzunluğunda
+   bir Bal Yolu var — Trakya'dan Doğu Anadolu'ya.
+   Bu potansiyeli bilimle birleştirirsek hem marka
+   hem erken uyarı sistemi kurulabilir."
+
+───────────────────────────────────────────────────────
+SLAYT 9 / ARAŞTIRMA BOŞLUĞU
+───────────────────────────────────────────────────────
+"Neler yapılabilir?" sorusuna:
+
+  "Üç somut adım var: Birincisi, fay hatları üzerindeki
+   kovanlara titreşim sensörü takılması — maliyeti
+   düşük, verisi değerli. Buna Ardu-Bee diyoruz;
+   'Ardu' kısmı Arduino'dan geliyor — dünyada yaygın
+   kullanılan açık kaynaklı küçük bir devre kartı,
+   kovan içi titreşimi ve sıcaklığı kesintisiz ölçüyor.
+   İkincisi, bu verilerin AFAD sistemine entegrasyonu.
+   Üçüncüsü, bal örneklerinin mineral ve izotop
+   analiziyle terroir haritasının çıkarılması —
+   böylece sahte balı laboratuvarda yakalayabiliriz.
+   Bunlar için büyük bütçe değil, irade lazım."
+
+───────────────────────────────────────────────────────
+SLAYT 10 / KAPANIŞ
+───────────────────────────────────────────────────────
+Tek cümlelik mesaj:
+
+  "Arıları korumak sadece bal için değil —
+   yer kabuğunun nabzını tutan sensörlerimizi
+   korumak için de önemli."
+
+───────────────────────────────────────────────────────
+ACİL SORULARA HAZIR YANIT
+───────────────────────────────────────────────────────
+
+S: "Bilimsel kanıt var mı?"
+C: "Arılar için henüz sistematik çalışma yok — 1995
+    Kobe'de tek gözlem var. Ama inekler ve köpekler
+    için Max Planck ve Japon ekolünden güçlü veriler
+    var. Biz bu boşluğu Türkiye'de doldurmayı
+    hedefliyoruz."
+
+S: "Deprem tahmin edilebilir mi?"
+C: "Tam tahmin değil — erken sinyal. Farkı şu:
+    hava durumunu birebir bilemezsiniz ama fırtına
+    yaklaşıyor diyebilirsiniz. Biz de yer altındaki
+    gerilimin arttığını hisseden bir sistem
+    kurmak istiyoruz."
+
+S: "Ne zaman hayata geçer?"
+C: "Sensör teknolojisi hazır, mevzuat uygun,
+    kovan sayısı yeterli. Eksik olan organize
+    veri toplama sistemi. Bu bir TÜBİTAK projesi
+    olabilir."
+
+───────────────────────────────────────────────────────
+KAYNAKLAR (Canlıda Söylemenize Gerek Yok)
+───────────────────────────────────────────────────────
+• Wikelski vd. (2020). Ethology. DOI: 10.1111/eth.13078
+• Hayakawa & Yamauchi (2016). OJER. DOI: 10.4236/ojer.2016.54017
+• Hayakawa & Yamauchi (2024). Applied Sciences. DOI: 10.3390/app14104317
+• Ikeya (2004). Earthquakes and Animals. World Scientific.
+• Öncel (2026). Fay Yolu Arıcılığı. aliosmanoncel.blogspot.com
+
+═══════════════════════════════════════════════════════
+© 2026 Prof. Dr. Ali Osman Öncel · İÜC · 16 Haziran 2026
+═══════════════════════════════════════════════════════

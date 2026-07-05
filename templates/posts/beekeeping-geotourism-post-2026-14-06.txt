@@ -1,0 +1,1064 @@
+﻿<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+#ep-wrap {
+  --ep-bg:#0d1117; --ep-text:#e2e8f0; --ep-panel:#111827; --ep-muted:#7c9cbd;
+  --ep-accent:#e11d48; --ep-accent2:#f59e0b; --ep-accent3:#a78bfa;
+  --ep-glass:rgba(255,255,255,.03); --ep-border:rgba(255,255,255,.08);
+  font-family:'DM Sans',sans-serif;
+  background:var(--ep-bg);
+  color:var(--ep-text);
+  line-height:1.8;
+  text-align:justify;
+  max-width:780px;
+  margin:0 auto;
+  padding:24px 24px 60px;
+  transition:background .4s,color .4s;
+}
+#ep-wrap[data-theme="light"] {
+  --ep-bg:#f0f4f8; --ep-text:#1a202c; --ep-panel:#ffffff; --ep-muted:#4a6280;
+  --ep-accent:#c41535; --ep-accent2:#b45309; --ep-accent3:#7c3aed;
+  --ep-glass:rgba(0,0,0,.02); --ep-border:rgba(0,0,0,.1);
+}
+#ep-wrap * { box-sizing:border-box; }
+#ep-wrap .ep-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 0 20px;border-bottom:1px solid var(--ep-border);margin-bottom:28px;}
+#ep-wrap .ep-badge{background:linear-gradient(135deg,var(--ep-accent),var(--ep-accent2));padding:5px 14px;border-radius:100px;font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase;}
+#ep-wrap .ep-brand-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--ep-text);margin-top:5px;}
+#ep-wrap .ep-brand-sub{font-size:.78rem;color:var(--ep-muted);}
+#ep-wrap .ep-theme-btn{border:1px solid var(--ep-border);padding:7px 14px;border-radius:100px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;background:var(--ep-glass);color:var(--ep-text);transition:all .2s;}
+#ep-wrap .ep-theme-btn:hover{border-color:var(--ep-accent);color:var(--ep-accent);}
+#ep-wrap .ep-hero{background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(245,158,11,.18),transparent 70%),linear-gradient(135deg,#070c18,#0d1525);border-radius:20px;padding:44px 32px;text-align:center;margin-bottom:28px;border:1px solid var(--ep-border);overflow:hidden;}
+#ep-wrap .ep-hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);padding:5px 14px;border-radius:100px;font-size:.78rem;color:var(--ep-accent2);margin-bottom:18px;font-weight:600;}
+#ep-wrap .ep-hero h1{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;line-height:1.15;margin-bottom:12px;text-wrap:balance;}
+#ep-wrap .ep-hero h1 span{background:linear-gradient(90deg,var(--ep-accent2),var(--ep-accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+#ep-wrap .ep-hero .ep-lead{font-size:1rem;color:var(--ep-muted);max-width:520px;margin:0 auto 20px;}
+#ep-wrap .ep-pills{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;}
+#ep-wrap .ep-pill{padding:4px 12px;border-radius:100px;font-size:.75rem;font-weight:600;border:1px solid var(--ep-border);color:var(--ep-muted);background:var(--ep-glass);}
+#ep-wrap .ep-meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:0 0 20px;font-size:.8rem;color:var(--ep-muted);}
+#ep-wrap .ep-video{margin:0 0 28px;border-radius:16px;overflow:hidden;border:1px solid rgba(245,158,11,.25);}
+#ep-wrap .ep-video-cap{padding:12px 18px;background:linear-gradient(135deg,rgba(245,158,11,.07),rgba(225,29,72,.04));border-top:1px solid rgba(245,158,11,.2);font-size:.78rem;color:var(--ep-muted);font-style:italic;text-align:justify;}
+#ep-wrap .ep-summary{background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(245,158,11,.03));border:1px solid rgba(245,158,11,.25);border-radius:16px;padding:24px 24px 24px 70px;margin:24px 0;position:relative;}
+#ep-wrap .ep-summary::before{content:"🍯";font-size:1.8rem;position:absolute;top:20px;left:20px;}
+#ep-wrap .ep-summary h3{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;color:var(--ep-accent2);margin-bottom:10px;}
+#ep-wrap .ep-summary p{font-size:.92rem;font-style:italic;color:var(--ep-text);opacity:.88;margin-bottom:8px;}
+#ep-wrap .ep-summary .ep-note{font-size:.78rem;color:var(--ep-muted);font-style:normal;}
+#ep-wrap .ep-section{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ep-accent2);margin:32px 0 14px;display:flex;align-items:center;gap:10px;border-bottom:2px solid rgba(245,158,11,.2);padding-bottom:8px;text-wrap:balance;}
+#ep-wrap .ep-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0;}
+#ep-wrap .ep-card{background:var(--ep-panel);border:1px solid var(--ep-border);border-radius:14px;padding:18px;transition:border-color .2s,transform .2s;}
+#ep-wrap .ep-card:hover{border-color:var(--ep-accent2);transform:translateY(-2px);}
+#ep-wrap .ep-card .ep-icon{font-size:1.6rem;margin-bottom:10px;}
+#ep-wrap .ep-card h4{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:6px;color:var(--ep-accent2);}
+#ep-wrap .ep-card p{font-size:.82rem;opacity:.72;line-height:1.6;}
+#ep-wrap .ep-steps{display:flex;flex-direction:column;margin:20px 0;}
+#ep-wrap .ep-step{display:flex;gap:16px;align-items:flex-start;padding:18px;background:var(--ep-panel);border:1px solid var(--ep-border);}
+#ep-wrap .ep-step:first-child{border-radius:14px 14px 0 0;}
+#ep-wrap .ep-step:last-child{border-radius:0 0 14px 14px;}
+#ep-wrap .ep-step-num{width:40px;height:40px;border-radius:50%;background:var(--ep-accent2);color:#000;font-weight:700;font-family:'Syne',sans-serif;font-size:1.1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+#ep-wrap .ep-step-body h4{margin:0 0 4px;color:var(--ep-accent2);font-family:'Syne',sans-serif;font-size:.9rem;}
+#ep-wrap .ep-step-body p{margin:0;font-size:.88rem;opacity:.8;}
+#ep-wrap .ep-connector{width:2px;background:rgba(245,158,11,.3);height:20px;margin-left:19px;}
+#ep-wrap .ep-quote{border-left:3px solid var(--ep-accent2);padding:14px 20px;margin:20px 0;background:rgba(245,158,11,.05);border-radius:0 12px 12px 0;font-style:italic;font-size:1rem;}
+#ep-wrap .ep-quote cite{display:block;margin-top:8px;font-style:normal;font-size:.78rem;color:var(--ep-muted);}
+#ep-wrap .ep-box{border-radius:14px;padding:18px 22px;margin:20px 0;font-size:.92rem;}
+#ep-wrap .ep-box-red{background:rgba(225,29,72,.07);border:1px solid rgba(225,29,72,.2);}
+#ep-wrap .ep-box-red strong{color:var(--ep-accent);}
+#ep-wrap .ep-box-gold{background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.2);}
+#ep-wrap .ep-box-gold strong{color:var(--ep-accent2);}
+#ep-wrap .ep-box-green{background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);}
+#ep-wrap .ep-box-green strong{color:#22c55e;}
+#ep-wrap .ep-think{background:rgba(167,139,250,.08);border-left:4px solid var(--ep-accent3);padding:16px 18px 16px 60px;border-radius:12px;margin:24px 0;font-style:italic;position:relative;font-size:.92rem;}
+#ep-wrap .ep-think::before{content:"🔬";font-size:1.6rem;position:absolute;top:14px;left:14px;}
+#ep-wrap .ep-think strong{display:block;margin-bottom:6px;font-style:normal;color:var(--ep-accent3);}
+#ep-wrap .ep-tags{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0 0;}
+#ep-wrap .ep-tag{padding:6px 16px;border-radius:100px;font-size:.78rem;font-weight:600;border:1px solid var(--ep-border);color:var(--ep-muted);background:var(--ep-glass);}
+#ep-wrap .ep-divider{height:1px;background:linear-gradient(90deg,transparent,var(--ep-border),transparent);margin:28px 0;}
+#ep-wrap .ep-p{font-size:.96rem;line-height:1.9;margin:16px 0;opacity:.9;}
+#ep-wrap .ep-kw{color:var(--ep-accent2);font-weight:600;}
+#ep-wrap .ep-kw2{color:var(--ep-accent3);font-weight:600;}
+#ep-wrap .ep-export{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.3);border-radius:14px;padding:14px 20px;margin:28px 0;}
+#ep-wrap .ep-export-info{display:flex;align-items:center;gap:10px;flex:1;min-width:180px;}
+#ep-wrap .ep-export-icon{width:34px;height:34px;border-radius:8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+#ep-wrap .ep-export-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.82rem;color:#e8c97a;}
+#ep-wrap .ep-export-sub{font-size:.68rem;color:var(--ep-muted);margin-top:2px;}
+#ep-wrap .ep-btn{padding:9px 18px;border-radius:8px;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all .2s;white-space:nowrap;border:1px solid;}
+#ep-wrap .ep-btn-pdf{background:#1a3a6e;border-color:rgba(56,189,248,.4);color:#7ab8ff;}
+#ep-wrap .ep-btn-pdf:hover{background:#1e4a8a;}
+#ep-wrap .ep-btn-word{background:#0f3020;border-color:rgba(34,197,94,.4);color:#4ade80;}
+#ep-wrap .ep-btn-word:hover{background:#163d28;}
+#ep-wrap .ep-author{display:flex;align-items:center;gap:18px;background:var(--ep-panel);border:1px solid var(--ep-border);border-radius:16px;padding:20px 24px;margin:28px 0;flex-wrap:wrap;}
+#ep-wrap .ep-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--ep-accent2),var(--ep-accent));display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;}
+#ep-wrap .ep-author-info{flex:1;min-width:180px;}
+#ep-wrap .ep-author-name{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--ep-text);margin-bottom:3px;}
+#ep-wrap .ep-author-role{font-size:.78rem;color:var(--ep-accent2);margin-bottom:5px;}
+#ep-wrap .ep-author-bio{font-size:.8rem;color:var(--ep-muted);line-height:1.6;}
+#ep-wrap .ep-author-link{display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:.75rem;font-weight:600;color:var(--ep-accent2);text-decoration:none;border:1px solid rgba(245,158,11,.3);border-radius:100px;padding:3px 10px;background:rgba(245,158,11,.06);}
+#ep-wrap .ep-share{margin:28px 0 0;}
+#ep-wrap .ep-share-label{font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ep-muted);margin-bottom:10px;}
+#ep-wrap .ep-share-btns{display:flex;flex-wrap:wrap;gap:9px;}
+#ep-wrap .ep-share-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:100px;font-family:'Syne',sans-serif;font-size:.76rem;font-weight:700;cursor:pointer;text-decoration:none;border:1px solid var(--ep-border);background:var(--ep-glass);color:var(--ep-text);transition:all .2s;}
+#ep-wrap .ep-share-btn:hover{transform:translateY(-2px);}
+#ep-wrap .ep-tw{border-color:rgba(29,161,242,.35);color:#1da1f2;}
+#ep-wrap .ep-wa{border-color:rgba(37,211,102,.35);color:#25d366;}
+#ep-wrap .ep-cp{border-color:rgba(167,139,250,.35);color:var(--ep-accent3);}
+#ep-wrap .ep-ml{border-color:rgba(225,29,72,.35);color:var(--ep-accent);}
+#ep-wrap .ep-cta{text-align:center;margin:36px 0 16px;}
+#ep-wrap .ep-cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--ep-accent2),var(--ep-accent));color:#fff;border:none;padding:16px 36px;border-radius:100px;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;text-decoration:none;box-shadow:0 8px 28px rgba(245,158,11,.35);transition:opacity .2s,transform .2s;}
+#ep-wrap .ep-cta-btn:hover{opacity:.88;transform:translateY(-2px);}
+#ep-wrap .ep-cta-sub{font-size:.8rem;color:var(--ep-muted);margin-top:10px;}
+#ep-wrap .ep-footer{text-align:justify;hyphens:auto;padding:24px 0 0;color:var(--ep-muted);font-size:.82rem;border-top:1px solid var(--ep-border);}
+#ep-wrap .ep-footer strong{color:var(--ep-accent2);}
+#ep-wrap .ep-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;}
+@media(max-width:600px){
+  #ep-wrap .ep-hero h1{font-size:1.6rem;}
+  #ep-wrap .ep-hero{padding:32px 20px;}
+  #ep-wrap .ep-author{flex-direction:column;text-align:center;}
+  #ep-wrap .ep-cards{grid-template-columns:1fr;}
+}
+</style>
+
+<div id="ep-wrap">
+
+<!-- HEADER -->
+<div class="ep-header">
+  <div>
+    <div class="ep-badge">🐝 Arıcılık Rehberi · EduPanel v4</div>
+    <div class="ep-brand-title">Fay Yolu Arıcılığı</div>
+    <div class="ep-brand-sub">Diri Fay Koridorlarında Süper-Organizma Stratejisi · <span style="opacity:.6;">Haziran 2026</span></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <div style="display:flex;align-items:center;gap:7px;background:linear-gradient(135deg,rgba(59,158,255,0.12),rgba(30,80,140,0.18));border:1px solid rgba(59,158,255,0.35);border-radius:100px;padding:5px 12px 5px 10px;">
+      <span style="font-size:1em;line-height:1;">🌐</span>
+      <span style="font-size:0.68rem;font-weight:700;color:#90caf9;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;">Language</span>
+      <div id="google_translate_element" style="display:flex;align-items:center;"></div>
+    </div>
+    <button id="tts-btn" title="Sesli oku / Listen" style="padding:7px 13px;background:linear-gradient(135deg,#1e3a5f,#1e40af);border:1px solid rgba(59,158,255,0.45);border-radius:100px;color:#90caf9;font-weight:700;font-size:.76rem;cursor:pointer;white-space:nowrap;transition:background .2s;">🔊 Dinle</button>
+    <button class="ep-theme-btn" id="ep-theme-btn"><span id="ep-theme-icon">🌙</span> Tema</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="ep-hero">
+  <div class="ep-hero-tag">🐝 Arıcılık Rehberi · Haziran 2026</div>
+  <h1>Fay Yolu <span>Arıcılığı</span></h1>
+  <p class="ep-lead">Sismotektonik koridorlardan kovan içi dalga fiziğine &#x2014; Türkiye'nin arıcılık mirasının jeolojik haritası ve yeni başlayanlar için bilimsel-pratik saha rehberi.</p>
+  <div class="ep-pills">
+    <span class="ep-pill">🍯 Kızılçam Balı</span>
+    <span class="ep-pill">🐝 Süper-Organizma</span>
+    <span class="ep-pill">🗺️ Türkiye Bal Yolu</span>
+    <span class="ep-pill">🔬 Sismoloji</span>
+    <span class="ep-pill">🌿 Jeoturizm</span>
+  </div>
+</div>
+
+<!-- OKUMA SÜRESİ -->
+<div class="ep-meta-row">
+  <span>📅 Haziran 2026</span>
+  <span>⏱️ <span id="ep-read-time">~8 dk</span> okuma</span>
+  <span>✍️ Arıcılık Rehberi</span>
+  <span>📡 JeoTurizm EduPanel v5</span>
+  <span>🔄 Güncellendi: 14 Haziran 2026</span>
+</div>
+
+<!-- VİDEO -->
+<div class="ep-video">
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+    <iframe src="https://www.youtube.com/embed/SQYC5cNRWSg?rel=0&amp;showinfo=0"
+      title="Türkiye Arıcılığı Bilimsel Rehber — Prof. Dr. Ali Osman Öncel"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
+  </div>
+  <div class="ep-video-cap">🎬 Türkiye Arıcılığı Bilimsel Rehber — Koloni Biyolojisi · Bal Kalitesi · Varroa · Genetik Seçim · ~8 dk</div>
+</div>
+
+<!-- ÖZET -->
+<div class="ep-summary">
+  <h3>Yazının Özü</h3>
+  <p>Bu rehber, Türkiye'nin sismotektonik yapısını arıcılıkla ilk kez buluşturan "Fay Yolu Arıcılığı" vizyonunu 10 bağımsız bölümde sunar. Belge sürecinden ana arı üretimine, Varroa mücadelesinden 1.200 km'lik göç rotasına ve jeoturizm ekonomisine kadar tüm konular bilimsel kaynaklarla desteklenmiştir.</p>
+  <p style="font-size:.88rem;color:#8aadcc;line-height:1.85;text-align:justify;margin:10px 0;">Bu rehberin temel amacı <strong style="color:#fff;">küresel bir vizyon</strong> sunmaktır: Diri fay hatları boyunca gelişen arıcılık ekosistemi yalnızca Türkiye'ye özgü değil — dünyanın herhangi bir tektonik bölgesine uygulanabilir evrensel bir çerçevedir. Gezgin arıcılık ABD'de ~3.000 km, Çin'de güney→kuzey, Avustralya'da okaliptüs koridorları boyunca sürdürülmektedir. Türkiye vakası bu küresel pratiğin en özgün örneğidir: <strong style="color:#fbbf24;">1.200 km'lik güzergahın altında NAFZ, EAFZ ve Batı Anadolu Fay Zonu uzanır</strong> — aktif tektonik yapının floraya ve bal kalitesine yansıması başka hiçbir ülkede bu ölçekte belgelenmemiştir.</p>
+  <p class="ep-note">📍 Hedef kitle: Dünyanın herhangi bir yerinde arıcılığa başlayan veya sürdüren herkes; tarım araştırmacıları, jeoturizm plancıları ve arı biyolojisine meraklı okuyucular.</p>
+</div>
+
+<!-- STAT KUTULARI -->
+<table style="width:100%;border-collapse:separate;border-spacing:10px;margin:24px 0;table-layout:fixed;">
+  <tr>
+    <td style="width:50%;background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(245,158,11,.03));border:1px solid rgba(245,158,11,.25);border-radius:14px;padding:18px 12px;text-align:center;vertical-align:top;">
+      <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:#f59e0b;line-height:1.2;">~9M</div>
+      <div style="font-size:.78rem;color:#7c9cbd;margin-top:6px;">Kayıtlı Kovan</div>
+      <div style="font-size:.68rem;color:#7c9cbd;opacity:.7;margin-top:3px;">Küresel lider · Türkiye</div>
+    </td>
+    <td style="width:50%;background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(245,158,11,.03));border:1px solid rgba(245,158,11,.25);border-radius:14px;padding:18px 12px;text-align:center;vertical-align:top;">
+      <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:#f59e0b;line-height:1.2;">%90</div>
+      <div style="font-size:.78rem;color:#7c9cbd;margin-top:6px;">Dünya Çam Balı</div>
+      <div style="font-size:.68rem;color:#7c9cbd;opacity:.7;margin-top:3px;">Türkiye'nin payı · Kızılçam</div>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:50%;background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(245,158,11,.03));border:1px solid rgba(245,158,11,.25);border-radius:14px;padding:18px 12px;text-align:center;vertical-align:top;">
+      <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:#f59e0b;line-height:1.2;">1.200 km</div>
+      <div style="font-size:.78rem;color:#7c9cbd;margin-top:6px;">Türkiye Bal Yolu</div>
+      <div style="font-size:.68rem;color:#7c9cbd;opacity:.7;margin-top:3px;">Muğla → Bingöl rotası</div>
+    </td>
+    <td style="width:50%;background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(245,158,11,.03));border:1px solid rgba(245,158,11,.25);border-radius:14px;padding:18px 12px;text-align:center;vertical-align:top;">
+      <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:#f59e0b;line-height:1.2;">%23</div>
+      <div style="font-size:.78rem;color:#7c9cbd;margin-top:6px;">Küresel Arı Genetiği</div>
+      <div style="font-size:.68rem;color:#7c9cbd;opacity:.7;margin-top:3px;">Türkiye'nin gen havuzu payı</div>
+    </td>
+  </tr>
+</table>
+
+<div class="ep-divider"></div>
+
+<!-- 10 BÖLÜM -->
+<div class="ep-section">📑 10 Bölümlük Rehber İçeriği</div>
+
+<div class="ep-steps">
+  <div class="ep-step">
+    <div class="ep-step-num">01</div>
+    <div class="ep-step-body">
+      <h4>Arıcılığa Başlamadan Önce</h4>
+      <p>AKS/ÇKS belge süreci, Langstroth kovan standardı (6–9 mm arı boşluğu) ve ideal arılık yeri seçimi. 200 metre sismik gürültü güvenlik sınırı.</p>
+    </div>
+  </div>
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">02</div>
+    <div class="ep-step-body">
+      <h4>Temel Ekipman ve Acemi Hataları</h4>
+      <p>Tulum (45–90 $), dumanlık, refraktometre. Gündüz şerbet yasağı, 40°C ısıtma yasağı, 5 km navigasyon sıfırlama kuralı.</p>
+    </div>
+  </div>
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">03</div>
+    <div class="ep-step-body">
+      <h4>Koloni Nasıl Çalışır: Süper-Organizma</h4>
+      <p>21 günlük işçi arı döngüsü, 5–8 milyon sperm deposu, 230–270 Hz kovan rezonans bandı ve petek mühendisliği (9–13° eğim).</p>
+    </div>
+  </div>
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">04</div>
+    <div class="ep-step-body">
+      <h4>Balın Simyası ve Hasat</h4>
+      <p>≤%17,5 nem eşiği, 40°C ısıtma yasağı, 13° ters mühendislik paradoksu ve refraktometre ile kalite kontrolü.</p>
+    </div>
+  </div>
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">05</div>
+    <div class="ep-step-body">
+      <h4>Mevsimsel Koloni Yönetimi</h4>
+      <p>14°C altı şurup yasağı, 4 temel dönem takvimi (İlkbahar/Oğul/Bal Akımı/Sonbahar) ve kovan açma disiplini.</p>
+    </div>
+  </div>
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">06</div>
+    <div class="ep-step-body">
+      <h4>Varroa ve Biyo-Güvenlik</h4>
+      <p>%2 alkol yıkama eşiği, oksalik asit (%91–96 etkinlik), timol (%89,98 etkinlik) ve hijyenik davranış seleksiyonu.</p>
+    </div>
+  </div>
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">07</div>
+    <div class="ep-step-body">
+      <h4>Ana Arı Üretim Teknikleri</h4>
+      <p>Doolittle yöntemi (12–24 saatlik larva), DCA çiftleşme biyolojisi, 100–1.000 € damızlık fiyat aralığı ve renk kodu sistemi.</p>
+    </div>
+  </div>
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">08</div>
+    <div class="ep-step-body">
+      <h4>Türkiye Arı Irk Haritası</h4>
+      <p>5 ana ırk (Kafkas, Anadolu, Karniyol, Suriye, Med), NAF/EAF/BAF fay hatlarının genetik bariyer işlevi ve %30 yanlış ırk verim kaybı. <strong style="color:#fca5a5;">Tektonik Hat &amp; Bal Yolu Rolü</strong> sütunu ile her ırkın fay koridoru eşleşmesi tabloda gösterilmektedir.</p>
+    </div>
+  </div>
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">09</div>
+    <div class="ep-step-body">
+      <h4>Türkiye Bal Yolu: 1.200 km</h4>
+      <p>Gezgin arıcılık küresel bir pratiktir — ancak Türkiye Bal Yolu'nun farkı güzergahın altındaki aktif tektonik yapıdır. Muğla kızılçamından Bingöl gevene uzanan 1.200 km boyunca her durak bir tektonik sınırla örtüşür: NAFZ, EAFZ ve Batı Anadolu Fay Zonu. 3–5 kovan/km² ekolojik kapasite sınırı, jeokimyasal parmak izi ve coğrafi köken sertifikasyonu potansiyeli bu güzergahı dünya arıcılığında eşsiz kılar. <strong style="color:#fbbf24;">&#9939;&#65039; Sismotektonik De&#287;er Zinciri</strong> ve <strong style="color:#fbbf24;">&#128506; İnteraktif Bal Yolu Haritası</strong> (NAFZ/EAFZ/WAFZ, 9 durak) bu bölümde yer almaktadır.</p>
+    </div>
+  </div>
+
+  <div style="margin:12px 0 0 56px;">
+    <div class="ep-box ep-box-gold">
+      <strong>🗺️ Trakya Uzantısı (Thracian Extension):</strong> KAFZ'nin Ganos hattı ve Istranca üzerinden Avrupa yakasına uzanması, ana Bal Yolu'nun batı kolu olan stratejik bir arıcılık koridoru oluşturur.
+      <ul style="padding-left:1.2em;margin-top:8px;font-size:.85rem;line-height:1.9;">
+        <li><strong>Biyolojik Bariyer:</strong> Marmara Denizi ve KAFZ, Anadolu arısını (<em>A. m. anatoliaca</em>) Karniyol (<em>A. m. carnica</em>) ve Makedon (<em>A. m. macedonica</em>) ırklarından coğrafi olarak ayıran tektonik sınırı oluşturur.</li>
+        <li><strong>Kırklareli İzole Bölgesi:</strong> Bakanlıkça ilan edilmiş 30 km çapındaki koruma alanı; faselya ve meşe florasının sağladığı yüksek protein kalitesiyle Trakya arısının genetik saflığını korur.</li>
+        <li><strong>Ayçiçeği Aksı:</strong> Temmuz–Ağustos döneminde Edirne–Tekirdağ–Kırklareli hattı, Türkiye'nin en yoğun ayçiçeği balı üretim koridorudur.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ep-connector"></div>
+  <div class="ep-step">
+    <div class="ep-step-num">10</div>
+    <div class="ep-step-body">
+      <h4>Geleceğin Arıcılığı: Jeoturizm ve Apitoksin</h4>
+      <p>50–150 $/gram arı zehiri (apitoksin), 200–250 $/kovan Kaliforniya referansı, Trakya jeoturizm rotası ve PDO coğrafi işaret stratejisi.</p>
+    </div>
+  </div>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- BİLİM NOTU -->
+<div class="ep-section">🔬 Deprem ve Arı: Canlı Sismograf Hipotezi</div>
+
+<div class="ep-p">Dünya literatüründe inek, köpek ve farelerin deprem öncesi davranış değiştirdiği Wikelski (2020) ve Hayakawa (2024) tarafından raporlandı. Arılar bu araştırmalarda henüz yer almıyor — Ikeya'nın (2004) 1995 Kobe gözlemi tek istisna. Bu boşluk, Türkiye'nin 9 milyon kovanlık fırsatının ta kendisidir.</div>
+
+<div class="ep-think">
+  <strong>Fay Yolu Arıcılığı — Özgün Vizyon</strong>
+  Türkiye'nin aktif fay sistemleri (NAF, EAF, BAF) sadece deprem üretmez &#x2014; mineralce zengin suları yüzeye çıkararak floraya jeokimyasal imza atar, topoğrafyayı bölerek arı ekotiplerini genetik olarak izole eder. Arılar bu mineral izlerini bala kodlayarak balın <span class="ep-kw">jeokimyasal parmak izini</span> oluşturur. Bu durum Türkiye ballarının hangi tektonik hat üzerinden geldiğinin bilimsel olarak kanıtlanabilmesini sağlar.
+</div>
+
+<div class="ep-think">
+  <strong>Kovan İçi Sismoloji</strong>
+  Sağlıklı bir koloni <span class="ep-kw">230–270 Hz</span> bandında titreşimsel sinyaller üretir. Varroa baskısı, kraliçe kaybı veya mekanik titreşim bu frekansı <span class="ep-kw">265–350 Hz alarm bandına</span> kaydırır. Mayıs 2026 Iğdır vakası, ağır araç trafiğinin kaskad koloni çöküşüne yol açtığını belgeleyen ilk biyo-sismik vaka olarak kayıtlara geçti.
+</div>
+
+<div class="ep-think">
+  <strong>Biyolojik Bariyer ve Biyosensör Düğümleri</strong>
+  Marmara Denizi ve KAFZ boyunca oluşan tektonik yarık, arı popülasyonları için güçlü bir <span class="ep-kw">biyolojik bariyer</span> işlevi görmüştür — Anadolu ve Trakya arı ırklarının morfometrik farklılıkları bu sismik sınırın biyolojik kanıtıdır. Öte yandan Trakya'nın KAFZ'nin kuzeyinde (Karadeniz bloku) yer alması, Tekirdağ–Saray ve Kırklareli hattındaki kovanları fayın deniz içindeki hareketlerini <span class="ep-kw">230–270 Hz</span> titreşim bandıyla algılayan stratejik <span class="ep-kw2">biyosensör düğümlerine</span> dönüştürür. Sismik erken uyarı sistemleri için bu kovanlar kritik gözlem noktalarıdır.
+</div>
+
+<div class="ep-think">
+  <strong>Bilimsel Zemin: Japon Ekolü ve Türkiye Fırsatı</strong>
+  Deprem öncesi hayvan davranışı son yıllarda sistematik ölçüme kavuştu. Wikelski vd. (2020), İtalya Norcia depremlerinde inekler ve köpeklerin 1–20 saat önceden anormal hareketlilik sergilediğini bio-logging yöntemiyle raporladı; kapalı ahır ortamının dış gürültüyü süzerek sinyali güçlendirdiğini gösterdi. Hayakawa vd. (2016) ve Hayakawa & Yamauchi (2024) ise Japon süt çiftliklerinde depremi 8–18 gün önceden süt verimi düşüşüyle yakaladı; mekanizma olarak <span class="ep-kw">ULF/ELF elektromanyetik radyasyon</span> — yer kabuğunun gerilme sürecinde yaydığı sessiz elektrik dalgaları — gösterildi. Arıların manyetik alanı algılayan biyolojik sistemi bu mekanizmayla doğrudan örtüşür; ancak arı odaklı sistematik çalışma literatürde henüz yer almamaktadır.
+</div>
+
+<div class="ep-box ep-box-gold">
+  <strong>🏛️ Türkiye'nin Yapısal Avantajı — 200 Metre Kuralı:</strong> Hayakawa (2024), Tokyo'daki kentsel istasyonların yoğun elektromanyetik gürültü nedeniyle sinyal veremediğini saptadı. Türkiye'de arıcılık mevzuatı kovanların yerleşim alanlarından <strong>en az 200 metre</strong> uzakta olmasını zorunlu kılmaktadır. Bu yasal zorunluluk, kentsel gürültüyü yapısal olarak ortadan kaldırarak kovanları <span class="ep-kw">doğal temiz-sinyal istasyonuna</span> dönüştürmektedir. 9 milyon kovan × temiz EM ortamı = Japonya'nın hiç kuramadığı biyo-sismik ağ potansiyeli.
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- GERÇEK BAL ANALİZİ -->
+<div class="ep-section">🍯 Gerçek Balın Jeokimyasal Parmak İzi</div>
+
+<div class="ep-p">Gerçek balın sadece aminoasit profili değil, <span class="ep-kw">jeokimyasal imzası</span> da sahtesi yapılamayan bir kanıttır. Fay hatları derinlerden kalsiyum, magnezyum ve potasyum gibi mineralleri yüzeye taşır; arı bu mineralleri bala "kodlar" (Karabagias ve ark., 2014). Bu durum, balı sıradan bir gıda olmaktan çıkarıp <span class="ep-kw">Jeolojik Miras (Terroir)</span> statüsüne yükseltir.</div>
+
+<div class="ep-box ep-box-gold">
+  <strong>⚗️ Nem Eşiği ve Sismik Kararlılık:</strong> Literatürde nem sınırı %20 olsa da, yüksek katma değerli ballar için kritik eşik <strong>%17,5</strong>'tir. Bu oran sadece fermantasyonu engellemekle kalmaz; aynı zamanda balın içindeki mineral kompozisyonunun <em>sismik kararlılıksini</em> korur. Ölçüm için refraktometre zorunludur (Tolon, 1999).
+</div>
+
+<div class="ep-think">
+  <strong>Hurafe vs. Bilim — Sahtecilik Testi</strong>
+  Kibrit yakma veya tabak testi gibi yöntemlerin bilimsel geçerliliği yoktur; zira mısır şurubu da petek şekli alabilir. Kesin kanıt, <span class="ep-kw">¹³C/¹²C izotop oranı analizi</span> ve prolinin <em>arı kaynaklı (bee-derived)</em> olduğunun ispatıdır. Yüksek prolin (800–900 mg/kg), uzun olgunlaştırma süresinin ve gerçek nektar kaynağının göstergesidir (Güler ve ark., 2017).
+</div>
+
+<div class="ep-p">Bireysel kovan analizleri yanıltıcı olabilir. Çözüm, üretimin her aşamasının kayıt altına alındığı <span class="ep-kw">Lisanslı Depoculuk</span> ve ürünlerin <span class="ep-kw">izotop haritalaması</span> ile tescillenmesidir. Türkiye'nin dünya arı genetiğinin %23'üne sahip olması, bu denetimi küresel bir marka gücüne dönüştürebilir.</div>
+
+<!-- KARŞILAŞTIRMA TABLOSU -->
+<div class="ep-table-wrap">
+<table style="width:100%;border-collapse:collapse;font-size:0.82rem;margin:20px 0;">
+  <thead>
+    <tr style="background:rgba(245,158,11,.12);border-top:2px solid rgba(245,158,11,.4);border-bottom:1px solid rgba(245,158,11,.3);">
+      <th style="padding:10px 12px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Parametre</th>
+      <th style="padding:10px 12px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Standart Bal</th>
+      <th style="padding:10px 12px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Fay Yolu (Terroir) Balı</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 12px;font-weight:600;">Prolin</td>
+      <td style="padding:9px 12px;color:#7c9cbd;">&gt;300 mg/kg</td>
+      <td style="padding:9px 12px;color:#f59e0b;font-weight:600;">800–900 mg/kg (Yoğun Emek)</td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+      <td style="padding:9px 12px;font-weight:600;">Nem</td>
+      <td style="padding:9px 12px;color:#7c9cbd;">&lt;%20</td>
+      <td style="padding:9px 12px;color:#f59e0b;font-weight:600;">&lt;%17,5 (Sismik Kararlılık)</td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 12px;font-weight:600;">Mineraller</td>
+      <td style="padding:9px 12px;color:#7c9cbd;">Standart</td>
+      <td style="padding:9px 12px;color:#f59e0b;font-weight:600;">Ca, Mg, K (Jeolojik İmza)</td>
+    </tr>
+    <tr>
+      <td style="padding:9px 12px;font-weight:600;">Kanıt</td>
+      <td style="padding:9px 12px;color:#7c9cbd;">Laboratuvar</td>
+      <td style="padding:9px 12px;color:#f59e0b;font-weight:600;">İzotop + Jeokimyasal Profil</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- KART GRUBU -->
+<div class="ep-section">🌍 Uluslararası Casework</div>
+<div class="ep-cards">
+  <div class="ep-card">
+    <div class="ep-icon">🇺🇸</div>
+    <h4>ABD — Kovan Kiralama</h4>
+    <p>Kaliforniya: 200–250 $/kovan. Arıcı gelirinin %60'ı artık baldan değil tozlaşma hizmetinden.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🇸🇮</div>
+    <h4>Slovenya — UNESCO</h4>
+    <p>2022 UNESCO tescili, PDO coğrafi işaret ve okullarda arıcılık dersi ile ulusal jeoturizm modeli.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🇯🇵</div>
+    <h4>Japonya — Ginza Projesi</h4>
+    <p>GPS destekli kentsel kovan ağı; 2006'dan bugüne 100+ site ve 3 ülkeye yayılan model.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🇪🇺</div>
+    <h4>AB — B-GOOD H2020</h4>
+    <p>Avrupa geneli gen bankası altyapısı ve HIVEOPOLIS akıllı kovan teknolojisi projesi.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🏝️</div>
+    <h4>Gökçeada — Ada İzolasyonu</h4>
+    <p>Ana karadan izole olması sayesinde kendine has popülasyonu koruyan Gökçeada arısı; kekik, sığırkuyruğu ve yabani enginar florası ile Anadolu ve Trakya ırklarından morfometrik olarak tamamen ayrışmış özgün bir <em>case study</em>.</p>
+  </div>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- ALINTI -->
+<div class="ep-quote">
+  "Arıcılık, sismoloji, jeokimya ve biyolojinin kesiştiği yaşayan bir ekosistemi yönetmektir. Fay hatlarının mineral zenginliğini ballara kodlayan arıcı, geleceğin en stratejik üreticisidir."
+  <cite>&#x2014; Prof. Dr. Ali Osman Öncel, Fay Yolu Arıcılığı v4 Final, 2026</cite>
+</div>
+
+<!-- BİLGİ KUTULARI -->
+<div class="ep-box ep-box-gold">
+  <strong>🍯 Kızılçam Balı — Stratejik Kırılganlık:</strong> Dünya çam balı üretiminin %90'ı Türkiye'nin Ege ve Akdeniz kıyılarında <em>Marchalina hellenica</em> simbiyozuyla gerçekleşir. Tüm üretimin tek bir böcek türüne bağlı olması "tek nokta kırılganlığı" yaratır.
+</div>
+
+<div class="ep-box ep-box-green" style="margin-top:16px;">
+  <strong>✅ Türkiye'nin Rekabet Avantajı:</strong> 9 milyon kovan + %90 dünya çam balı + %23 küresel arı genetiği + aktif fay hatlarının jeokimyasal zenginliği. Hiçbir ülkede bu dört avantaj bir arada mevcut değil.
+</div>
+
+<div class="ep-box ep-box-red" style="margin-top:16px;">
+  <strong>⚠️ Genetik Erozyon Riski:</strong> Gökçeada, Sinop ve Yığılca gibi coğrafi izolasyon içindeki bölgelerde kontrolsüz kovan trafiği binlerce yılda oluşan yerel adaptasyonları silme riski taşır.
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- ÜÇ OMURGALI BAL YOLU -->
+<div class="ep-section">🗺️ Üç Omurgalı Bal Yolu — Sismotektonik Haritası</div>
+
+<div class="ep-p">Türkiye'nin arıcılık coğrafyası, tek bir hat üzerinde değil; <strong>üç farklı tektonik rejim</strong> tarafından şekillendirilen üç ayrı omurga üzerinde yürür. Her omurga, kendine özgü mineral baskısı, arı ırkı ve bal kimliği üretir. "Arılar nektarı takip ediyor; Anadolu ise milyonlarca yıldır bu faylar boyunca şekilleniyor."</div>
+
+<!-- 3 OMURGA KARTI -->
+<div class="ep-cards" style="grid-template-columns:1fr;gap:16px;">
+
+  <!-- BAT -->
+  <div class="ep-card" style="border-color:rgba(74,222,128,.35);background:rgba(74,222,128,.05);">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+      <div style="width:14px;height:14px;border-radius:50%;background:#4ade80;flex-shrink:0;box-shadow:0 0 8px #4ade8099;"></div>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;color:#4ade80;font-size:.95rem;">🟢 BAT — Batı Anadolu Genişleme Rejimi · Muğla → Afyon</div>
+    </div>
+    <p style="font-size:.82rem;color:var(--ep-muted);line-height:1.7;margin:0;">
+      <strong style="color:#86efac;">Tektonik kimlik:</strong> Menderes Grabenleri ve Burdur-Fethiye Fay Zonu'nun denetlediği <em>açılma (extensional)</em> rejimi. Yerin derinliklerinden yükselen kalsiyum (Ca) ve magnezyum (Mg) açısından zengin sular, bu genişleme kırıklarından yüzeye taşınır.<br><br>
+      <strong style="color:#86efac;">Jeokimyasal terroir:</strong> Muğla çam balının küresel üstünlüğü, kısmen bu mineral yükleme mekanizmasına borçludur (Tolon 1999). Denizli-Pamukkale travertenleri, Ca-Mg terroir etkisinin yeryüzündeki görünür kanıtıdır.<br><br>
+      <strong style="color:#86efac;">Biyolojik odak:</strong> <em>Apis mellifera anatoliaca</em> — Büyük Menderes vadisi boyunca gelişen, sismik izolasyonun ürünü özgün bir ekotip. Muğla arısı bu genişleme zonunun biyosensörüdür.<br><br>
+      <strong style="color:#86efac;">Duraklar:</strong> B1 Aydın/Menderes · B2 Denizli/Pamukkale · B3 Afyon (BAT-KAF kavşağı)
+    </p>
+  </div>
+
+  <!-- KAF -->
+  <div class="ep-card" style="border-color:rgba(251,191,36,.35);background:rgba(251,191,36,.05);">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+      <div style="width:14px;height:14px;border-radius:50%;background:#fbbf24;flex-shrink:0;box-shadow:0 0 8px #fbbf2499;"></div>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;color:#fbbf24;font-size:.95rem;">🟡 KAF — Kuzey Anadolu Fayı · Muğla → Bingöl · ~1.200 km</div>
+    </div>
+    <p style="font-size:.82rem;color:var(--ep-muted);line-height:1.7;margin:0;">
+      <strong style="color:#fde68a;">Tektonik kimlik:</strong> Sağ yanal atımlı (dextral) doğrultu atımlı fay. Anadolu levhasının batıya kaçışını sağlayan ana kırık sistemi. Erzincan, Adapazarı ve 1999 Marmara depremleriyle tarihte derin izler bırakmıştır.<br><br>
+      <strong style="color:#fde68a;">Biyolojik bariyer:</strong> KAF, Karadeniz bloku ile Anadolu bloğu arasında doğal bir <em>biyolojik bariyer</em> işlevi görür. <em>A. m. caucasica</em> (Kafkas arısı) bu hattın kuzeyinde, <em>A. m. anatoliaca</em> güneyinde konuşlanmıştır; geçiş kuşakları sismik jeokimyasal etki bölgeleriyle örtüşür.<br><br>
+      <strong style="color:#fde68a;">Jeokimyasal terroir:</strong> Kayan fay boyunca yüzeye taşınan Orta Anadolu volkanik zenginliği, kekik ve geven ballarının mineral profilini şekillendirir. Erzincan (M7.8, 1939) havzasının mineral imzası bala kaydedilmiştir.<br><br>
+      <strong style="color:#fde68a;">Duraklar:</strong> 01 Muğla → 02 Antalya → 03 Isparta → 04 Konya → 05 Ankara → 06 Tokat → 07 Ordu → 08 Erzincan → 09 Bingöl
+    </p>
+  </div>
+
+  <!-- DAF -->
+  <div class="ep-card" style="border-color:rgba(251,146,60,.35);background:rgba(251,146,60,.05);">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+      <div style="width:14px;height:14px;border-radius:50%;background:#fb923c;flex-shrink:0;box-shadow:0 0 8px #fb923c99;"></div>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;color:#fb923c;font-size:.95rem;">🟠 DAF — Doğu Anadolu Fayı · Bingöl → Hatay · ~800 km</div>
+    </div>
+    <p style="font-size:.82rem;color:var(--ep-muted);line-height:1.7;margin:0;">
+      <strong style="color:#fed7aa;">Tektonik kimlik:</strong> Sol yanal atımlı (sinistral) doğrultu atımlı fay. Karlıova-Bingöl'de KAF ile birleşerek Anadolu'nun tektonik dağıtım merkezini oluşturur. 6 Şubat 2023 Kahramanmaraş depremleri (M7.8), bu hattın hem yıkıcı potansiyelini hem de jeokimyasal enerji kapasitesini dünyaya kanıtlamıştır.<br><br>
+      <strong style="color:#fed7aa;">Jeokimyasal terroir:</strong> Bazaltik toprak yapısı ve sismotektonik mineralleşme; kekik, geven ve narenciye ballarının özgün mineral parmak izini oluşturur. DAF koridoru, KAF'tan farklı olarak <em>sıkışmalı</em> tektonik rejimin damgasını taşır — bu fark, terroir kimliğini doğrudan etkiler.<br><br>
+      <strong style="color:#fed7aa;">Biyolojik odak:</strong> <em>Apis mellifera syriaca</em> (Suriye arısı) ve <em>A. m. meda</em> (Med arısı) bu koridorun sismik bekçileridir. DAF, bu iki ekotipin kuzey dağılım sınırını çizer; 2023 depremleri sonrası popülasyon dinamiklerinin izlenmesi bilimsel öncelik taşımaktadır.<br><br>
+      <strong style="color:#fed7aa;">Duraklar:</strong> D1 Elazığ · D2 Malatya · D3 Kahramanmaraş · D4 Hatay/Antakya
+    </p>
+  </div>
+
+</div>
+
+<!-- STRATEJİK ÖZET TABLO -->
+<div style="margin:24px 0 8px;font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;color:var(--ep-accent2);">Tektonik Rejim × Bal Kimliği × Arı Irkı Karşılaştırması</div>
+<div class="ep-table-wrap">
+<table style="width:100%;border-collapse:collapse;font-size:0.78rem;">
+  <thead>
+    <tr style="background:rgba(245,158,11,.1);border-top:2px solid rgba(245,158,11,.35);border-bottom:1px solid rgba(245,158,11,.25);">
+      <th style="padding:9px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Omurga</th>
+      <th style="padding:9px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Fay Sistemi</th>
+      <th style="padding:9px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Tektonik Tür</th>
+      <th style="padding:9px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Terroir Mekanizması</th>
+      <th style="padding:9px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Baskın Bal</th>
+      <th style="padding:9px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;">Arı Irkı</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 10px;color:#4ade80;font-weight:700;">🟢 BAT</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Menderes + Burdur-Fethiye</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Genişleme (extensional)</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Ca/Mg mineral yükleme · travertenli su çıkışı</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Çam balı · Kestane</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);font-style:italic;">A. m. anatoliaca</td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+      <td style="padding:9px 10px;color:#fbbf24;font-weight:700;">🟡 KAF</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Kuzey Anadolu Fayı</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Sağ yanal atımlı (dextral)</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Biyolojik bariyer etkisi · volkanik mineral taşıma</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Yayla balları · Geven · Kekik</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);font-style:italic;">A. m. caucasica / anatoliaca</td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 10px;color:#fb923c;font-weight:700;">🟠 DAF</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Doğu Anadolu Fayı</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Sol yanal atımlı (sinistral)</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Bazaltik toprak + sismik mineralleşme · sıkışmalı rejim</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Narenciye · Kekik · Geven</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);font-style:italic;">A. m. syriaca / meda</td>
+    </tr>
+    <tr style="background:rgba(255,255,255,.02);">
+      <td style="padding:9px 10px;color:#34d399;font-weight:700;">🟣 Trakya</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">KAFZ Ganos Uzantısı</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Sağ yanal · Marmara geçişi</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Karadeniz bloku izolasyonu · Kofçaz 30 km koruma alanı</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);">Ayçiçeği · Meşe · Faselya</td>
+      <td style="padding:9px 10px;color:var(--ep-muted);font-style:italic;">A. m. macedonica / carnica</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="ep-box ep-box-green" style="margin-top:20px;">
+  <strong>🌍 Dünyadaki İlk Model:</strong> Tektonik rejim türü (genişleme / sağ yanal / sol yanal) ile bal kalitesi ve arı ırkı izolasyonunu eş zamanlı ele alan bu "Üç Omurgalı Bal Yolu" haritası, sismotektonik ve jeoturizm literatüründe bir ilktir. Her omurganın ayrı bir jeokimyasal parmak izi ürettiği; bu parmak izinin bal analizleriyle tescil edilebildiği ve üreticiye "coğrafi işaret" hakları sağlayabileceği hipotezi, gelecekteki arazi çalışmaları için zemin oluşturmaktadır.
+</div>
+
+<div class="ep-box" style="margin-top:14px;border-left:3px solid rgba(245,158,11,.5);background:rgba(245,158,11,.04);border-radius:10px;padding:14px 18px;">
+  <strong style="color:var(--ep-accent2);">📋 Metodolojik Not:</strong>
+  <span style="font-size:.84rem;color:var(--ep-muted);line-height:1.7;display:block;margin-top:6px;">Bu çalışmada sunulan "Üç Omurgalı Bal Yolu" ve "Sismotektonik Koridoru" kavramları; aktif tektonik sistemler (BAT · KAF · DAF) ile gezgin arıcılık koridorları ve arı ekotipleri arasındaki olası mekânsal ilişkileri inceleyen <em>kavramsal bir bilimsel hipotez modelidir</em>. Fay koordinatları yaklaşık jeolojik hatları temsil etmektedir. Hipotezin saha verileri, izotopik bal analizleri ve morfometrik arı çalışmalarıyla doğrulanması önerilmektedir. · <em>Öncel, A. O. (2026) · İstanbul Üniversitesi-Cerrahpaşa · JeoTurizm EduPanel v8 Final</em></span>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- TAM RAPOR LİNKİ -->
+<div class="ep-section">📖 Tam İnteraktif Rapor</div>
+
+<div style="background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(225,29,72,.06));border:1px solid rgba(245,158,11,.3);border-radius:16px;padding:24px;margin:20px 0;text-align:center;">
+  <div style="font-size:2rem;margin-bottom:12px;">🐝</div>
+  <div style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:8px;">Fay Yolu Arıcılığı — JeoTurizm EduPanel v5 Final</div>
+  <div style="font-size:.85rem;color:var(--ep-muted);margin-bottom:18px;">14 bölüm · Interaktif İçindekiler · Supplementary Material · PDF/Word Export · Tüm Videolar</div>
+  <a href="https://aliosmanoncel.blogspot.com/p/beekeeping-geotourism-2026-04-16.html"
+     target="_blank"
+     style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#f59e0b,#e11d48);color:#fff;border:none;padding:14px 32px;border-radius:100px;font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none;box-shadow:0 8px 28px rgba(245,158,11,.35);">
+    📖 Tam Raporu Aç →
+  </a>
+  <a href="https://aliosmanoncel.github.io/bal-yolu-harita/bal-yolu-harita.html" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.5);color:#fbbf24;padding:12px 24px;border-radius:100px;font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;text-decoration:none;margin-top:12px;">&#128506; İnteraktif Harita →</a>
+  <div style="font-size:.75rem;color:var(--ep-muted);margin-top:12px;">aliosmanoncel.blogspot.com · Haziran 2026 · v4 Final</div>
+</div>
+
+<!-- DIŞA AKTARMA -->
+<div class="ep-export">
+  <div class="ep-export-info">
+    <div class="ep-export-icon">📤</div>
+    <div>
+      <div class="ep-export-title">PDF / Word olarak dışa aktar</div>
+      <div class="ep-export-sub">Times New Roman · A4 · Akademik format</div>
+    </div>
+  </div>
+  <button id="tts-btn-export" onclick="document.getElementById('tts-btn').click()" style="padding:9px 16px;border-radius:8px;font-family:'Syne',sans-serif;font-size:.76rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(59,158,255,.4);background:#1a3a6e;color:#7ab8ff;white-space:nowrap;">🔊 Dinle</button>
+  <button class="ep-btn ep-btn-pdf" id="ep-pdf">📄 PDF indir</button>
+  <button class="ep-btn ep-btn-word" id="ep-word">📝 Word indir</button>
+</div>
+
+<!-- CTA -->
+<div class="ep-cta">
+  <a class="ep-cta-btn" href="https://aliosmanoncel.blogspot.com/p/beekeeping-geotourism-2026-04-16.html" target="_blank">
+    🐝 Tam İnteraktif Rapora Git →
+  </a>
+  <div class="ep-cta-sub">Fay Yolu Arıcılığı · 14 Bölüm · JeoTurizm EduPanel v5 Final · Haziran 2026</div>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- YAZAR KARTI -->
+<div class="ep-author">
+  <div class="ep-avatar">🍯</div>
+  <div class="ep-author-info">
+    <div class="ep-author-name">Prof. Dr. Ali Osman Öncel</div>
+    <div class="ep-author-role">Deprem Sismolojisti · Jeofizik Mühendisi · JeoTurizm EduPanel</div>
+    <div class="ep-author-bio">Edinburgh'dan İstanbul'a; yeraltı verilerinden saha romanlarına &#x2014; bilimi insanla buluşturan bir araştırmacının yolculuğu. "Fay Yolu Arıcılığı" — sismotektonik koridorları arıcılık stratejisiyle ilk kez birleştiren özgün bir vizyon belgesidir.</div>
+    <a class="ep-author-link" href="https://aliosmanoncel.blogspot.com" target="_blank">🔗 aliosmanoncel.blogspot.com</a>
+  </div>
+</div>
+
+<!-- SOSYAL PAYLAŞIM -->
+<div class="ep-share">
+  <div class="ep-share-label">Bu içeriği paylaş</div>
+  <div class="ep-share-btns">
+    <a class="ep-share-btn ep-tw" id="ep-tw" href="#" target="_blank">𝕏 Twitter / X</a>
+    <a class="ep-share-btn ep-wa" id="ep-wa" href="#" target="_blank">💬 WhatsApp</a>
+    <a class="ep-share-btn ep-ml" id="ep-ml" href="#">✉️ E-posta</a>
+    <button class="ep-share-btn ep-cp" id="ep-cp">🔗 Linki Kopyala</button>
+  </div>
+</div>
+
+<!-- ARIların SESSİZ MANİFESTOSU -->
+<div class="ep-section">🐝 Arıların Sessiz Manifestosu</div>
+
+<div class="ep-p">Bir kavanoz balın arkasındaki matematiki ve fedakarlığı bir kez düşünün. Bu rakamlar, "Fay Yolu Terroir Balı"nın neden korunmaya değer olduğunu anlatır.</div>
+
+<div class="ep-cards">
+  <div class="ep-card">
+    <div class="ep-icon">⏳</div>
+    <h4>35 Günlük Ömür</h4>
+    <p>İlkbahar-yaz döneminde bir işçi arının ortalama ömrü 35 gündür. Kışın koloni ısısını koruyarak 5–12 aya uzar.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🌍</div>
+    <h4>240.000 km Uçuş</h4>
+    <p>Sadece 1 kg bal için arıların toplam uçuş mesafesi ~240.000 km — dünyanın çevresini tam 6 kez dolaşmaya eşdeğer.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🌸</div>
+    <h4>7,5 Milyon Uçuş</h4>
+    <p>Bir koloni, bir sezonda bal ve polen stoklarını doldurmak için yaklaşık 7,5 milyon nektar seferi gerçekleştirir.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">⚖️</div>
+    <h4>Kendi Ağırlığının %85'i</h4>
+    <p>Yoğun nektar akımında arı, kendi vücut ağırlığının %85'ine kadar yük taşır. Normal seferde 40–50 mg nektar.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🔥</div>
+    <h4>15–20 kg Kışlık Stok</h4>
+    <p>Arılar balı sadece gıda için değil, kışın donmamak için yakıt olarak kullanır. Güçlü bir koloni 15–20 kg stoka ihtiyaç duyar.</p>
+  </div>
+</div>
+
+<div class="ep-think" style="border-left-color:#f59e0b;">
+  <strong style="color:#f59e0b;">🛡️ Fay Yolu Arıcılığında Etik Sorumluluk</strong>
+  <ol style="padding-left:1.2em;margin-top:8px;line-height:2;">
+    <li><strong>Emek ve Coğrafya:</strong> Arının dünyanın çevresini 6 kez dolaşarak topladığı nektar, fay hatlarından gelen Ca, Mg ve K mineralleriyle birleşerek <span class="ep-kw">jeokimyasal parmak izine</span> dönüşür. Bu emeğe saygı, terroir bilincinin temelidir.</li>
+    <li><strong>Sorumlu Hasat:</strong> Arıcı, arının ömrünü verdiği bu ürünü alırken kovanda en az <span class="ep-kw">%17,5 nem kararlılıksine</span> sahip yeterli kışlık stok bırakmak zorundadır — bu bir vicdan ve mühendislik borcudur.</li>
+    <li><strong>Biyo-Sismik Saygı:</strong> Arılar sadece bal üreten işçiler değil, aynı zamanda sismik mikro-titreşimleri algılayan <span class="ep-kw">canlı sismograflardır</span>. 200 metrelik güvenlik tampon bölgesi, bu kısa ömürlerin huzur içinde geçmesini sağlar. Türk arıcılık mevzuatının zorunlu kıldığı bu 200 metre yerleşim uzaklığı, Hayakawa (2024)'nın tespit ettiği kentsel elektromanyetik gürültü sorununu yapısal olarak ortadan kaldırmakta; kovanları doğal birer temiz-sinyal istasyonuna dönüştürmektedir.</li>
+  </ol>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- KÜRESEL KAYNAKLAR -->
+<div class="ep-section">🌐 Küresel Referanslar ve Milli Hedef</div>
+
+<div class="ep-p">"Fay Yolu Arıcılığı" doktrinimiz, Türkiye'yi ABD ve Kanada'da olduğu gibi <span class="ep-kw">Lisanslı Depoculuk</span> ve <span class="ep-kw">Kovan Kiralama Borsası</span> sistemlerine entegre etmeyi hedeflemektedir. Bu modeller sadece teorik değil — küresel ekonomik karşılığı olan milli bir stratejidir.</div>
+
+<div class="ep-cards">
+  <div class="ep-card">
+    <div class="ep-icon">🐝</div>
+    <h4>Kovan Kiralama Borsası</h4>
+    <p>ABD'de yıllık ~1,1 milyon koloni tozlaşma hizmeti için kiralanır; arıcılar kovan başına 35–60 $ ek gelir elde eder. Türkiye'de mevcut sistemde arıcı bahçe sahibine ödeme yaparken, hedef model nakit akışını tersine çevirir.</p>
+  </div>
+  <div class="ep-card">
+    <div class="ep-icon">🏛️</div>
+    <h4>Lisanslı Depoculuk</h4>
+    <p>ABD (1917'den beri), Kanada ve AB'de uygulanan; elektronik ürün senedi (ELÜS) ile balın standartlara uygun saklandığı ve izotop haritalamasıyla tescillendiği sistem. Türkiye'de TÜRİB bu modelin taşıyıcısıdır.</p>
+  </div>
+</div>
+
+<div class="ep-box ep-box-green" style="margin-top:4px;">
+  <strong>🔗 Küresel Kuruluşlar:</strong>
+  <ul style="padding-left:1.3em;margin-top:8px;font-size:.85rem;line-height:2;color:var(--ep-text);">
+    <li><strong>TÜRİB</strong> — Türkiye Ürün İhtisas Borsası: <a href="https://www.turib.com.tr" target="_blank" style="color:#4ade80;">www.turib.com.tr</a></li>
+    <li><strong>ABF</strong> — Amerikan Arıcılık Federasyonu: <a href="https://www.abfnet.org" target="_blank" style="color:#4ade80;">www.abfnet.org</a></li>
+    <li><strong>BBKA</strong> — İngiliz Arıcılar Birliği: <a href="https://www.bbka.org.uk" target="_blank" style="color:#4ade80;">www.bbka.org.uk</a></li>
+    <li><strong>NBA</strong> — Yeni Zelanda Arıcılar Birliği: <a href="https://www.nba.org.nz" target="_blank" style="color:#4ade80;">www.nba.org.nz</a></li>
+    <li><strong>USDA</strong> — ABD Tarım Bakanlığı: <a href="https://www.usda.gov" target="_blank" style="color:#4ade80;">www.usda.gov</a></li>
+    <li><strong>FAOSTAT</strong> — Küresel Tarım İstatistikleri: <a href="https://faostat.fao.org" target="_blank" style="color:#4ade80;">faostat.fao.org</a></li>
+  </ul>
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- STRATEJİK YOL HARİTASI TABLOSU -->
+<div class="ep-section">🗺️ Stratejik Yol Haritası — 10 Öneri</div>
+
+<div class="ep-p" style="margin-bottom:16px;">Aşağıdaki tablo, "Fay Yolu Arıcılığı" doktrininin Türkiye'de henüz tamamlanmamış 10 stratejik hedefini, mevcut durumla karşılaştırmalı olarak özetlemektedir.</div>
+
+<div class="ep-table-wrap">
+<table style="width:100%;border-collapse:collapse;font-size:0.8rem;">
+  <thead>
+    <tr style="background:rgba(245,158,11,.12);border-top:2px solid rgba(245,158,11,.4);border-bottom:1px solid rgba(245,158,11,.3);">
+      <th style="padding:10px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;width:3%;">#</th>
+      <th style="padding:10px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;width:25%;">Öneri</th>
+      <th style="padding:10px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;width:32%;">Mevcut Durum</th>
+      <th style="padding:10px 10px;text-align:left;font-family:'Syne',sans-serif;color:#f59e0b;width:40%;">Özgün Sismotektoniksel Katkı</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">1</td>
+      <td style="padding:9px 10px;font-weight:600;">Bal Yolu Koridoru Tescili</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Geleneksel kullanım var; yasal koruma yok</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Dünyanın ilk <em>Sismotektonik Terroir Hattı</em> statüsü</td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">2</td>
+      <td style="padding:9px 10px;font-weight:600;">GPS Tabanlı Dijital Kovan İzleme</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">AKS var; gerçek zamanlı değil</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Sismik gürültü analizine göre optimize <em>Biyo-Navigasyonel İzleme Ağı</em></td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">3</td>
+      <td style="padding:9px 10px;font-weight:600;">Ekotip Gen Bankası</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Kırklareli / Camili sınırlı koruma alanı</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Sismik adaptasyon kapasitesi korunan <em>Biyo-Sismograf</em> nesil arşivi</td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">4</td>
+      <td style="padding:9px 10px;font-weight:600;">Ege–Akdeniz Apitoksin Merkezleri</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Münferit akademik çalışmalar var</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Varol (2024) modeli temelli dünyanın ilk <em>Medikal Apitoksin Havzası</em></td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">5</td>
+      <td style="padding:9px 10px;font-weight:600;">Kovan Kiralama Borsası</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Arıcı bahçeye ücret ödüyor; borsa yok</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Bal dışı gelir üreten dijital <em>Ekolojik Hizmet Borsası</em></td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">6</td>
+      <td style="padding:9px 10px;font-weight:600;">Trakya Uzantısı Jeoturizm Pilot Bölgesi</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Bal üretimi aktif; jeoturizm entegrasyonu yok</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Ganos / Istranca hattında <em>Biyo-Tektonik Park</em> modeli</td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">7</td>
+      <td style="padding:9px 10px;font-weight:600;">Üçlü Yönetişim Protokolü</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Proje bazlı kopuk iş birliği</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Bakanlık–Üniversite–Belediye <em>Katılımcı Sismobiyolojik Yönetim</em> modeli</td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">8</td>
+      <td style="padding:9px 10px;font-weight:600;">AB PDO — Jeolojik Marka Tescili</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Yerel coğrafi işaretler var; sismik kanıt eksik</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">¹³C/¹²C izotop + jeokimyasal imzayla kanıtlanmış <em>Jeolojik Marka</em></td>
+    </tr>
+    <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">9</td>
+      <td style="padding:9px 10px;font-weight:600;">TÜBİTAK / AB Horizon Projesi</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Bu ölçekte proje dünyada henüz yok</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Kovan–sismometre entegrasyonu: küresel <em>Biyo-Sismik Güvenlik</em> ağı</td>
+    </tr>
+    <tr>
+      <td style="padding:9px 10px;color:#f59e0b;font-weight:700;">10</td>
+      <td style="padding:9px 10px;font-weight:600;">Arıcılık–Jeoturizm Sertifikasyonu</td>
+      <td style="padding:9px 10px;color:#7c9cbd;">Türkiye'de kılavuz / sertifika yok</td>
+      <td style="padding:9px 10px;color:#e2e8f0;">Arıcılar birer <em>Doğa ve Yer Bilimi Rehberi</em> — eğitim turizmi modeli</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="ep-think" style="margin-top:16px;">
+  <strong>Editör Notu</strong>
+  Bu 10 öneri, mevcut parçalı projelerin ham maddelerini "Sismotektonik" potasında eriterek milli bir sistem kurmayı hedefler. Teknik kanıtlar ve vaka analizleri için tam interaktif rapora bakınız.
+</div>
+
+<div class="ep-divider"></div>
+
+<!-- KAYNAKÇA -->
+<div class="ep-box ep-box-gold" style="margin-top:28px;">
+  <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--ep-accent2);margin-bottom:14px;">📚 Temel Kaynaklar (APA 7)</div>
+  <ol style="padding-left:1.4em;font-size:0.82rem;line-height:1.75;color:var(--ep-muted);margin:0;">
+    <li style="margin-bottom:6px;">Varol, E. (2024). <em>Türkiye'nin farklı coğrafi bölgelerindeki bal arısı ırk ve ekotiplerinden elde edilen arı zehirinin biyokimyasal içeriklerinin belirlenmesi</em> [Doktora tezi, Ege Üniversitesi]. YÖK Tez Merkezi.</li>
+    <li style="margin-bottom:6px;">Emsen, B. (2008). <em>Bal arısı kolonilerinde Varroa destructor ile mücadelede organik bileşiklerin etkinlikleri</em> [Doktora tezi, Atatürk Üniversitesi]. YÖK Tez Merkezi.</li>
+    <li style="margin-bottom:6px;">Seeley, T. D. (2019). <em>The Lives of Bees</em>. Princeton University Press.</li>
+    <li style="margin-bottom:6px;">Meixner, M. D. et al. (2015). Effects of genotype, environment, and their interactions on honey bee health in Europe. <em>Current Opinion in Insect Science</em>, 10, 177–184.</li>
+    <li style="margin-bottom:6px;">Sharma, R. (2024). <em>The Beekeeper's Handbook: A Comprehensive Guide to Apiculture</em>. ResearchGate. https://www.researchgate.net/publication/377160013</li>
+    <li style="margin-bottom:6px;">Karabagias, I. K., Badeka, A., Kontakos, S., Karabournioti, S., &amp; Kontominas, M. G. (2014). Characterization and classification of Greek pine honeys according to their geographical origin. <em>Food Chemistry</em>, 146, 548–557.</li>
+    <li style="margin-bottom:6px;">Tolon, B. (1999). <em>Muğla ve yöresi çam ballarının biyokimyasal özellikleri üzerine bir araştırma</em> (Doktora tezi). Ege Üniversitesi Fen Bilimleri Enstitüsü.</li>
+    <li style="margin-bottom:6px;">Güler, A., Garipoglu, A. V., Onder, H., Biyik, S., Kocaokutgen, H., &amp; Ekinci, D. (2017). Comparing biochemical properties of pure and adulterated honeys produced by feeding honeybees (<em>Apis mellifera</em> L.) colonies with different levels of industrial commercial sugars. <em>Kafkas Üniversitesi Veteriner Fakültesi Dergisi</em>, 23(2), 259–268.</li>
+    <li style="margin-bottom:6px;">Ikeya, M. (2004). <em>Earthquakes and animals: From folk legends to science</em>. World Scientific.</li>
+    <li style="margin-bottom:6px;">Hayakawa, M., Asano, T., Schekotov, A., &amp; Yamauchi, H. (2016). A study on the correlation of milk yield of cows with seismicity and ULF magnetic field variations. <em>Open Journal of Earthquake Research</em>, 5, 206–218. https://doi.org/10.4236/ojer.2016.54017</li>
+    <li style="margin-bottom:6px;">Wikelski, M., Mueller, U., Scocco, P., Catorci, A., Dewar, L. V., Dreyer, C., ... &amp; Feige, A. (2020). Potential short-term earthquake forecasting by farm animal monitoring. <em>Ethology</em>, 126(9), 931–941. https://doi.org/10.1111/eth.13078</li>
+    <li style="margin-bottom:6px;">Hayakawa, M., &amp; Yamauchi, T. (2024). Unusual animal behavior as a possible candidate of earthquake prediction. <em>Applied Sciences</em>, 14(10), 4317. https://doi.org/10.3390/app14104317</li>
+    <li style="margin-bottom:6px;">Resmî Gazete. (2012). <em>Türk Gıda Kodeksi Bal Tebliği</em> (Tebliğ No: 2012/58). Gıda, Tarım ve Hayvancılık Bakanlığı.</li>
+    <li style="margin-bottom:6px;">Tautz, J. (2008). <em>The Buzz about Bees: Biology of a Superorganism</em>. Springer-Verlag.</li>
+    <li style="margin-bottom:0;">Öncel, A. O. (2026). <em>Fay Yolu Arıcılığı — JeoTurizm EduPanel v8 Final</em>. İstanbul Üniversitesi-Cerrahpaşa. https://aliosmanoncel.blogspot.com/p/beekeeping-geotourism-2026-04-16.html</li>
+  </ol>
+</div>
+
+<!-- FOOTER -->
+<div class="ep-footer" style="margin-top:32px;">
+  <p>© 2026 <strong>Fay Yolu Arıcılığı — JeoTurizm EduPanel v5 Final</strong> · Haziran 2026</p>
+  <p style="margin-top:6px;opacity:.55;">Prof. Dr. Ali Osman Öncel · aliosmanoncel.blogspot.com</p>
+</div>
+
+</div><!-- /#ep-wrap -->
+
+<script>
+(function(){
+
+/* TEMA */
+var btn=document.getElementById('ep-theme-btn');
+var ico=document.getElementById('ep-theme-icon');
+var wrap=document.getElementById('ep-wrap');
+if(btn) btn.onclick=function(){
+  var light=wrap.getAttribute('data-theme')==='light';
+  wrap.setAttribute('data-theme',light?'dark':'light');
+  ico.textContent=light?'🌙':'☀️';
+};
+
+/* OKUMA SÜRESİ */
+var rt=document.getElementById('ep-read-time');
+if(rt&&wrap){var w=wrap.innerText.split(/\s+/).length;rt.textContent='~'+Math.max(1,Math.round(w/200))+' dk';}
+
+/* KART FADE-IN */
+if('IntersectionObserver' in window){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
+  },{threshold:0.1});
+  document.querySelectorAll('#ep-wrap .ep-card').forEach(function(c){
+    c.style.opacity='0';c.style.transform='translateY(16px)';
+    c.style.transition='opacity .45s ease,transform .45s ease';
+    obs.observe(c);
+  });
+}
+
+/* SOSYAL PAYLAŞIM */
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent('Fay Yolu Arıcılığı — JeoTurizm EduPanel v4 | Prof. Dr. Ali Osman Öncel');
+var tw=document.getElementById('ep-tw');
+var wa=document.getElementById('ep-wa');
+var ml=document.getElementById('ep-ml');
+var cp=document.getElementById('ep-cp');
+if(tw) tw.href='https://twitter.com/intent/tweet?text='+title+'&url='+url;
+if(wa) wa.href='https://api.whatsapp.com/send?text='+title+'%20'+url;
+if(ml) ml.href='mailto:?subject='+title+'&body='+url;
+if(cp) cp.onclick=function(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    cp.textContent='✅ Kopyalandı!';
+    setTimeout(function(){cp.innerHTML='🔗 Linki Kopyala';},2000);
+  });
+};
+
+/* EXPORT */
+function epLoading(msg){var d=document.createElement('div');d.style.cssText='position:fixed;inset:0;background:rgba(10,14,21,.92);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:sans-serif;gap:16px;';d.innerHTML='<div style="font-size:36px;">⚙️</div><div style="font-size:16px;font-weight:700;">'+msg+'</div>';document.body.appendChild(d);return d;}
+function epHide(d){if(d&&d.parentNode)d.parentNode.removeChild(d);}
+function epDown(content,filename,mime){var b=new Blob([content],{type:mime});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=filename;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u);},8000);}
+
+function epBody(){
+  var html='';
+  var summ=document.querySelector('#ep-wrap .ep-summary p');
+  if(summ) html+='<h2>Özet</h2>\n<p>'+(summ.innerText||'').trim()+'</p>\n';
+  document.querySelectorAll('#ep-wrap .ep-section').forEach(function(sec){html+='<h2>'+(sec.innerText||'').trim()+'</h2>\n';});
+  document.querySelectorAll('#ep-wrap .ep-step').forEach(function(step,i){
+    var h=(step.querySelector('h4')||{}).innerText||'';
+    var p=(step.querySelector('p')||{}).innerText||'';
+    if(h){html+='<h3>'+(i+1)+'. '+h.trim()+'</h3>\n';if(p)html+='<p>'+p.trim()+'</p>\n';}
+  });
+  document.querySelectorAll('#ep-wrap .ep-quote').forEach(function(q){var t=(q.innerText||'').trim();if(t.length>5)html+='<blockquote>'+t+'</blockquote>\n';});
+  document.querySelectorAll('#ep-wrap .ep-p').forEach(function(p){var t=(p.innerText||'').trim();if(t.length>10)html+='<p>'+t+'</p>\n';});
+  document.querySelectorAll('#ep-wrap .ep-card').forEach(function(c){var h=(c.querySelector('h4')||{}).innerText||'';var p=(c.querySelector('p')||{}).innerText||'';if(h.trim().length>2){html+='<h3>'+h.trim()+'</h3>\n';if(p.trim().length>5)html+='<p>'+p.trim()+'</p>\n';}});
+  document.querySelectorAll('#ep-wrap .ep-box').forEach(function(box){var t=(box.innerText||'').trim();if(t.length>10)html+='<blockquote>'+t+'</blockquote>\n';});
+  return html;
+}
+
+var pdfBtn=document.getElementById('ep-pdf');
+if(pdfBtn) pdfBtn.addEventListener('click',function(){
+  var ld=epLoading('PDF hazırlanıyor…');
+  try{
+    var body=epBody();
+    var now=new Date().toLocaleDateString('tr-TR',{year:'numeric',month:'long',day:'numeric'});
+    var html='<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><title>Fay Yolu Arıcılığı — JeoTurizm EduPanel v4</title>'
+    +'<style>@page{size:A4;margin:20mm 18mm 24mm 18mm;}*{box-sizing:border-box;}'
+    +'body{font-family:"Times New Roman",serif;font-size:10.5pt;line-height:1.75;color:#000;background:#fff;margin:0;}'
+    +'@media screen{body{background:#b0b8c8;padding:48px 0 60px;}.doc{width:210mm;margin:0 auto;background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.28);padding:20mm 18mm 24mm;}}'
+    +'@media print{.pbar{display:none!important;}.doc{padding:0;box-shadow:none;}}'
+    +'.pbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#0f172a;color:#f1f5f9;padding:9px 20px;display:flex;align-items:center;font-family:Arial,sans-serif;font-size:12px;}'
+    +'.pbtn{margin-left:auto;background:#b45309;color:#fff;border:none;border-radius:6px;padding:8px 20px;font-size:12px;font-weight:bold;cursor:pointer;}'
+    +'.mast{border-top:3px solid #b45309;border-bottom:1px solid #b45309;padding:8pt 0 6pt;margin-bottom:14pt;display:flex;justify-content:space-between;}'
+    +'.jname{font-family:Arial,sans-serif;font-size:13pt;font-weight:900;color:#b45309;}'
+    +'.atitle{font-family:Arial,sans-serif;font-size:15pt;font-weight:700;margin:0 0 8pt;line-height:1.3;}'
+    +'.abox{border:1.5px solid #b45309;padding:9pt 11pt;margin:0 0 12pt;background:#fffbeb;}'
+    +'.albl{font-family:Arial,sans-serif;font-size:8.5pt;font-weight:700;color:#b45309;text-transform:uppercase;margin:0 0 4pt;}'
+    +'.atext{font-size:9.5pt;line-height:1.7;text-align:justify;margin:0;}'
+    +'.twocol{column-count:2;column-gap:14pt;column-rule:1px solid #e5d5b0;}'
+    +'h2{font-family:Arial,sans-serif;font-size:10.5pt;font-weight:700;color:#b45309;margin:14pt 0 5pt;border-bottom:1px solid #f59e0b;break-after:avoid;column-span:all;}'
+    +'h3{font-family:Arial,sans-serif;font-size:9.5pt;font-weight:700;font-style:italic;margin:10pt 0 4pt;break-after:avoid;}'
+    +'p{text-align:justify;font-size:9.5pt;margin:0 0 5pt;line-height:1.7;}'
+    +'blockquote{border-left:2.5px solid #b45309;padding:4pt 8pt;margin:7pt 0 7pt 10pt;font-size:9pt;font-style:italic;color:#333;}'
+    +'table{width:100%;border-collapse:collapse;font-size:7.5pt;margin:10pt 0;column-span:all;}'
+    +'th{border-top:1.5px solid #b45309;border-bottom:1px solid #b45309;padding:3pt 4pt;font-family:Arial,sans-serif;font-weight:700;background:#fffbeb;}'
+    +'td{padding:2.5pt 4pt;border-bottom:1px solid #e5d5b0;}'
+    +'.col{column-span:all;margin-top:18pt;padding-top:8pt;border-top:1px solid #bbb;font-size:7.5pt;color:#777;font-family:Arial,sans-serif;text-align:center;}'
+    +'</style></head><body>'
+    +'<div class="pbar"><strong>🍯 Fay Yolu Arıcılığı — JeoTurizm EduPanel v5 Final</strong>'
+    +'<button class="pbtn" onclick="window.print()">🖨️ Yazdır / PDF Kaydet</button></div>'
+    +'<div class="doc"><div class="mast">'
+    +'<div><div class="jname">🐝 Fay Yolu Arıcılığı — JeoTurizm EduPanel</div>'
+    +'<div style="font-size:8pt;color:#444;font-family:Arial,sans-serif;margin-top:2pt;">aliosmanoncel.blogspot.com</div></div>'
+    +'<div style="font-size:8pt;color:#444;text-align:right;font-family:Arial,sans-serif;line-height:1.5;">Arıcılık Rehberi · Haziran 2026<br>Tarih: '+now+'</div></div>'
+    +'<div class="atitle">Fay Yolu Arıcılığı: Diri Fay Koridorlarında Süper-Organizma Stratejisi</div>'
+    +'<p style="font-size:9.5pt;font-family:Arial,sans-serif;margin:0 0 4pt;"><strong>Prof. Dr. Ali Osman Öncel</strong> &#x2014; Deprem Sismolojisti · Jeofizik Mühendisi · İÜC</p>'
+    +'<p style="font-size:8.5pt;font-style:italic;font-family:Arial,sans-serif;color:#555;margin:0 0 8pt;">JeoTurizm EduPanel v5 Final · Haziran 2026 · aliosmanoncel.blogspot.com</p>'
+    +'<div class="abox"><div class="albl">Özet / Abstract</div>'
+    +'<p class="atext">Bu rehber, Türkiye\'nin sismotektonik yapısını arıcılıkla ilk kez buluşturan "Fay Yolu Arıcılığı" vizyonunu 10 bölümde sunar. Belge sürecinden ana arı üretimine, Varroa mücadelesinden 1.200 km\'lik göç rotasına ve jeoturizm ekonomisine kadar tüm konular bilimsel kaynaklarla desteklenmiştir. Tam interaktif rapor: https://aliosmanoncel.blogspot.com/p/beekeeping-geotourism-2026-04-16.html</p></div>'
+    +'<div class="twocol">'+body+'</div>'
+    +'<div class="col">&copy; 2026 Fay Yolu Arıcılığı &middot; JeoTurizm EduPanel v5 Final &middot; Prof. Dr. Ali Osman &Ouml;ncel &middot; '+now+'</div>'
+    +'</div></body></html>';
+    epHide(ld);
+    epDown(html,'Fay-Yolu-Ariciligi-v4-Final.html','text/html;charset=utf-8');
+  }catch(e){epHide(ld);alert('PDF hatası: '+e.message);}
+});
+
+var wordBtn=document.getElementById('ep-word');
+if(wordBtn) wordBtn.addEventListener('click',function(){
+  var ld=epLoading('Word hazırlanıyor…');
+  try{
+    var body=epBody();
+    var now=new Date().toLocaleDateString('tr-TR',{year:'numeric',month:'long',day:'numeric'});
+    var html='<!DOCTYPE html>'
+    +'<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40" lang="tr">'
+    +'<head><meta charset="utf-8"><meta name=ProgId content=Word.Document>'
+    +'<title>Fay Yolu Arıcılığı — JeoTurizm EduPanel v4</title>'
+    +'<style>@page Section1{size:210mm 297mm;margin:25.4mm 19mm 25.4mm 19mm;}div.Section1{page:Section1;}'
+    +'body{font-family:"Times New Roman",serif;font-size:10.5pt;color:#000;line-height:1.75;}'
+    +'h1{font-family:Arial,sans-serif;font-size:15pt;font-weight:bold;margin:0 0 8pt;}'
+    +'h2{font-family:Arial,sans-serif;font-size:10.5pt;font-weight:bold;color:#b45309;margin:14pt 0 5pt;border-bottom:1pt solid #f59e0b;page-break-after:avoid;}'
+    +'h3{font-family:Arial,sans-serif;font-size:9.5pt;font-weight:bold;font-style:italic;margin:10pt 0 4pt;page-break-after:avoid;}'
+    +'p{text-align:justify;font-size:9.5pt;margin:0 0 5pt;line-height:16pt;}'
+    +'blockquote{border-left:2.5pt solid #b45309;padding-left:8pt;margin:7pt 0 7pt 10pt;font-style:italic;font-size:9pt;text-align:justify;}'
+    +'table{width:100%;border-collapse:collapse;font-size:7.5pt;margin:10pt 0;}'
+    +'th{border-top:1.5pt solid #b45309;border-bottom:1pt solid #b45309;padding:3pt 4pt;font-family:Arial,sans-serif;font-weight:bold;background:#fffbeb;}'
+    +'td{padding:2.5pt 4pt;border-bottom:1pt solid #e5d5b0;}'
+    +'p.col{font-family:Arial,sans-serif;font-size:7.5pt;color:#777;border-top:1pt solid #ccc;margin-top:18pt;padding-top:6pt;text-align:center;}'
+    +'</style></head><body><div class="Section1">'
+    +'<h1>🐝 Fay Yolu Arıcılığı: Diri Fay Koridorlarında Süper-Organizma Stratejisi</h1>'
+    +'<p><strong>Prof. Dr. Ali Osman Öncel</strong> &#x2014; Deprem Sismolojisti · Jeofizik Mühendisi · İstanbul Üniversitesi-Cerrahpaşa</p>'
+    +'<p><em>JeoTurizm EduPanel v5 Final · Arıcılık Rehberi · Haziran 2026</em></p>'
+    +'<p>Tarih: '+now+' · aliosmanoncel.blogspot.com</p>'
+    +'<p><strong>Tam interaktif rapor:</strong> https://aliosmanoncel.blogspot.com/p/beekeeping-geotourism-2026-04-16.html</p>'
+    +body
+    +'<p class="col">&copy; 2026 Fay Yolu Arıcılığı &middot; JeoTurizm EduPanel v5 Final &middot; Prof. Dr. Ali Osman &Ouml;ncel &middot; '+now+'</p>'
+    +'</div></body></html>';
+    epHide(ld);
+    epDown(html,'Fay-Yolu-Ariciligi-v4-Final.doc','application/vnd.ms-word;charset=utf-8');
+  }catch(e){epHide(ld);alert('Word hatası: '+e.message);}
+});
+
+})();
+</script>
+
+<script type="text/javascript">
+(function(){
+  function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+(d*864e5));document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/';}
+  if(document.cookie.indexOf('googtrans')===-1){setCookie('googtrans','/tr/en',1);}
+})();
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'tr',includedLanguages:'en,tr,de,fr,es,ar,ru',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:true},'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+(function(){
+  var synth=window.speechSynthesis,btn=document.getElementById('tts-btn');
+  if(!synth||!btn)return;
+  var speaking=false,paused=false,activeEl=null,segments=[];
+
+  function getLang(){var m=document.cookie.match(/googtrans=\/[^\/]+\/([^;]+)/);return m?m[1].trim():'tr';}
+
+  /* DOM elementlerini karakter pozisyonlarıyla eşleştir */
+  function buildSegments(){
+    segments=[];
+    var root=document.getElementById('ep-wrap')||document.body;
+    var els=root.querySelectorAll('p,h1,h2,h3,h4,li,blockquote,.callout-label');
+    var pos=0,parts=[];
+    els.forEach(function(el){
+      if(el.closest('script,style,button,noscript'))return;
+      var txt=(el.innerText||el.textContent||'').replace(/\s{2,}/g,' ').trim();
+      if(txt.length<4)return;
+      /* iç içe geçmiş elementleri atla */
+      for(var i=0;i<segments.length;i++){if(segments[i].el.contains(el))return;}
+      segments.push({el:el,start:pos,end:pos+txt.length});
+      parts.push(txt);
+      pos+=txt.length+1;
+    });
+    return parts.join(' ').slice(0,50000);
+  }
+
+  function clearHL(){
+    if(activeEl){
+      activeEl.style.background='';
+      activeEl.style.outline='';
+      activeEl.style.borderRadius='';
+      activeEl=null;
+    }
+  }
+
+  function hlEl(el){
+    if(el===activeEl)return;
+    clearHL();
+    activeEl=el;
+    el.style.background='rgba(245,158,11,0.18)';
+    el.style.outline='2px solid rgba(245,158,11,0.4)';
+    el.style.borderRadius='4px';
+    el.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  function findSeg(ci){
+    for(var i=0;i<segments.length;i++){
+      if(ci>=segments[i].start&&ci<segments[i].end)return segments[i].el;
+    }
+    return null;
+  }
+
+  function setState(s){
+    if(s==='playing'){btn.textContent='⏸ Duraklat';btn.style.background='linear-gradient(135deg,#92400e,#b45309)';}
+    else if(s==='paused'){btn.textContent='▶ Devam';btn.style.background='linear-gradient(135deg,#14532d,#166534)';}
+    else{btn.textContent='🔊 Dinle';btn.style.background='linear-gradient(135deg,#1e3a5f,#1e40af)';}
+  }
+
+  btn.addEventListener('click',function(){
+    if(!speaking&&!paused){
+      synth.cancel();
+      var text=buildSegments();
+      var utt=new SpeechSynthesisUtterance(text);
+      utt.lang=getLang();utt.rate=0.92;
+      utt.addEventListener('boundary',function(e){
+        if(e.name==='word'||e.name==='sentence'){
+          var el=findSeg(e.charIndex);
+          if(el)hlEl(el);
+        }
+      });
+      utt.onend=utt.onerror=function(){speaking=false;paused=false;setState('idle');clearHL();};
+      synth.speak(utt);speaking=true;setState('playing');
+    } else if(speaking){
+      synth.pause();speaking=false;paused=true;setState('paused');
+    } else if(paused){
+      synth.resume();paused=false;speaking=true;setState('playing');
+    }
+  });
+  window.addEventListener('beforeunload',function(){synth.cancel();});
+})();
+</script>
