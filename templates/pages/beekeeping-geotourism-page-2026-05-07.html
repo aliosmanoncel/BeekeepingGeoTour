@@ -572,6 +572,11 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
 #beetest-panel .beetest-level-btn{background:linear-gradient(135deg,rgba(245,158,11,.16),rgba(217,119,6,.10));border:1px solid rgba(245,158,11,.35);color:var(--honey);font-family:var(--font-display);font-weight:700;font-size:.82rem;padding:10px 20px;border-radius:100px;cursor:pointer;transition:all .2s;}
 #beetest-panel .beetest-level-btn:hover{background:rgba(245,158,11,.26);transform:translateY(-1px);}
 #beetest-panel .beetest-level-btn span{opacity:.65;font-weight:500;font-size:.72rem;margin-left:4px;}
+#beetest-panel .beetest-topic-btn{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);color:var(--text);font-family:var(--font-display);font-weight:700;font-size:.85rem;padding:14px 18px;border-radius:12px;cursor:pointer;transition:all .2s;text-align:left;flex:1;min-width:220px;}
+#beetest-panel .beetest-topic-btn:hover{border-color:var(--honey);background:rgba(245,158,11,.08);transform:translateY(-2px);}
+#beetest-panel .beetest-topic-btn.active{border-color:var(--honey);background:rgba(245,158,11,.12);}
+#beetest-panel .beetest-topic-btn small{display:block;font-weight:400;opacity:.65;font-size:.72rem;margin-top:4px;}
+#beetest-panel .beetest-back-link{background:none;border:none;color:var(--muted);font-size:.74rem;cursor:pointer;padding:0;margin-bottom:12px;text-decoration:underline;}
 #beetest-panel .beetest-opt{width:100%;}
 #beetest-panel .beetest-opt:hover:not(:disabled){border-color:var(--honey) !important;background:var(--panel3) !important;}
 #beetest-panel .beetest-opt:disabled{cursor:default;opacity:.9;}
@@ -580,15 +585,15 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
 </style>
 <div class="main-wrap" style="padding:20px 24px 0;" id="beetest-panel">
   <div class="callout" style="border-color:var(--honey);background:rgba(245,158,11,.07);border-radius:14px;padding:22px 26px;">
-    <div class="callout-label" style="color:var(--honey);font-size:.75rem;letter-spacing:.08em;font-weight:800;text-transform:uppercase;margin-bottom:8px;">🎓 Arıcılık Öğrenim Testi — Kolay · Orta · Zor</div>
+    <div class="callout-label" style="color:var(--honey);font-size:.75rem;letter-spacing:.08em;font-weight:800;text-transform:uppercase;margin-bottom:8px;">🎓 Arıcılık Öğrenim Testleri — Kolay · Orta · Zor</div>
     <p style="font-size:.85rem;color:var(--soft);margin:0 0 16px;">
-      Dr. Ali Korkmaz'ın <em>"Anlaşılabilir Arıcılık"</em> (T.C. Tarım ve Orman Bakanlığı Samsun İl Müdürlüğü Yayını) kitabındaki teknik verilere dayanan, 3 seviyeli ve toplam 60 soruluk interaktif bilgi testi. Her seviye 20 soru içerir ve her soru 5 puan taşır (toplam 100 puan). İlk hakkında doğru cevap tam puan kazandırır; yanlış cevapta ikinci bir şans verilir — ikinci hakta doğru bilinirse puan 1/3 oranında kırılır.
+      Dr. Ali Korkmaz'ın <em>"Anlaşılabilir Arıcılık"</em> (T.C. Tarım ve Orman Bakanlığı Samsun İl Müdürlüğü Yayını) kitabı ve ilgili akademik çalışmalara dayanan, konu bazlı ve 3 seviyeli interaktif testler. Bir konu seçin, ardından seviyenizi belirleyin — her seviye 20 soru içerir ve her soru 5 puan taşır (toplam 100 puan). İlk hakkında doğru cevap tam puan kazandırır; yanlış cevapta ikinci bir şans verilir — ikinci hakta doğru bilinirse puan 1/3 oranında kırılır.
     </p>
-    <div id="beetest-level-select" style="display:flex;flex-wrap:wrap;gap:10px;">
-      <button class="beetest-level-btn" data-level="kolay">🟢 Kolay <span>(20 Soru)</span></button>
-      <button class="beetest-level-btn" data-level="orta">🟡 Orta <span>(20 Soru)</span></button>
-      <button class="beetest-level-btn" data-level="zor">🔴 Zor <span>(20 Soru)</span></button>
+    <div id="beetest-topic-select" style="display:flex;flex-wrap:wrap;gap:10px;">
+      <button class="beetest-topic-btn" data-topic="genel">🎓 Genel Arıcılık Bilgisi<small>3 seviye · 60 soru · Anlaşılabilir Arıcılık</small></button>
+      <button class="beetest-topic-btn" data-topic="hastaliklar">🦠 Arı Hastalıkları<small>3 seviye · 60 soru · Saha teşhisi ve mücadele odaklı</small></button>
     </div>
+    <div id="beetest-level-select" style="display:none;flex-wrap:wrap;gap:10px;margin-top:14px;"></div>
     <div id="beetest-quiz-area" style="margin-top:18px;"></div>
   </div>
 </div>
@@ -660,9 +665,78 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     {q:"Nosema ceranae'ya bağlı ölümlerin en tipik özelliği nedir?", o:["Belirti vermeden ani koloni sönüşü","Uçuş tahtasında belirgin ishal izi","Sadece kışın görülmesi","Sadece ana arıyı etkilemesi"], c:0},
     {q:"Balın içindeki, ishal yapabilen ve çam balında yüksek bulunan şeker türevi nedir?", o:["Fruktoz","Dekstrin","Maltoz","Sükroz"], c:1}
   ];
-  var BEETEST_DATA = {kolay:Q_KOLAY, orta:Q_ORTA, zor:Q_ZOR};
+  var H_KOLAY = [
+    {q:"Bal arılarının bilinen en tehlikeli ve bulaşıcı yavru hastalığı hangisidir?", o:["Kireç Hastalığı","Amerikan Yavru Çürüklüğü (AYÇ)","Nosema","Avrupa Yavru Çürüklüğü (EYÇ)"], c:1},
+    {q:"AYÇ hastalığının etkeni olan bakteri hangisidir?", o:["Melissococcus plutonius","Paenibacillus larvae","Ascosphaera apis","Nosema apis"], c:1},
+    {q:"Türkiye'de görülmesi durumunda \"ihbarı mecburi\" olan arı hastalığı hangisidir?", o:["Kireç Hastalığı","Nosema","Amerikan Yavru Çürüklüğü","Varroosis"], c:2},
+    {q:"Larvaların petek gözleri içinde kireç beyazı renginde mumyalaşmasına neden olan hastalık hangisidir?", o:["Kireç Hastalığı (Ascosphaera apis)","Amerikan Yavru Çürüklüğü","Avrupa Yavru Çürüklüğü","Nosema"], c:0},
+    {q:"Arıların hemolenfini (kanını) emerek beslenen ve virüs taşıyan en yaygın dış parazit nedir?", o:["Trake Akarı","Varroa destructor","Arı biti","Tropilaelaps"], c:1},
+    {q:"AYÇ hastalığında ölen larvaya bir çöp sokulduğunda görülen en tipik fiziksel özellik nedir?", o:["Lastik gibi uzaması (ipliksi yapı)","Kuruyup mumyalaşması","Sarı köpüklenme","Kokusuz sertleşme"], c:0},
+    {q:"Ergin arılarda görülen, arıların uçuş tahtasına dışkı bırakmasına ve titremesine neden olan hastalık nedir?", o:["Nosema","Amerikan Yavru Çürüklüğü","Kireç Hastalığı","Avrupa Yavru Çürüklüğü"], c:0},
+    {q:"Arıların solunum sistemine (trakelerine) yerleşen iç parazit hangisidir?", o:["Varroa destructor","Trake Akarı (Acarapis woodi)","Arı biti","Küçük Kovan Böceği"], c:1},
+    {q:"Arı bitinin (Braula coeca) Varroa'dan en temel farkı nedir?", o:["Kan emmez, arının ağzındaki besine ortak olur","Çok daha büyüktür","Sadece yavru gözünde yaşar","Uçabilir"], c:0},
+    {q:"AYÇ hastalığı tespit edilen bir kovan için yasal olarak ne yapılmalıdır?", o:["Antibiyotik verilip izole edilmeli","Kovanı ile birlikte yakılarak imha edilmelidir","Karantinaya alınmalı","Sadece komşu arıcılara bildirilmeli"], c:1},
+    {q:"Avrupa Yavru Çürüklüğü (EYÇ) etkeni olan bakteri hangisidir?", o:["Paenibacillus larvae","Melissococcus plutonius","Ascosphaera apis","Nosema ceranae"], c:1},
+    {q:"Kireç hastalığını tetikleyen en önemli çevre faktörü nedir?", o:["Aşırı sıcaklık","Aşırı nem ve yetersiz havalandırma","Kuraklık","Fazla bal stoku"], c:1},
+    {q:"Varroa paraziti çıplak gözle görülebilir mi?", o:["Evet, ergin dişiler koyu kızıl-kahverengi renkte görülür","Hayır, sadece mikroskopla görülür","Sadece larva döneminde görülür","Sadece beyaz renkte görülür"], c:0},
+    {q:"Arıların vücut kıllarının dökülmesine ve parlak-siyah bir görünüm almasına neden olan virüs hangisidir?", o:["Siyah Ana Arı Gözü Virüsü (BQCV)","Tulumsu Yavru Çürüklüğü Virüsü (SBV)","Kronik Arı Felci Virüsü (CBPV)","Kanat Deformasyon Virüsü (DWV)"], c:2},
+    {q:"Bir işçi arının gelişim süreci (yumurtadan çıkışa kadar) kaç gündür?", o:["16 gün","21 gün","24 gün","28 gün"], c:1},
+    {q:"Varroa en çok hangi tip petek gözlerini tercih eder?", o:["İşçi arı gözlerini","Erkek arı gözlerini","Ana arı gözlerini","Polen gözlerini"], c:1},
+    {q:"Arıların mide-bağırsak sistemini etkileyen hastalık grubu hangisidir?", o:["Nosemosis (Nosema apis / ceranae)","Varroosis","Akarapiosis","Askosferosis"], c:0},
+    {q:"Varroa mücadelesinde kullanılan duman verme aletinin adı nedir?", o:["Körük","El demiri","Ruşet","Ana arı ızgarası"], c:0},
+    {q:"Arıların kendi üzerindeki veya birbirleri üzerindeki parazitleri temizlemesine ne denir?", o:["Tımarlama (Grooming) davranışı","Hijyenik davranış","Fanning davranışı","Robbing davranışı"], c:0},
+    {q:"Kovan önünde sürünerek yürüyen, kanatları kopuk ve cılız arıların görülmesi neyi işaret eder?", o:["Nosema enfeksiyonu","Yoğun Varroa bulaşıklığı ve Kanat Deformasyon Virüsü","Amerikan Yavru Çürüklüğü","Kireç Hastalığı"], c:1}
+  ];
+  var H_ORTA = [
+    {q:"Varroa destructor'un erkek bireyleri kovan dışında yaşayabilir mi?", o:["Evet, ergin arılar üzerinde yaşarlar","Hayır, sadece kapalı yavru gözü içinde yaşar ve orada ölürler","Sadece kışın yaşarlar","Sadece ana arı üzerinde yaşarlar"], c:1},
+    {q:"Nosema ceranae hastalığının N. apis'ten en önemli belirti farkı nedir?", o:["Mikrobik ishale (lekelere) rastlanmaz, ani koloni sönüşü yapar","Sadece kışın görülür","Sadece ana arıyı etkiler","Daha az öldürücüdür"], c:0},
+    {q:"Ergin dişi Varroa'lar kışın kuluçka olmadığında nerede yaşarlar?", o:["Toprakta","İşçi arıların üzerinde (foretik evre)","Petek mumunda","Sadece ana arı üzerinde"], c:1},
+    {q:"AYÇ sporları dış ortamda (örneğin eski peteklerde) ne kadar süre canlı kalabilir?", o:["5 yıl","15 yıl","40 yıl","100 yıl"], c:2},
+    {q:"Varroa parazitinin işçi arı gözünde ergin hale gelme süresi kaç gündür?", o:["3-4 gün","7-8 gün","10-12 gün","15 gün"], c:1},
+    {q:"Avrupa Yavru Çürüklüğü'nde ölen larvalar petek gözünde hangi pozisyonda durur?", o:["Düz uzanmış halde","\"C\" harfi şeklinde kıvrılmış halde","Spiral şeklinde","Dik durur halde"], c:1},
+    {q:"Varroa'nın bal arısı hemolenfi dışında arı vücudunda asıl tükettiği doku hangisidir?", o:["Kas dokusu","Yağ dokusu (Fat body)","Sinir dokusu","Kitin tabakası"], c:1},
+    {q:"Siyah Ana Arı Gözü Virüsü (BQCV) genellikle hangi hastalıkla birlikte görülür?", o:["Amerikan Yavru Çürüklüğü","Nosema apis","Kireç Hastalığı","Varroosis"], c:1},
+    {q:"Tulumsu Yavru Çürüklüğü (SBV) hastalığında larvanın görünümü nasıldır?", o:["Kuru ve sert","Başı \"L\" şeklinde kıvrılmış, içi sıvı dolu bir torba gibi","Beyaz mumyalaşmış","Tamamen siyahlaşmış"], c:1},
+    {q:"Varroa paraziti her iki saatte bir arı vücut ağırlığının yüzde kaçını yok eder?", o:["%0,01","%0,1 - %0,2","%1","%5"], c:1},
+    {q:"Arı sütünün asitlik (pH) değeri kaçtır?", o:["pH 3","pH 5","pH 7","pH 9"], c:1},
+    {q:"Nosema sporları bal içinde ne kadar süre canlı kalabilir?", o:["1 ay","6 ay","1 yıl","5 yıl"], c:2},
+    {q:"Varroa'nın esas konukçusu olan arı türü hangisidir?", o:["Apis mellifera","Apis cerana (Hint Arısı)","Apis dorsata","Bombus terrestris"], c:1},
+    {q:"\"Küçük Kovan Böceği\" (Aethina tumida) ilk olarak nerede ortaya çıkmıştır?", o:["Güney Afrika","Kuzey Amerika","Avustralya","Güneydoğu Asya"], c:0},
+    {q:"Tropilaelaps akarı Varroa'dan farklı olarak ergin arı üzerinde neden beslenemez?", o:["Ağız yapısı arı kitinini delecek yapıda değildir","Çok yavaş hareket eder","Sadece gece beslenir","Kanatları yoktur"], c:0},
+    {q:"Varroa Sensitive Hygiene (VSH) nedir?", o:["Arıların Varroa'ya karşı doğuştan bağışıklığı","Arıların Varroa ile enfekte olmuş kapalı gözleri tespit edip temizleme yeteneği","Kimyasal ilaçlara karşı direnç","Varroa'nın arıya karşı geliştirdiği toleransı"], c:1},
+    {q:"Varroa mücadelesinde kullanılan Oksalik Asit hangi dönemde uygulanmalıdır?", o:["Yaz ortasında, nektar akımı sırasında","Kışın, kovanın yavrulu alanının en az olduğu dönemde","İlkbahar başında","Hasat sırasında"], c:1},
+    {q:"Bal arılarında \"felç\" (paraliz) belirtileri gösteren arılar ne yapar?", o:["Hızlı ve düzensiz uçarlar","Kovan önünde titrer, uçamaz ve yerde sürünürler","Kovanı topluca terk ederler","Aşırı saldırgan olurlar"], c:1},
+    {q:"Nosema hastalığına karşı Türkiye'de kullanımı serbest olan tek ilaç grubu hangisidir?", o:["Bazı spesifik antibiyotikler (reçete ile)","Akarisitler","Antiparazitik yağlar","Fungisitler"], c:0},
+    {q:"Varroa parazitinin dişisi, petek gözü kapandıktan kaç saat sonra ilk yumurtasını bırakır?", o:["24-30 saat sonra","60-70 saat sonra","100 saat sonra","5 gün sonra"], c:1}
+  ];
+  var H_ZOR = [
+    {q:"Varroa bulaşıklığı %5,1 - %15 (Aşırı) seviyesindeyse, koloninin kışlama yeteneği yüzde kaça düşer?", o:["%65","%50","%24","%10"], c:2},
+    {q:"Bir koloninin \"Hijyenik\" kabul edilebilmesi için 48 saatte ölü pupaları temizleme oranı en az yüzde kaç olmalıdır?", o:["%80","%90","%95 ve üzeri","%100"], c:2},
+    {q:"Pudra şekeri yöntemiyle Varroa sayımı yaparken örnek olarak alınan ergin arı sayısı yaklaşık kaçtır?", o:["100 adet","300 adet","500 adet","1.000 adet"], c:1},
+    {q:"Varroa'nın termal (ısıl) mücadelede ölüm eşiği kaç derecedir?", o:["38°C","42°C ve üzeri","50°C","60°C"], c:1},
+    {q:"Laktik Asit Varroa mücadelesinde hangi sıcaklığın üzerinde uygulanırsa ana arı kaybına neden olabilir?", o:["15°C","18°C","25°C","30°C"], c:1},
+    {q:"AYÇ sporlarını öldürmek için peteklerin sterilizasyonunda kullanılan tekniklerden biri nedir?", o:["Gamma ışınlaması veya yakma","Dondurma","Kaynatma","Tuzlu suya batırma"], c:0},
+    {q:"Varroa bulaşıklığı olan bir kovanda işçi arı pupası üzerinde, 3 ve üzeri parazit varlığında protein kaybı yüzde kaçtır?", o:["%20","%50","%80","%10"], c:1},
+    {q:"Nosema ceranae sporları mide epitel hücrelerinden başka vücudun neresinde çoğalabilir?", o:["Sadece kanat kaslarında","Yağ dokuları ve salgı bezlerinde","Sinir sisteminde","Gözlerde"], c:1},
+    {q:"Varroa mücadelesinde kullanılan Formik Asit uygulaması için en uygun aylar hangisidir?", o:["Haziran-Temmuz","Ağustos başı ve Eylül","Aralık-Ocak","Nisan-Mayıs"], c:1},
+    {q:"Arıcılıkta kullanılan \"Kafes Yöntemi\" Varroa mücadelesinde ne sağlar?", o:["Yavru üretimini keserek akarları ergin arılar üzerinde toplar ve ilaç etkinliğini artırır","Ana arıyı hastalıklardan korur","Bal üretimini artırır","Oğul vermeyi tamamen engeller"], c:0},
+    {q:"Tropilaelaps akarı petek gözü kapandıktan kaç saat sonra yumurta bırakır?", o:["24 saat sonra","48 saat sonra","72 saat sonra","96 saat sonra"], c:1},
+    {q:"Oksalik Asit damlatma yöntemi çözeltisi nasıl hazırlanır?", o:["35-40g asit + 1 L %50'lik şeker şurubu","10g asit + 1 L su","100g asit + 1 L su","20g asit + 2 L şurup"], c:0},
+    {q:"Kaşmir Arı Virüsü (KBV) ilk belirtisi nedir?", o:["İshal ve karın şişmesi","Titreme ve koordinasyon bozukluğu","Kanat deformasyonu","Vücut renginin kararması"], c:1},
+    {q:"Varroa akarı 230-270 Hz aralığındaki \"huzur bandını\" nasıl bozar?", o:["Kovanı topluca terk ettirerek","Fiziksel stres ve titreşimli dansları engelleyerek koloni frekansını 265-350 Hz'e çıkararak","Balı bozarak","Ana arıyı doğrudan öldürerek"], c:1},
+    {q:"Koloni Çökme Bozukluğu (CCD) için suçlanan faktör kombinasyonları nelerdir?", o:["Sadece pestisitler","Pestisitler + Yeni virüsler + Varroa + İklim değişikliği","Sadece Varroa","Sadece iklim değişikliği"], c:1},
+    {q:"Arı biti larvaları peteklerde en çok nerede tünel açar?", o:["Sırlanmış bal hücrelerinin üzerinde","Yavru gözlerinde","Ana arı gözünde","Polen gözlerinde"], c:0},
+    {q:"Perizin ilacının aktif maddesi nedir?", o:["Coumaphos","Amitraz","Timol","Oksalik asit"], c:0},
+    {q:"Varroa bulaşıklığı \"Yüksek\" (%3,1 - %5) olan bir koloninin yaşama gücü yüzde kaçtır?", o:["%40","%60","%80","%95"], c:2},
+    {q:"Küçük kovan böceği larvaları gelişimini tamamladıktan sonra nerede pupa olur?", o:["Kovan içinde peteklerde","Kovan dışındaki toprakta","Petek gözlerinde","Çiçeklerin üzerinde"], c:1},
+    {q:"Kafkas arı ırkında hijyenik davranış seleksiyonu için kaç generasyon çalışma yapılması önerilir?", o:["2 generasyon","4 generasyon","8 generasyon","10 generasyon"], c:1}
+  ];
+  var TOPICS = {
+    genel: {label:"Genel Arıcılık Bilgisi", data:{kolay:Q_KOLAY, orta:Q_ORTA, zor:Q_ZOR}},
+    hastaliklar: {label:"Arı Hastalıkları", data:{kolay:H_KOLAY, orta:H_ORTA, zor:H_ZOR}}
+  };
   var LEVEL_NAMES = {kolay:"Kolay", orta:"Orta", zor:"Zor"};
-  var state = {level:null, idx:0, score:0, attempts:0};
+  var state = {topic:null, level:null, idx:0, score:0, attempts:0};
 
   function shuffle(arr){
     var a = arr.slice();
@@ -673,14 +747,31 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     return a;
   }
 
+  function showLevelSelect(topicKey){
+    state.topic = topicKey;
+    document.querySelectorAll('#beetest-topic-select .beetest-topic-btn').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-topic')===topicKey);
+    });
+    var levelSelect = document.getElementById('beetest-level-select');
+    levelSelect.style.display = 'flex';
+    levelSelect.innerHTML =
+      '<button class="beetest-level-btn" data-level="kolay">🟢 Kolay <span>(20 Soru)</span></button>'+
+      '<button class="beetest-level-btn" data-level="orta">🟡 Orta <span>(20 Soru)</span></button>'+
+      '<button class="beetest-level-btn" data-level="zor">🔴 Zor <span>(20 Soru)</span></button>';
+    levelSelect.querySelectorAll('.beetest-level-btn').forEach(function(b){
+      b.addEventListener('click', function(){ startLevel(b.getAttribute('data-level')); });
+    });
+    document.getElementById('beetest-quiz-area').innerHTML = '';
+  }
+
   function startLevel(level){
-    state = {level:level, idx:0, score:0, attempts:0};
+    state.level = level; state.idx = 0; state.score = 0; state.attempts = 0;
     renderQuestion();
   }
   window.beetestStart = startLevel;
 
   function renderQuestion(){
-    var qs = BEETEST_DATA[state.level];
+    var qs = TOPICS[state.topic].data[state.level];
     var area = document.getElementById('beetest-quiz-area');
     if(state.idx >= qs.length){ renderResult(); return; }
     var item = qs[state.idx];
@@ -689,8 +780,9 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     state.attempts = 0;
     var pct = Math.round((state.idx/qs.length)*100);
     var html = '';
+    html += '<button class="beetest-back-link" id="beetest-back-btn">↩ Başka konu / seviye seç</button><br>';
     html += '<div class="beetest-progress-track"><div class="beetest-progress-fill" style="width:'+pct+'%;"></div></div>';
-    html += '<div style="font-family:var(--font-mono);font-size:.68rem;color:var(--muted);margin-bottom:8px;">Soru '+(state.idx+1)+' / '+qs.length+' · '+LEVEL_NAMES[state.level]+' Seviye · Puan: '+state.score.toFixed(1)+' / 100</div>';
+    html += '<div style="font-family:var(--font-mono);font-size:.68rem;color:var(--muted);margin-bottom:8px;">Soru '+(state.idx+1)+' / '+qs.length+' · '+TOPICS[state.topic].label+' · '+LEVEL_NAMES[state.level]+' Seviye · Puan: '+state.score.toFixed(1)+' / 100</div>';
     html += '<div style="font-size:.95rem;font-weight:700;color:#fff;margin-bottom:14px;line-height:1.6;">'+item.q+'</div>';
     html += '<div id="beetest-options" style="display:grid;gap:8px;">';
     opts.forEach(function(o,i){
@@ -698,6 +790,11 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     });
     html += '</div><div id="beetest-feedback" style="margin-top:12px;font-size:.82rem;min-height:20px;"></div>';
     area.innerHTML = html;
+    document.getElementById('beetest-back-btn').addEventListener('click', function(){
+      area.innerHTML = '';
+      document.getElementById('beetest-level-select').style.display = 'none';
+      document.querySelectorAll('#beetest-topic-select .beetest-topic-btn').forEach(function(b){ b.classList.remove('active'); });
+    });
     var btns = area.querySelectorAll('.beetest-opt');
     btns.forEach(function(b){
       b.addEventListener('click', function(){ handleAnswer(b, btns); });
@@ -739,15 +836,22 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
       '<div class="beetest-progress-track"><div class="beetest-progress-fill" style="width:100%;"></div></div>'+
       '<div style="text-align:center;padding:14px 0 6px;">'+
       '<div style="font-size:2.1rem;font-weight:800;color:var(--honey);font-family:var(--font-display);">'+state.score.toFixed(1)+' / 100</div>'+
-      '<div style="font-size:.85rem;color:var(--soft);margin:8px 0 4px;">'+LEVEL_NAMES[state.level]+' Seviye Testi Tamamlandı</div>'+
+      '<div style="font-size:.85rem;color:var(--soft);margin:8px 0 4px;">'+TOPICS[state.topic].label+' · '+LEVEL_NAMES[state.level]+' Seviye Testi Tamamlandı</div>'+
       '<div style="font-size:.8rem;color:var(--muted);margin-bottom:18px;">'+comment+'</div>'+
+      '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">'+
       '<button id="beetest-retry-btn" class="beetest-level-btn">🔁 Tekrar Dene</button>'+
-      '</div>';
+      '<button id="beetest-changetopic-btn" class="beetest-level-btn" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.18);color:var(--soft);">↩ Konu / Seviye Değiştir</button>'+
+      '</div></div>';
     document.getElementById('beetest-retry-btn').addEventListener('click', function(){ startLevel(state.level); });
+    document.getElementById('beetest-changetopic-btn').addEventListener('click', function(){
+      area.innerHTML = '';
+      document.getElementById('beetest-level-select').style.display = 'none';
+      document.querySelectorAll('#beetest-topic-select .beetest-topic-btn').forEach(function(b){ b.classList.remove('active'); });
+    });
   }
 
-  document.querySelectorAll('#beetest-level-select .beetest-level-btn').forEach(function(b){
-    b.addEventListener('click', function(){ startLevel(b.getAttribute('data-level')); });
+  document.querySelectorAll('#beetest-topic-select .beetest-topic-btn').forEach(function(b){
+    b.addEventListener('click', function(){ showLevelSelect(b.getAttribute('data-topic')); });
   });
 })();
 </script>
