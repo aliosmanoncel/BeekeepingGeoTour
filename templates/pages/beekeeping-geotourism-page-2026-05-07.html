@@ -932,8 +932,9 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
   function makeItemBtn(el,txt,color){
     var short=txt.slice(0,72)+(txt.length>72?'…':'');
     var btn=document.createElement('button');
-    btn.style.cssText='display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:8px 12px;color:#e2e8f0;cursor:pointer;font-size:.79rem;font-family:inherit;width:100%;transition:background .15s,border-color .15s;';
-    btn.innerHTML='<span style="font-size:.62rem;font-weight:800;color:'+color+';letter-spacing:.06em;display:block;margin-bottom:2px;opacity:.8;">&#9632;</span>'+short;
+    btn.style.cssText='display:flex;flex-direction:row;align-items:center;gap:8px;text-align:left;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 12px;color:#e2e8f0;cursor:pointer;font-size:.79rem;font-family:inherit;width:100%;transition:background .15s,border-color .15s;';
+    btn.innerHTML='<span style="font-size:.6rem;font-weight:800;color:'+color+';flex-shrink:0;opacity:.85;">&#9632;</span>'+
+      '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;">'+short+'</span>';
     btn.onmouseover=function(){this.style.background='rgba(255,255,255,.07)';this.style.borderColor='rgba(245,158,11,.35)';};
     btn.onmouseout=function(){this.style.background='rgba(255,255,255,.03)';this.style.borderColor='rgba(255,255,255,.08)';};
     btn.onclick=function(){jumpTo(el);};
