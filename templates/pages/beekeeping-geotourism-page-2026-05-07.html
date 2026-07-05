@@ -539,7 +539,7 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;">
       <a href="#sr-export-pdf" onclick="document.getElementById('sr-export-pdf').click();return false;" style="display:inline-flex;align-items:center;gap:8px;background:var(--honey);color:#000;font-family:var(--font-display);font-size:.8rem;font-weight:800;padding:11px 22px;border-radius:8px;text-decoration:none;letter-spacing:.04em;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">📄 Raporu İndir</a>
       <a href="#acc-harita" onclick="var el=document.getElementById('acc-harita');if(el){el.scrollIntoView({behavior:'smooth'});var b=el.querySelector('.acc-body');if(b&&b.style.display!=='block'){var h=el.querySelector('.acc-header');if(h)h.click();}}return false;" style="display:inline-flex;align-items:center;gap:8px;background:rgba(20,184,166,.15);color:#5eead4;border:1px solid rgba(20,184,166,.4);font-family:var(--font-display);font-size:.8rem;font-weight:800;padding:11px 22px;border-radius:8px;text-decoration:none;letter-spacing:.04em;transition:background .2s;" onmouseover="this.style.background='rgba(20,184,166,.25)'" onmouseout="this.style.background='rgba(20,184,166,.15)'">🗺️ İnteraktif Harita</a>
-      <a href="#bee-toc" onclick="document.getElementById('bee-toc').scrollIntoView({behavior:'smooth'});return false;" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);color:var(--soft);border:1px solid rgba(255,255,255,.12);font-family:var(--font-display);font-size:.8rem;font-weight:700;padding:11px 22px;border-radius:8px;text-decoration:none;letter-spacing:.04em;transition:background .2s;" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.05)'">📑 İçindekiler</a>
+      <a href="#bee-toc" onclick="document.getElementById('bee-toc').scrollIntoView({behavior:'smooth'});return false;" style="display:inline-flex;align-items:center;gap:8px;background:rgba(167,139,250,.15);color:#c4b5fd;border:1px solid rgba(167,139,250,.45);font-family:var(--font-display);font-size:.8rem;font-weight:800;padding:11px 22px;border-radius:8px;text-decoration:none;letter-spacing:.04em;transition:background .2s,transform .2s;" onmouseover="this.style.background='rgba(167,139,250,.28)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(167,139,250,.15)';this.style.transform='translateY(0)'">📑 İçindekiler</a>
     </div>
 
     <!-- Yazar satırı -->
@@ -783,6 +783,41 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     <button class="playlist-toggle-btn" id="btn-tvnet1"
             style="background:rgba(56,189,248,.07);border-top-color:rgba(56,189,248,.18);color:var(--sky);"
             onclick="togglePlaylist('tvnet1','https://www.youtube.com/embed/eyOBa2_B9jI?rel=0')">
+      <span class="toggle-arrow">▼</span>
+      <span class="toggle-label">Videoyu Aç ▼</span>
+    </button>
+  </div>
+
+  <!-- KAPAK VİDEO 2 — TRT Radyo Röportajı -->
+  <div class="playlist-card recommended" style="max-width:640px;margin:0 auto 28px;border-color:rgba(245,158,11,.5);box-shadow:0 0 0 1px rgba(245,158,11,.2);">
+    <div class="playlist-thumb" style="cursor:pointer;"
+         onclick="togglePlaylist('trtradyo1','https://www.youtube.com/embed/4POIQwZ3qLM?rel=0')">
+      <img src="https://img.youtube.com/vi/4POIQwZ3qLM/maxresdefault.jpg"
+           alt="TRT Radyo — Fay Yolu Arıcılığı Röportajı — Prof. Dr. Ali Osman Öncel"
+           onerror="this.style.display='none';this.parentElement.style.cssText+='background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(56,189,248,.1));min-height:160px;display:flex;align-items:center;justify-content:center;'">
+      <div class="playlist-thumb-overlay"></div>
+      <div class="playlist-play-btn">▶</div>
+      <div style="position:absolute;top:10px;left:10px;">
+        <span class="playlist-thumb-badge" style="background:rgba(245,158,11,.9);color:#2a1400;">📻 Radyo Programı</span>
+      </div>
+    </div>
+    <div class="playlist-embed-panel" id="embed-trtradyo1"></div>
+    <div class="playlist-body">
+      <div class="playlist-channel" style="color:var(--honey);">📻 TRT Ankara Radyosu</div>
+      <div class="playlist-title">Fay Yolu Arıcılığı Röportajı — Prof. Dr. Ali Osman Öncel</div>
+      <div class="playlist-desc">Prof. Dr. Ali Osman Öncel'in TRT Ankara Radyosu'na canlı yayın konuğu olarak katıldığı, "Fay Yolu Arıcılığı" kavramını, Motoji Ikeya'nın 1995 Kobe depremi gözlemlerini, kovan titreşim bantlarını ve Iğdır vakasını ele aldığı söyleşi. 9 Haziran 2026.</div>
+      <div style="font-size:.7rem;color:var(--muted);margin-top:10px;line-height:1.7;">
+        <strong style="color:var(--soft);">Bölümler:</strong> 00:00 Giriş: Fay Yolu Arıcılığı Nedir · 01:34 Konuk Tanıtımı · 02:33 Arı ve Deprem Coğrafyasının Örtüşmesi · 04:11 Motoji Ikeya ve 1995 Kobe · 06:38 Arı Titreşim Bantları: Huzur ve Panik · 08:49 Iğdır Vakası ve Kaynağa Yakınlık · 11:00 Biyosensör ve Ulusal Erken Uyarı · 11:48 Fay Yolunun Bal Mineral İçeriğine Etkisi · 14:53 Muğla Doktora Tezi ve Rize Balları · 17:12 Kapanış ve Değerlendirme
+      </div>
+      <div class="playlist-meta">
+        <span class="playlist-tag" style="color:var(--honey);border-color:rgba(245,158,11,.25);background:rgba(245,158,11,.05);">Canlı Yayın</span>
+        <a class="playlist-link" style="color:var(--honey);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);"
+           href="https://youtu.be/4POIQwZ3qLM" target="_blank" rel="noopener">YouTube'da Aç →</a>
+      </div>
+    </div>
+    <button class="playlist-toggle-btn" id="btn-trtradyo1"
+            style="background:rgba(245,158,11,.07);border-top-color:rgba(245,158,11,.18);color:var(--honey);"
+            onclick="togglePlaylist('trtradyo1','https://www.youtube.com/embed/4POIQwZ3qLM?rel=0')">
       <span class="toggle-arrow">▼</span>
       <span class="toggle-label">Videoyu Aç ▼</span>
     </button>
