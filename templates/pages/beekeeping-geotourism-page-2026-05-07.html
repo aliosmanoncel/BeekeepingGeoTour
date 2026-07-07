@@ -1008,7 +1008,7 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
 <div class="main-wrap" style="padding:0 24px;">
   <div id="bee-toc" style="background:linear-gradient(135deg,rgba(245,158,11,.10),rgba(20,184,166,.08));border:1px solid rgba(245,158,11,.30);border-radius:14px;padding:16px 20px;margin:24px 0 20px;box-shadow:0 4px 20px rgba(245,158,11,.08);overflow:hidden;box-sizing:border-box;width:100%;">
     <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;"
-         onclick="(function(){var b=document.getElementById('bee-toc-body');var i=document.getElementById('bee-toc-icon');var open=b.style.display!=='none';b.style.display=open?'none':'block';i.textContent=open?'▼':'▲';})()">
+         onclick="(function(){var b=document.getElementById('bee-toc-body');var i=document.getElementById('bee-toc-icon');var open=b.style.display!=='none';b.style.display=open?'none':'block';i.textContent=open?String.fromCharCode(9662):String.fromCharCode(9652);})()">
       <div style="display:flex;align-items:center;gap:10px;">
         <span style="font-family:var(--font-display);font-weight:700;font-size:.97rem;color:var(--honey);">🧭 Bu Rehberde Neler Var?</span>
         <span style="font-size:.68rem;background:linear-gradient(135deg,#92400e,#065f46);color:#fef3c7;padding:2px 8px;border-radius:100px;font-weight:700;letter-spacing:.05em;">BeeGeo EduPanel</span>
@@ -1103,7 +1103,7 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
           if(!match) return;
           var a=document.createElement('div');
           a.style.cssText='font-size:.78rem;color:var(--soft);padding:4px 0;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.05);';
-          a.textContent='› '+match.txt.replace(/^[^\wçğıöşüÇĞİÖŞÜ]+/,'').slice(0,50);
+          a.textContent=String.fromCharCode(8250)+' '+match.txt.replace(/^[^\wçğıöşüÇĞİÖŞÜ]+/,'').slice(0,50);
           a.onmouseover=function(){this.style.color='#fff';};
           a.onmouseout=function(){this.style.color='var(--soft)';};
           a.onclick=function(){jumpTo(match.el);};
@@ -1138,7 +1138,7 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
         '</span>'+
         '<span style="display:flex;align-items:center;gap:8px;flex-shrink:0;">'+
           '<span title="Bölüm sayısına göre hesaplanan yaklaşık okuma süresi; ölçülmüş bir değer değildir." style="text-align:center;font-size:.68rem;font-weight:700;color:'+cat.color+';background:rgba(255,255,255,.06);border-radius:8px;padding:4px 10px;white-space:nowrap;cursor:help;line-height:1.5;">'+members.length+' bölüm<br><span style="font-weight:400;opacity:.75;">≈'+estMin+' dk (tahmini)</span></span>'+
-          '<span class="toc-cat-arrow" style="color:'+cat.color+';font-size:.75rem;">'+(isFirst?'▴':'▾')+'</span>'+
+          '<span class="toc-cat-arrow" style="color:'+cat.color+';font-size:.75rem;">'+(isFirst?String.fromCharCode(9652):String.fromCharCode(9662))+'</span>'+
         '</span>';
       var sub=document.createElement('div');
       sub.style.cssText='display:'+(isFirst?'flex':'none')+';flex-direction:column;gap:6px;padding:0 14px 14px;';
@@ -1150,7 +1150,7 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
       header.onclick=function(){
         var open=sub.style.display==='flex';
         sub.style.display=open?'none':'flex';
-        header.querySelector('.toc-cat-arrow').textContent=open?'▾':'▴';
+        header.querySelector('.toc-cat-arrow').textContent=open?String.fromCharCode(9662):String.fromCharCode(9652);
       };
       box.appendChild(header);
       box.appendChild(sub);
@@ -11355,11 +11355,11 @@ function togglePlaylist(id, embedUrl) {
     }
     panel.classList.add('open');
     btn.classList.add('active');
-    btn.querySelector('.toggle-label').textContent = 'Kapat ▲';
+    btn.querySelector('.toggle-label').textContent = 'Kapat ' + String.fromCharCode(9652);
   } else {
     panel.classList.remove('open');
     btn.classList.remove('active');
-    btn.querySelector('.toggle-label').textContent = 'Playlist\'i Aç ▼';
+    btn.querySelector('.toggle-label').textContent = 'Playlist\'i Aç ' + String.fromCharCode(9662);
   }
 }
 
@@ -11517,7 +11517,8 @@ function toggleTranscript() {
       var c = s.charCodeAt(i);
       if (c < 0xD800 || c > 0xDFFF) { if (c < 0x2600 || c > 0x27BF) out += s[i]; }
     }
-    return out.replace(/^\s*[•·▸►▼▶\-–—]\s*/, '').trim();
+    var bulletChars = [8226,183,9656,9658,9660,9654,45,8211,8212].map(function(code){ return String.fromCharCode(code); }).join('');
+    return out.replace(new RegExp('^\\s*[' + bulletChars + ']\\s*'), '').trim();
   }
 
   function showLoading(msg) {
