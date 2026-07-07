@@ -1142,6 +1142,10 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
         '</span>';
       var sub=document.createElement('div');
       sub.style.cssText='display:'+(isFirst?'flex':'none')+';flex-direction:column;gap:6px;padding:0 14px 14px;';
+      var subLabel=document.createElement('div');
+      subLabel.style.cssText='font-size:.68rem;font-weight:700;color:'+cat.color+';text-transform:uppercase;letter-spacing:.08em;padding:2px 0 4px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:2px;';
+      subLabel.textContent=cat.icon+' '+cat.name+' — Bölümler';
+      sub.appendChild(subLabel);
       members.forEach(function(e){ sub.appendChild(makeItemBtn(e.el,e.txt,cat.color)); });
       header.onclick=function(){
         var open=sub.style.display==='flex';
