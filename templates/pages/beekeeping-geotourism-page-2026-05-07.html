@@ -1036,7 +1036,7 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
 (function(){
   /* 75 bölümün 6 makro-kategoriye eşleştirilmesi. Anahtar kelimeler, sec-label-text
      metinlerinden alınan ayırt edici alt dizilerdir; ilk eşleşen kategori kazanır. */
-  var CATEGORIES=[
+  var CATEGORIES=window.CATEGORIES=[
     {name:'Başlangıç ve Genel Bakış',desc:'Yeni okuyucular için giriş, mitler ve temel bilgiler',icon:'📘',color:'#fbbf24',keys:['Yönetici Özeti','Bu Yazıyı Nasıl Okumalısınız','Mitler ve Gerçekler','Bir Arının Bir Günü','Yeni Başlayanlar İçin Bilimsel Tavsiyeler','Giriş: Sıfırdan Başlangıç','Temel Ekipman Listesi','Yaygın Başlangıç Hataları','İlk Yıl Yol Haritası','Yeni Başlayanlar İçin Sismolog Tavsiyeleri','Kışı Arım Oldu']},
     {name:'Arıcılık ve Kovan Yaşamı',desc:'Koloni biyolojisi, ürünler ve yönetim',icon:'🐝',color:'#34d399',keys:['Kızılçam Balı ve Marchalina','Arı Irk Hazinesi','Koloni Biyolojisi','Balın Olgunlaşması','Tozlaşma Ekonomisi ve İklim','Arı Zehiri (Apitoksin)','Propolis: Kovanın Bağışıklık','Arı Sütü ve Ana Arı','Arı Hastalıkları ve Varroa','Varroa Mücadelesi','İleri Düzey Arı Fiziği','Koloni Fizyolojisi','Arı Anatomisi','Balmumu Biyolojisi','Arı Irk Biyolojisi — Soy Hatları','Bombus Arısı','Petek Gözü Temizliği','Feromon Biyolojisi']},
     {name:'Fay Yolu Arıcılığı ve Jeoturizm',desc:'Göçer arıcılık, rotalar ve jeoturizm modeli',icon:'🌍',color:'#60a5fa',keys:['İnteraktif Göçer Arıcılık Haritası','Göçer Arıcılık Rotası','Kovan Yoğunluğu ve Taşıma','Kovan Kiralama Modeli','Trakya Balı ve Jeoturizm','Trakya Bal ve Yer Bilimleri Rotası','JeoTurizm ve Bal Yolu','Gezici Arıcılık — Fay Hatlarını','Gezginci Arıcılık — Genetik Erozyon','Arıcılık ve Afet Dayanıklılığı']},
@@ -5540,7 +5540,15 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
           <thead><tr><th colspan="2" style="background:rgba(167,139,250,.14);color:var(--violet);">🟣 Virüsler / Diğer</th></tr></thead>
           <tbody>
             <tr>
-              <td style="width:38%;">DWV, BQCV, ABPV (çoğu Varroa taşır); CCD (Koloni Çökme Bozukluğu)</td>
+              <td style="width:38%;"><strong>Kronik Arı Felci Virüsü (CBPV)</strong></td>
+              <td>Ergin arının <strong>vücut kılları dökülür</strong>, parlak-siyah ve yağlı görünüm alır; uçamaz, kovan önünde titreyerek sürünür. Sağlıklı arılar hasta bireyi kovana sokmaz.</td>
+            </tr>
+            <tr>
+              <td><strong>Tulumsu Yavru Çürüklüğü Virüsü (SBV)</strong></td>
+              <td>Larva ölür, başı <strong>"L" şeklinde kıvrılır</strong>; kütikula altında sıvı toplanır — sıkıldığında <strong>tulum/torba gibi</strong> içi sulu bir kese görünümü verir. Yavru hastalığıdır, AFB/EFB ile karıştırılmamalı (bakteri değil, virüs).</td>
+            </tr>
+            <tr>
+              <td><strong>DWV, BQCV, ABPV</strong> (çoğu Varroa taşır); <strong>CCD</strong> (Koloni Çökme Bozukluğu)</td>
               <td>İşçi arıların kovanı aniden terk etmesi; pestisitler + iklim değişikliği + çoklu patojen.</td>
             </tr>
           </tbody>
@@ -8762,13 +8770,13 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     <!-- SCI 1: MEIXNER 2015 -->
     <li class="sci-item" style="border-color:rgba(167,139,250,.3);">
       <p>Meixner, M. D., Kryger, P., & Costa, C. (2015). Effects of genotype, environment, and their interactions on honey bee health in Europe. <em>Current Opinion in Insect Science</em>, 10, 177–184.</p>
-      <div class="sci-doi">https://doi.org/10.1016/j.cois.2015.05.010 · Yerel genotip adaptasyonu · Varroa direnci · Lokal ekotip üstünlüğü · ✓ Tam metne erişildi</div>
+      <div class="sci-doi"><a href="https://doi.org/10.1016/j.cois.2015.05.010" target="_blank" style="color:#c4b5fd;">→ DOI: 10.1016/j.cois.2015.05.010</a> · Yerel genotip adaptasyonu · Varroa direnci · Lokal ekotip üstünlüğü · ✓ Tam metne erişildi</div>
     </li>
 
     <!-- SCI 2: VANBERGEN 2013 -->
     <li class="sci-item" style="border-color:rgba(225,29,72,.25);">
       <p>Vanbergen, A. J., & Insect Pollinators Initiative. (2013). Threats to an ecosystem service: Pressures on pollinators. <em>Frontiers in Ecology and the Environment</em>, 11(5), 251–259.</p>
-      <div class="sci-doi">https://doi.org/10.1890/120126 · Çoklu stres analizi · Habitat kaybı · Pestisit–beslenme sinerjisi · P450 enzim savunması · ✓ Tam metne erişildi</div>
+      <div class="sci-doi"><a href="https://doi.org/10.1890/120126" target="_blank" style="color:#fca5a5;">→ DOI: 10.1890/120126</a> · Çoklu stres analizi · Habitat kaybı · Pestisit–beslenme sinerjisi · P450 enzim savunması · ✓ Tam metne erişildi</div>
     </li>
 
     <!-- YÖK TEZ 1: GÜNBEY 2015 -->
@@ -8827,8 +8835,8 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
 
     <!-- DOĞAROĞLU 2024 -->
     <li class="sci-item" style="border-color:rgba(134,239,172,.3);">
-      <p>Doğaroğlu, M. (2024). <em>Arıcılık Seminerleri ve Modern Arıcılık Teknikleri Video Serisi</em>. Tanersfarm YouTube Kanalı. Erişim: https://www.youtube.com/@tanersfarm</p>
-      <div class="sci-doi">youtube.com/@tanersfarm · Ruşet kovan teknolojisi · Koloni yönetim takvimi · Oğul kontrolü · İlkbahar/yaz/kış protokolleri · ✓ Video kaynak</div>
+      <p>Doğaroğlu, M. (2024). <em>Arıcılık Seminerleri ve Modern Arıcılık Teknikleri Video Serisi</em>. Tanersfarm YouTube Kanalı.</p>
+      <div class="sci-doi"><a href="https://www.youtube.com/@tanersfarm" target="_blank" style="color:var(--teal);">→ youtube.com/@tanersfarm</a> · Ruşet kovan teknolojisi · Koloni yönetim takvimi · Oğul kontrolü · İlkbahar/yaz/kış protokolleri · ✓ Video kaynak</div>
     </li>
 
     <!-- BAKANLIK REHBERİ -->
@@ -8843,19 +8851,19 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     <!-- ALPATOV 1929 -->
     <li class="sci-item" style="border-color:rgba(167,139,250,.3);">
       <p>Alpatov, V. V. (1929). Biometrical studies on variation and races of the honeybee (<em>Apis mellifera</em> L.). <em>The Quarterly Review of Biology</em>, 4(1), 1–58.</p>
-      <div class="sci-doi">https://doi.org/10.1086/394316 · Morphometri taksonomi · Dil uzunluğu standartlaştırması · Michailov ölçümleri · Irk ayrımı · ✓ DOI erişilebilir</div>
+      <div class="sci-doi"><a href="https://doi.org/10.1086/394316" target="_blank" style="color:#c4b5fd;">→ DOI: 10.1086/394316</a> · Morphometri taksonomi · Dil uzunluğu standartlaştırması · Michailov ölçümleri · Irk ayrımı · ✓ DOI erişilebilir</div>
     </li>
 
     <!-- WIGGLESWORTH 1936 -->
     <li class="sci-item" style="border-color:rgba(167,139,250,.3);">
       <p>Wigglesworth, V. B. (1936). The function of the corpus allatum in the growth and reproduction of <em>Rhodnius prolixus</em> (Hemiptera). <em>Quarterly Journal of Microscopical Science</em>, 79, 91–121.</p>
-      <div class="sci-doi">Böcek endokrinolojisinin kurucu çalışması · Juvenil hormon (JH) keşfi · İş bölümü mekanizması · Tarihsel kaynak</div>
+      <div class="sci-doi">Böcek endokrinolojisinin kurucu çalışması · Juvenil hormon (JH) keşfi · İş bölümü mekanizması · ✓ Tarihsel kaynak (1936 öncesi, DOI atanmamış)</div>
     </li>
 
     <!-- GÜLER 2010 -->
     <li class="sci-item" style="border-color:rgba(34,197,94,.3);">
       <p>Güler, A., Bak, B., &amp; Çelik, T. H. (2010). Karadeniz bölgesi bal arısı (<em>Apis mellifera</em> L.) populasyonlarının morfometrik özellikleri. <em>Uludağ Arıcılık Dergisi</em>, 10(1), 1–9.</p>
-      <div class="sci-doi">tez.yok.gov.tr · Sinop ekotipi (7,8 mm arka bacak) · Yığılca (9,47 mm ön kanat) · Karadeniz morfolojik çeşitlilik · ✓ Türkçe kaynak</div>
+      <div class="sci-doi">Sinop ekotipi (7,8 mm arka bacak) · Yığılca (9,47 mm ön kanat) · Karadeniz morfolojik çeşitlilik · ✓ Türkçe hakemli dergi kaynağı</div>
     </li>
 
     <!-- SEELEY 2019 -->
@@ -9962,6 +9970,9 @@ footer { background: var(--panel); border-top: 1px solid var(--border); padding:
     <h3 style="color:var(--sky);">Hijyenik Davranış — "Kapalıları Öldürüp Açıkları Bırakıyor"</h3>
     <p>Arıların kapalı gözleri açıp içindeki pupaları dışarı atarken açık larvalara dokunmaması, arıcılık literatüründe <strong style="color:var(--sky);">hijyenik davranış</strong> olarak tanımlanır. Arılar kapalı gözün içindeki pupanın <strong style="color:#fff;">hasta veya ölü</strong> olduğunu koku/titreşimle algılar ve o gözü imha eder; henüz hastalık belirtisi göstermeyen açık larvalara o an dokunmaz.</p>
     <p>Tetikleyiciler: <strong style="color:#fca5a5;">Varroa baskısı</strong> (pupa içinde çoğalan akar), <strong style="color:#fca5a5;">AYÇ sporları</strong>, <strong style="color:#fca5a5;">Formik asit aşırı dozu</strong> (sıcakta hızla buharlaşır, kapalı yavruyu öldürür). Güçlü hijyenik davranış gösteren ırk ve koloniler Varroa'ya karşı doğal direnç açısından <strong style="color:var(--sky);">damızlık seçimi</strong> için değerlidir.</p>
+    <div class="callout" style="margin-top:10px;background:rgba(255,255,255,.04);">
+      <p><strong>Karıştırılmamalı — Tımarlama (Grooming) Davranışı:</strong> Hijyenik davranış <em>petek gözü</em> içindeki hasta/ölü pupayı hedef alırken, tımarlama arıların kendi vücutlarını (otogrooming) veya birbirlerinin sırtındaki Varroa akarlarını (allogrooming) bacak/mandibulla yakalayıp temizlemesidir. Hijyenik davranış "yavruyu", tımarlama "ergin arı yüzeyini" temizler — ikisi de Varroa direnç seleksiyonunda aranan özelliklerdir ama farklı hedeflere yöneliktir.</p>
+    </div>
   </div>
 
   <!-- ORGANİK ARICILIK -->
@@ -11500,14 +11511,14 @@ function toggleTranscript() {
 <script>
 (function(global) {
   var CFG = {
-    title: 'Sismoloji ve Aricilik: Fay Hatlarindan Petek Titresimlerine Super-Organizma Yonetimi',
-    author: 'Prof. Dr. Ali Osman Oncel',
-    affil: 'Jeofizik Yuksek Muhendisi & Sismolog - Istanbul Universitesi-Cerrahpasa',
+    title: 'Sismoloji ve Arıcılık: Fay Hatlarından Petek Titreşimlerine Süper-Organizma Yönetimi',
+    author: 'Prof. Dr. Ali Osman Öncel',
+    affil: 'Jeofizik Yüksek Mühendisi & Sismolog - İstanbul Üniversitesi-Cerrahpaşa',
     email: 'ali.oncel@iuc.edu.tr',
     journal: 'BeeGeo EduPanel 1.0',
-    sub: 'Turkiye Bal Yolu - Gocer Aricilik - Kizilcam - Tozlasma Ekonomisi',
-    abs: 'Bu rapor, Turkiye ariciliğini jeoturizm perspektifinden ele almaktadir. Kizilcam balindan kovan ekonomisine, gocer ariciliktan tozlasma krizine uzanan kapsamli bir panorama sunulmaktadir.',
-    kw: 'Aricilik - Jeoturizm - Kizilcam Bali - Marchalina hellenica - Gocer Aricilik - Tozlasma - Bal Yolu',
+    sub: 'Türkiye Bal Yolu - Göçer Arıcılık - Kızılçam - Tozlaşma Ekonomisi',
+    abs: 'Bu rapor, Türkiye arıcılığını jeoturizm perspektifinden ele almaktadır. Kızılçam balından kovan ekonomisine, göçer arıcılıktan tozlaşma krizine uzanan kapsamlı bir panorama sunulmaktadır.',
+    kw: 'Arıcılık - Jeoturizm - Kızılçam Balı - Marchalina hellenica - Göçer Arıcılık - Tozlaşma - Bal Yolu',
     filename: 'BeeGeo-EduPanel'
   };
 
@@ -11517,7 +11528,7 @@ function toggleTranscript() {
       var c = s.charCodeAt(i);
       if (c < 0xD800 || c > 0xDFFF) { if (c < 0x2600 || c > 0x27BF) out += s[i]; }
     }
-    var bulletChars = [8226,183,9656,9658,9660,9654,45,8211,8212].map(function(code){ return String.fromCharCode(code); }).join('');
+    var bulletChars = [8226,183,9656,9658,9660,9654,8211,8212,45].map(function(code){ return String.fromCharCode(code); }).join('');
     return out.replace(new RegExp('^\\s*[' + bulletChars + ']\\s*'), '').trim();
   }
 
@@ -11551,6 +11562,39 @@ function toggleTranscript() {
     setTimeout(function(){ URL.revokeObjectURL(u); }, 8000);
   }
 
+  function cleanNodeHTML(node) {
+    var clone = node.cloneNode(true);
+    clone.querySelectorAll('script,style,button,iframe,[id^="map"],[class*="leaflet"]').forEach(function(x){ if(x.parentNode) x.parentNode.removeChild(x); });
+    clone.querySelectorAll('[style]').forEach(function(x){
+      var s = (x.getAttribute('style')||'').replace(/color\s*:\s*var\([^)]+\)[^;]*;?/gi,'color:#000;').replace(/background\s*:\s*rgba\([^)]+\)[^;]*;?/gi,'').replace(/background\s*:\s*var\([^)]+\)[^;]*;?/gi,'');
+      x.setAttribute('style', s);
+    });
+    return clone.innerHTML;
+  }
+
+  function buildTOCHTML() {
+    var cats = window.CATEGORIES || [];
+    if (!cats.length) return '';
+    var labels = Array.prototype.slice.call(document.querySelectorAll('.sec-label-text'));
+    var entries = labels.map(function(el){ return stripTxt((el.innerText||el.textContent||'').replace(/\s+/g,' ').trim()); }).filter(function(t){ return t; });
+    var used = new Array(entries.length).fill(false);
+    var html = '<h2>İçindekiler</h2>';
+    cats.forEach(function(cat){
+      var members = [];
+      entries.forEach(function(e,i){
+        if (used[i]) return;
+        for (var k=0;k<cat.keys.length;k++){
+          if (e.indexOf(cat.keys[k])!==-1){ used[i]=true; members.push(e); break; }
+        }
+      });
+      if (!members.length) return;
+      html += '<p style="font-weight:600;margin:10pt 0 3pt;">' + cat.icon + ' ' + cat.name + '</p><ul style="margin:0 0 10pt;padding-left:18pt;">';
+      members.forEach(function(m){ html += '<li style="font-size:9.5pt;margin-bottom:2pt;">' + m + '</li>'; });
+      html += '</ul>';
+    });
+    return html;
+  }
+
   function buildBodyHTML() {
     // Force-open all accordion bodies
     document.querySelectorAll('.acc-body').forEach(function(b) {
@@ -11563,7 +11607,7 @@ function toggleTranscript() {
     // Hero stats
     var heroStats = document.querySelectorAll('.hero-stat');
     if (heroStats.length) {
-      html += '<h2>Temel Gostergeler</h2><table><thead><tr><th>Gosterge</th><th>Deger</th></tr></thead><tbody>';
+      html += '<h2>Temel Göstergeler</h2><table><thead><tr><th>Gösterge</th><th>Değer</th></tr></thead><tbody>';
       heroStats.forEach(function(s) {
         var num = (s.querySelector('.hero-stat-num') || {}).innerText || '';
         var lbl = (s.querySelector('.hero-stat-lbl') || {}).innerText || '';
@@ -11572,7 +11616,7 @@ function toggleTranscript() {
       html += '</tbody></table>';
     }
 
-    // Section labels + accordions
+    // Section labels + accordions + diğer içerik kutuları (journey-box, callout, stops-grid vb.)
     document.querySelectorAll('.sec-label').forEach(function(lbl) {
       var te = lbl.querySelector('.sec-label-text') || lbl;
       var title = stripTxt(te.innerText || te.textContent || '');
@@ -11580,19 +11624,14 @@ function toggleTranscript() {
       html += '<h2>' + title + '</h2>';
       var el = lbl.nextElementSibling;
       while (el && !el.classList.contains('sec-label') && el.tagName !== 'FOOTER') {
+        if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE') { el = el.nextElementSibling; continue; }
         if (el.classList.contains('accordion')) {
           var at = el.querySelector('.acc-title');
           if (at) html += '<h3>' + stripTxt(at.innerText||'') + '</h3>';
           var body = el.querySelector('.acc-body');
-          if (body) {
-            var clone = body.cloneNode(true);
-            clone.querySelectorAll('script,style,button,iframe,[id^="map"],[class*="leaflet"]').forEach(function(x){ if(x.parentNode) x.parentNode.removeChild(x); });
-            clone.querySelectorAll('[style]').forEach(function(x){
-              var s = (x.getAttribute('style')||'').replace(/color\s*:\s*var\([^)]+\)[^;]*;?/gi,'color:#000;').replace(/background\s*:\s*rgba\([^)]+\)[^;]*;?/gi,'').replace(/background\s*:\s*var\([^)]+\)[^;]*;?/gi,'');
-              x.setAttribute('style', s);
-            });
-            html += clone.innerHTML;
-          }
+          if (body) html += cleanNodeHTML(body);
+        } else {
+          html += cleanNodeHTML(el);
         }
         el = el.nextElementSibling;
       }
@@ -11610,12 +11649,12 @@ function toggleTranscript() {
       });
     }
 
-    return html || '<p>Icerik yuklenemedi. Lutfen sayfayi yenileyip tekrar deneyin.</p>';
+    return html || '<p>İçerik yüklenemedi. Lütfen sayfayı yenileyip tekrar deneyin.</p>';
   }
 
   function pdfTemplate(body) {
     var now = new Date().toLocaleDateString('tr-TR', {year:'numeric',month:'long',day:'numeric'});
-    var css = '@page{size:A4 portrait;margin:25mm 22mm 28mm 22mm;}*{box-sizing:border-box;}body{font-family:"Times New Roman",serif;font-size:11pt;line-height:1.85;color:#000;background:#fff;margin:0;padding:0;}@media screen{body{background:#b0b8c8;padding:64px 0 50px;}.doc-wrap{width:210mm;margin:0 auto;padding:25mm 22mm 30mm;background:#fff;box-shadow:0 6px 30px rgba(0,0,0,.22);min-height:297mm;}}@media print{.print-bar{display:none!important;}.doc-wrap{padding:0;box-shadow:none;}}.print-bar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#060810;color:#e2ecf4;padding:10px 24px;display:flex;align-items:center;gap:14px;font-family:Arial,sans-serif;font-size:13px;border-bottom:1px solid #f59e0b;}.btn-p{margin-left:auto;background:#f59e0b;color:#000;border:none;border-radius:7px;padding:9px 22px;font-size:13px;font-weight:bold;cursor:pointer;}h1{text-align:center;font-size:15pt;font-weight:bold;margin:0 0 8pt;line-height:1.3;}h2{font-family:Arial,sans-serif;font-size:11pt;font-weight:700;color:#b45309;border-bottom:1px solid #f59e0b;margin:16pt 0 6pt;padding-bottom:2pt;page-break-after:avoid;}h3{font-family:Arial,sans-serif;font-size:10pt;font-weight:700;font-style:italic;margin:12pt 0 4pt;page-break-after:avoid;}p{text-align:justify;font-size:10pt;margin:0 0 6pt;line-height:1.7;orphans:3;widows:3;}img{max-width:100%;display:block;margin:6pt auto;}table{width:100%;border-collapse:collapse;font-size:8.5pt;margin:10pt 0;}th{border-top:1.5pt solid #b45309;border-bottom:1pt solid #b45309;padding:3pt 4pt;font-family:Arial,sans-serif;font-weight:700;text-align:left;background:#fffbeb;font-size:7.5pt;}td{padding:2.5pt 4pt;border-bottom:1pt solid #e5d5b0;vertical-align:top;font-size:8.5pt;}.accordion{border:1pt solid #e5d5b0;border-radius:4pt;margin:8pt 0;padding:8pt 10pt;}.acc-header{display:none;}.acc-body{display:block!important;max-height:none!important;}.callout{border-left:3pt solid #b45309;background:#fffbeb;padding:9pt 11pt;margin:8pt 0;font-size:9.5pt;}.source-note{border:1pt solid #dde4f0;padding:6pt 9pt;font-size:8.5pt;margin:6pt 0;background:#f8f8f8;}.journey-box{border:1pt solid #e0e7f0;padding:8pt 10pt;margin:8pt 0;}.data-table{font-size:8pt;}.geo-hi{font-style:italic;}.hero-stat,.hero-section,.hero-inner,.map-wrap,.leaflet-container,[id^="map"],[class*="leaflet"]{display:none!important;}';
+    var css = '@page{size:A4 portrait;margin:25mm 22mm 28mm 22mm;}*{box-sizing:border-box;}body{font-family:"Times New Roman",serif;font-size:11pt;line-height:1.85;color:#000;background:#fff;margin:0;padding:0;}@media screen{body{background:#b0b8c8;padding:64px 0 50px;}.doc-wrap{width:210mm;margin:0 auto;padding:25mm 22mm 30mm;background:#fff;box-shadow:0 6px 30px rgba(0,0,0,.22);min-height:297mm;}}@media print{.print-bar{display:none!important;}.doc-wrap{padding:0;box-shadow:none;}}.print-bar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#060810;color:#e2ecf4;padding:10px 24px;display:flex;align-items:center;gap:14px;font-family:Arial,sans-serif;font-size:13px;border-bottom:1px solid #f59e0b;}.btn-p{margin-left:auto;background:#f59e0b;color:#000;border:none;border-radius:7px;padding:9px 22px;font-size:13px;font-weight:bold;cursor:pointer;}h1{text-align:center;font-size:19pt;font-weight:600;letter-spacing:.01em;margin:0 0 10pt;line-height:1.35;}h2{font-family:Arial,sans-serif;font-size:12pt;font-weight:600;letter-spacing:.03em;color:#b45309;background:#fffbeb;border-top:2pt solid #f59e0b;border-bottom:1pt solid #f59e0b;margin:28pt 0 12pt;padding:6pt 8pt 5pt;page-break-after:avoid;}h3{font-family:Arial,sans-serif;font-size:10.5pt;font-weight:600;font-style:italic;margin:16pt 0 7pt;page-break-after:avoid;}p{text-align:justify;font-size:10pt;margin:0 0 8pt;line-height:1.75;orphans:3;widows:3;}ul,ol{margin:6pt 0 12pt;padding-left:16pt;}li{margin-bottom:4pt;}img{max-width:100%;display:block;margin:10pt auto;}table{width:100%;border-collapse:collapse;font-size:8.5pt;margin:14pt 0 16pt;}th{border-top:1.5pt solid #b45309;border-bottom:1pt solid #b45309;padding:4pt 5pt;font-family:Arial,sans-serif;font-weight:700;text-align:left;background:#fffbeb;font-size:7.5pt;}td{padding:3pt 5pt;border-bottom:1pt solid #e5d5b0;vertical-align:top;font-size:8.5pt;}.data-table-wrap{margin:10pt 0 16pt;}.accordion{border:1pt solid #e5d5b0;border-radius:4pt;margin:14pt 0;padding:10pt 12pt;}.acc-header{display:none;}.acc-body{display:block!important;max-height:none!important;}.callout{border-left:3pt solid #b45309;background:#fffbeb;padding:10pt 12pt;margin:12pt 0 14pt;font-size:9.5pt;}.source-note{border:1pt solid #dde4f0;padding:7pt 10pt;font-size:8.5pt;margin:10pt 0 14pt;background:#f8f8f8;}.journey-box{border:1pt solid #e0e7f0;padding:10pt 12pt;margin:12pt 0 14pt;}.think-zone{border:1pt dashed #b45309;background:#fffdf5;padding:9pt 11pt;margin:12pt 0 14pt;font-size:9pt;}.stops-grid{margin:10pt 0 14pt;}.stop-card{border:1pt solid #e5d5b0;border-radius:4pt;padding:9pt 11pt;margin:0 0 10pt;}.data-table{font-size:8pt;}.geo-hi{font-style:italic;}.hero-stat,.hero-section,.hero-inner,.map-wrap,.leaflet-container,[id^="map"],[class*="leaflet"]{display:none!important;}';
     return '<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8">'
       + '<title>' + CFG.journal + ' — PDF</title>'
       + '<style>' + css + '</style></head>'
@@ -11625,28 +11664,29 @@ function toggleTranscript() {
       + '<script>window.addEventListener("load",function(){setTimeout(function(){window.print();},800);});<\/script>'
       + '<div class="doc-wrap">'
       + '<div style="text-align:center;border:1.5pt solid #b45309;padding:18pt 16pt 14pt;margin-bottom:20pt;">'
-      + '<div style="font-size:8pt;font-weight:700;letter-spacing:.12em;color:#b45309;margin-bottom:6pt;text-transform:uppercase;">Aricilik Jeoturizm Egitim Raporu</div>'
+      + '<div style="font-size:8pt;font-weight:700;letter-spacing:.12em;color:#b45309;margin-bottom:6pt;text-transform:uppercase;">Arıcılık Jeoturizm Eğitim Raporu</div>'
       + '<div style="font-size:7.5pt;color:#555;margin-bottom:12pt;font-style:italic;">' + CFG.sub + '</div>'
       + '<h1>' + CFG.title + '</h1>'
       + '<hr style="border:none;border-top:1pt solid #ccc;margin:10pt 30pt;">'
       + '<p style="font-size:11pt;font-weight:bold;text-align:center;margin-bottom:3pt;text-indent:0;">' + CFG.author + '</p>'
       + '<p style="font-size:9.5pt;font-style:italic;text-align:center;margin-bottom:3pt;text-indent:0;">' + CFG.affil + '</p>'
       + '<p style="font-size:8.5pt;color:#b45309;text-align:center;text-indent:0;">' + CFG.email + '</p>'
-      + '<p style="font-size:8pt;color:#777;text-align:center;text-indent:0;">Yayin tarihi: ' + now + '</p>'
+      + '<p style="font-size:8pt;color:#777;text-align:center;text-indent:0;">Yayın tarihi: ' + now + '</p>'
       + '</div>'
       + '<div style="border:1.5pt solid #b45309;border-radius:2pt;padding:9pt 11pt;margin:0 0 14pt;background:#fffbeb;">'
-      + '<div style="font-family:Arial,sans-serif;font-size:8.5pt;font-weight:700;color:#b45309;margin-bottom:4pt;text-transform:uppercase;">Ozet</div>'
+      + '<div style="font-family:Arial,sans-serif;font-size:8.5pt;font-weight:700;color:#b45309;margin-bottom:4pt;text-transform:uppercase;">Özet</div>'
       + '<p style="font-size:9.5pt;line-height:1.7;text-align:justify;margin:0;">' + CFG.abs + '</p>'
       + '</div>'
       + '<p style="font-size:8.5pt;margin:0 0 14pt;"><strong>Anahtar Kelimeler:</strong> ' + CFG.kw + '</p>'
+      + buildTOCHTML()
       + body
-      + '<p style="font-family:Arial,sans-serif;font-size:7.5pt;color:#777;border-top:1pt solid #ccc;margin-top:18pt;padding-top:6pt;text-align:center;">2026 ' + CFG.journal + ' - Turkiye Bal Yolu - ' + now + '</p>'
+      + '<p style="font-family:Arial,sans-serif;font-size:7.5pt;color:#777;border-top:1pt solid #ccc;margin-top:18pt;padding-top:6pt;text-align:center;">2026 ' + CFG.journal + ' - Türkiye Bal Yolu - ' + now + '</p>'
       + '</div></body></html>';
   }
 
   function wordTemplate(body) {
     var now = new Date().toLocaleDateString('tr-TR', {year:'numeric',month:'long',day:'numeric'});
-    var css = '@page Section1{size:210mm 297mm;margin:25mm 20mm 25mm 20mm;}div.Section1{page:Section1;}body{font-family:"Times New Roman",serif;font-size:11pt;color:#000;line-height:1.85;}h1{font-family:Arial,sans-serif;font-size:15pt;font-weight:bold;text-align:center;margin:0 0 8pt;}h2{font-family:Arial,sans-serif;font-size:11pt;font-weight:bold;color:#b45309;border-bottom:1pt solid #f59e0b;margin:16pt 0 6pt;page-break-after:avoid;}h3{font-family:Arial,sans-serif;font-size:10pt;font-weight:bold;font-style:italic;margin:12pt 0 4pt;page-break-after:avoid;}p{text-align:justify;font-size:10pt;margin:0 0 6pt;line-height:1.85;}img{max-width:14cm;height:auto;display:block;margin:6pt auto;}table{width:100%;border-collapse:collapse;font-size:8.5pt;margin:10pt 0;}th{border-top:1.5pt solid #b45309;border-bottom:1pt solid #b45309;padding:3pt 4pt;font-family:Arial,sans-serif;font-weight:bold;background:#fffbeb;text-align:left;font-size:7.5pt;}td{padding:2.5pt 4pt;border-bottom:1pt solid #e5d5b0;vertical-align:top;font-size:8.5pt;}.acc-header{display:none;}.acc-body{display:block!important;max-height:none!important;}.hero-stat,.hero-section,.hero-inner,.map-wrap,.leaflet-container,[id^="map"],[class*="leaflet"]{display:none!important;}';
+    var css = '@page Section1{size:210mm 297mm;margin:25mm 20mm 25mm 20mm;}div.Section1{page:Section1;}body{font-family:"Times New Roman",serif;font-size:11pt;color:#000;line-height:1.85;}h1{font-family:Arial,sans-serif;font-size:19pt;font-weight:600;text-align:center;margin:0 0 10pt;}h2{font-family:Arial,sans-serif;font-size:12pt;font-weight:600;color:#b45309;background:#fffbeb;border-top:2pt solid #f59e0b;border-bottom:1pt solid #f59e0b;margin:26pt 0 12pt;padding:6pt 8pt;page-break-after:avoid;}h3{font-family:Arial,sans-serif;font-size:10.5pt;font-weight:600;font-style:italic;margin:16pt 0 7pt;page-break-after:avoid;}p{text-align:justify;font-size:10pt;margin:0 0 8pt;line-height:1.85;}ul,ol{margin:6pt 0 12pt;padding-left:16pt;}li{margin-bottom:4pt;}img{max-width:14cm;height:auto;display:block;margin:10pt auto;}table{width:100%;border-collapse:collapse;font-size:8.5pt;margin:14pt 0 16pt;}th{border-top:1.5pt solid #b45309;border-bottom:1pt solid #b45309;padding:4pt 5pt;font-family:Arial,sans-serif;font-weight:bold;background:#fffbeb;text-align:left;font-size:7.5pt;}td{padding:3pt 5pt;border-bottom:1pt solid #e5d5b0;vertical-align:top;font-size:8.5pt;}.callout{border-left:3pt solid #b45309;background:#fffbeb;padding:10pt 12pt;margin:12pt 0 14pt;font-size:9.5pt;}.journey-box{border:1pt solid #e0e7f0;padding:10pt 12pt;margin:12pt 0 14pt;}.think-zone{border:1pt dashed #b45309;background:#fffdf5;padding:9pt 11pt;margin:12pt 0 14pt;font-size:9pt;}.stop-card{border:1pt solid #e5d5b0;padding:9pt 11pt;margin:0 0 10pt;}.acc-header{display:none;}.acc-body{display:block!important;max-height:none!important;}.hero-stat,.hero-section,.hero-inner,.map-wrap,.leaflet-container,[id^="map"],[class*="leaflet"]{display:none!important;}';
     return '<!DOCTYPE html>'
       + '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40" lang="tr">'
       + '<head><meta charset="utf-8"><meta name=ProgId content=Word.Document>'
@@ -11658,13 +11698,14 @@ function toggleTranscript() {
       + '<p style="text-align:center;text-indent:0;font-weight:bold;">' + CFG.author + '</p>'
       + '<p style="text-align:center;text-indent:0;font-style:italic;">' + CFG.affil + '</p>'
       + '<p style="text-align:center;font-size:9pt;text-indent:0;color:#b45309;">' + CFG.email + '</p>'
-      + '<p style="text-align:center;font-size:8pt;text-indent:0;color:#777;">Yayin tarihi: ' + now + '</p>'
+      + '<p style="text-align:center;font-size:8pt;text-indent:0;color:#777;">Yayın tarihi: ' + now + '</p>'
       + '<hr style="border:none;border-top:1.5pt solid #b45309;">'
-      + '<p><strong>Ozet:</strong> ' + CFG.abs + '</p>'
+      + '<p><strong>Özet:</strong> ' + CFG.abs + '</p>'
       + '<p><strong>Anahtar Kelimeler:</strong> ' + CFG.kw + '</p>'
       + '<hr style="border:none;border-top:1pt solid #ccc;">'
+      + buildTOCHTML()
       + body
-      + '<p style="font-size:7.5pt;color:#777;border-top:1pt solid #ccc;margin-top:18pt;padding-top:6pt;text-align:center;">2026 ' + CFG.journal + ' - Turkiye Bal Yolu - ' + now + '</p>'
+      + '<p style="font-size:7.5pt;color:#777;border-top:1pt solid #ccc;margin-top:18pt;padding-top:6pt;text-align:center;">2026 ' + CFG.journal + ' - Türkiye Bal Yolu - ' + now + '</p>'
       + '</div></body></html>';
   }
 
